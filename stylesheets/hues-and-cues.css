@@ -5,7 +5,7 @@ body {
     margin: 0px;
 }
 
-.game {
+.game-board {
     display: grid;
     grid-template-columns: repeat(30, 1fr);
     background-color: black;
@@ -30,6 +30,6 @@ h1 {
 p{
     color: white;
 }
-text {
+strong {
     color: white;
 }
