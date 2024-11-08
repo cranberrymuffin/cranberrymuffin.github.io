@@ -1,6 +1,9 @@
 
 window.onload = init;
 
+const marker = '★'
+const permanent_marker = "<span style='color: red;'>★</span>";
+
 function init() {
     const colors = [
         //row A
@@ -508,7 +511,15 @@ function init() {
         tile.classList.add('tile');
         tile.id = "tile_" + i;
         tile.style.background = colors[i];
-        tile.addEventListener('mouseup', (event) => console.log("hello"), false);
+        tile.addEventListener('mouseup', (event) => select(event.target), false);
         game.appendChild(tile);
+    }
+}
+
+function select(tile) {
+    if(tile.innerHTML == marker) {
+        tile.innerHTML = '';
+    } else if(tile.innerHTML != permanent_marker) {
+        tile.innerHTML = marker;
     }
 }
