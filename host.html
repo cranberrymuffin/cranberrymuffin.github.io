@@ -7,13 +7,22 @@
         <link rel="stylesheet" href="stylesheets/hues-and-cues.css">
     </head>
     <body>
+        <script src="https://unpkg.com/peerjs@1.5.0/dist/peerjs.min.js"></script>
+        <script type="text/javascript" src="js/game.js"></script>
+        <script type="text/javascript" src="js/host.js"></script>
         <div>
-            <strong id="host-id" title="Copy this ID to the input on join.html.">ID:</strong><br>
-            <strong id="connection-status"></strong>
+            <div class="welcome">
+                <div id="welcome">
+                <h1>Host Hues and Cues</h1>
+                <input type="text" class="screen-name" id="screen-name" placeholder="Enter your screen name."></input><br>
+                <button id="start-game" class="start-game" onclick="openGameConnection()">Start</button><br>
+                </div>
+                <div id="waiting-room">
+                    <h1 id="share-code" title="Copy this ID to the input on join.html."></h1><br>
+                    <h2 id="connection-status"></h1><br>
+                </div>
+            </div>
             <div id="game-board" class="game-board"></div>
         </div>
-        <script src="https://unpkg.com/peerjs@1.5.0/dist/peerjs.min.js"></script>
-        <script src="js/game.js"></script>
-        <script src="js/host.js"></script>
     </body>
 </html>
