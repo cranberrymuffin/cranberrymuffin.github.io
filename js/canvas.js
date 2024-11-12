@@ -8,6 +8,7 @@ function init() {
     canvas.addEventListener('mousedown', () => { drawing = true }, false)
     canvas.addEventListener('mouseup', () => { drawing = false }, false)
     canvas.addEventListener('mousemove', (event) => draw(event), false);
+    canvas.addEventListener('mouseout',  () => { drawing = false }, false);
     canvas.addEventListener("touchstart", () => { drawing = true }, false)
     canvas.addEventListener("touchend", () => { drawing = false }, false)
     canvas.addEventListener("touchmove", (event) => draw(event), false);
