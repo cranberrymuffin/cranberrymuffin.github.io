@@ -16,14 +16,19 @@ function init() {
 }
 
 function resize() {
+    resume = document.getElementById("resume");
+
     canvas.style.width = '100%';
-    canvas.style.height = '100%';
+    canvas.style.height = resume.height;
     canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    canvas.height = resume.offsetHeight;
 }
 
 function draw(event) {
     if (drawing) {
-        ctx.fillRect(event.clientX, event.clientY, 10, 10); // fill in 10x10 pixel grid
+        const rect = canvas.getBoundingClientRect()
+        const x = event.clientX - rect.left
+        const y = event.clientY - rect.top
+        ctx.fillRect(x, y, 10, 10); // fill in 10x10 pixel grid
     }
 }
