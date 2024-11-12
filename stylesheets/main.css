@@ -6,3 +6,10 @@ body {
   background: linear-gradient(#e66465, #9198e5);
   height: 100%;
 }
+
+.resume {
+  height:max-content;
+  box-sizing: content-box;
+  width:80vh;
+  margin: auto;
+}

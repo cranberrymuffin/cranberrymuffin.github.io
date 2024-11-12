@@ -11,13 +11,6 @@ function init() {
     canvas.addEventListener("touchstart", () => { drawing = true }, false)
     canvas.addEventListener("touchend", () => { drawing = false }, false)
     canvas.addEventListener("touchmove", (event) => draw(event), false);
-    resizeCanvas()
-    window.addEventListener('resize', resizeCanvas, false);
-}
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
 }
 
 function draw(event) {
