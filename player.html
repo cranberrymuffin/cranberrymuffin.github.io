@@ -10,8 +10,9 @@
 
 <body>
     <div>
-        <strong>ID: </strong>
-        <input type="text" id="receiver-id" title="Input ID from game host">
+        <input type="text" id="receiver-id" placeholder="Host Game ID">
+        <input type="text" id="screen-name" placeholder="Screenname">
+
         <button id="connect-button" onclick="join()">Connect</button><br>
         <text id="connection-status">Not Connected</text>
         <div id="game-board" class="game-board"></div>
