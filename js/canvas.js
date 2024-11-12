@@ -24,11 +24,24 @@ function resize() {
     canvas.height = resume.offsetHeight;
 }
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
 function draw(event) {
     if (drawing) {
         const rect = canvas.getBoundingClientRect()
         const x = event.clientX - rect.left
         const y = event.clientY - rect.top
-        ctx.fillRect(x, y, 10, 10); // fill in 10x10 pixel grid
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, 2 * Math.PI, false);
+        ctx.fillStyle = getRandomColor();
+        ctx.fill();
+        ctx.lineWidth = 5;
     }
 }
