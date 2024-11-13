@@ -78,12 +78,13 @@ function join() {
     conn.on('open', function () {
         connection_status.innerHTML = "Connected to: " + conn.peer;
         console.log("Connected to: " + conn.peer);
+        screenname = document.getElementById("screen-name").value;
 
-        conn.send("hi");
+        conn.send(screenname);
     });
     // Handle incoming data (messages only since this is the signal sender)
     conn.on('data', function (data) {
-        console.log(data)
+        console.log("Player Recieved: " + data)
     });
     conn.on('close', function () {
         connection_status.innerHTML = "Connection closed";

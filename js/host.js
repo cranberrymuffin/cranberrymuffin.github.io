@@ -52,7 +52,7 @@ function openGameConnection() {
             initBoard();
         }
         updateConnectionStatus()
-        ready();
+        ready(c);
     });
 }
 
@@ -60,9 +60,8 @@ function openGameConnection() {
  * Triggered once a connection has been achieved.
  * Defines callbacks to handle incoming data and connection events.
  */
-function ready() {
-
-    self.on('data', function (data) {
-        console.log("Data recieved " + data);
+function ready(c) {
+    c.on('data', function (data) {
+        console.log("Host recieved " + data);
     });
 }
