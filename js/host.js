@@ -11,15 +11,15 @@ function screenNameEntered() {
 }
 
 function init() {
-    self=null;
-    connections=[];
+    self = null;
+    connections = [];
     screen_name = document.getElementById("screen-name")
     shareCode = document.getElementById("share-code");
     connection_status = document.getElementById("connection-status");
 }
 
 function updateConnectionStatus() {
-    if(connections.length <= 1 ) {
+    if (connections.length <= 1) {
         connection_status.textContent = "Awaiting players...";
     } else {
         connection_status.textContent = connections.length + " players connected.";
@@ -33,26 +33,25 @@ function updateConnectionStatus() {
  * self object.
  */
 function openGameConnection() {
-    if(!screenNameEntered()) {
+    if (!screenNameEntered()) {
         return;
     }
     // Create own self object with connection to shared PeerJS server
     self = new Peer();
     self.on('open', function (id) {
         document.getElementById("welcome").remove();
-        connections.push(self.id)
+        connections.push(self)
         shareCode.textContent = "Share code: \n" + self.id
         updateConnectionStatus()
 
     });
     self.on('connection', function (c) {
-        connections.push(c);
-        console.log(connections)
-        if(connections.length >= 2) {
+        if (connections.length >= 2) {
             initBoard();
         }
-        updateConnectionStatus()
         ready(c);
+        connections.push(connectTo(c.peer));
+        updateConnectionStatus()
     });
 }
 
@@ -62,6 +61,14 @@ function openGameConnection() {
  */
 function ready(c) {
     c.on('data', function (data) {
-        console.log("Host recieved " + data);
+        console.log("host recieved " + data)
     });
+}
+
+function connectTo(id) {
+    var conn = self.connect(id);
+    conn.on('open', function () {
+        conn.send(screen_name.value);
+    });
+    return conn;
 }
