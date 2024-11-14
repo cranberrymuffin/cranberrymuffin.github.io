@@ -40,17 +40,15 @@ function openGameConnection() {
     self = new Peer();
     self.on('open', function (id) {
         document.getElementById("welcome").remove();
-        connections.push(self)
         shareCode.textContent = "Share code: \n" + self.id
         updateConnectionStatus()
-
     });
     self.on('connection', function (c) {
+        connections.push(connectTo(c.peer));
         if (connections.length >= 2) {
             initBoard();
         }
         ready(c);
-        connections.push(connectTo(c.peer));
         updateConnectionStatus()
     });
 }

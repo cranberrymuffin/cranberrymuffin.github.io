@@ -38,7 +38,6 @@ function ready(c) {
  * connection and data received on it.
  */
 function join() {
-    initBoard();
     // Close old connection
     if (host) {
         host.close();
