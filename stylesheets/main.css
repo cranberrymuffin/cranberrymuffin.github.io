@@ -13,7 +13,8 @@ ul {
 h3 {
   margin-bottom: 0;
 }
-p {
+
+h4 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -38,11 +39,15 @@ p {
 
 .row {
   font-style: italic;
-  display: grid;
-  grid-auto-flow: column;
 }
 
 .date {
-  text-align: right
+  float: left;
+  text-align: right;
+  width: 50%;
+}
+.role {
+  float: left;
+  width: 50%;
 }
 
