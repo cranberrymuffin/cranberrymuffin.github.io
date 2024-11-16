@@ -11,6 +11,8 @@ function init() {
     canvas = document.getElementById("canvas");
     if(window.mobileCheck()) {
         canvas.remove();
+        resume = document.getElementById("resume");
+        resume.style.fontSize = "2rem"
         return;
     }
     ctx = canvas.getContext("2d");
