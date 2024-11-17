@@ -8,51 +8,16 @@ html {
 
 body {
   background: linear-gradient(#e66465, #9198e5);
+  min-height: 100vh;
   height: 100%;
 }
 
-.resume {
-  height: max-content;
-  box-sizing: content-box;
-  width: 80vw;
-  max-width: 750px;
-  margin: auto;
-  z-index: 2;
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.canvas {
-  position: absolute;
-  z-index: 1;
-}
-
-.business-card {
-  text-align: center
-}
-
-.row {
-  font-style: italic;
-}
-
-h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-ul {
-  margin-top: 0;
-}
-
-h3 {
-  margin-bottom: 0;
-}
-
-.date {
-  float: left;
-  text-align: right;
-  width: 50%;
-}
-
-.role {
-  float: left;
-  width: 50%;
+.navbar-item {
+  display: inline;
 }
