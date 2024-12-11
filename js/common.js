@@ -10,9 +10,6 @@ window.mobileCheck = function () {
 window.onload = window.mobileCheck();
 
 function onMobile() {
-    console.log("is mobile")
     var main = document.getElementById("main");
     main.style.fontSize = "2rem"
-    var navbar = document.getElementById("navbar");
-    navbar.style.fontSize = "2rem"
 }
