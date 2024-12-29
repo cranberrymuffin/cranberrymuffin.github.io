@@ -54,13 +54,11 @@ function computerTurn() {
 
     // random move
     while (true) {
-        pos = Math.floor(Math.random() * 8);
+        pos = Math.floor(Math.random() * 9);
         if (board[pos] == undefined) {
             return addMarker(pos, computerPiece)
         }
     }
-
-
 }
 
 //  game loop
