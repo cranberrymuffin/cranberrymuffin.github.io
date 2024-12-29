@@ -31,33 +31,36 @@ function computePosition(row, col) {
 
 function computerTurn() {
     if (humanPiece == 'o') {
-        piece = 'x'
+        computerPiece = 'x'
     } else {
-        piece = 'o'
+        computerPiece = 'o'
     }
 
-    pos = undefined
+    //look for winning positions
+    for (combo of winningCombos) {
+        pieces = combo.map((x) => board[x])
+        if (pieces.filter((piece) => piece == computerPiece).length == 2 && pieces.filter((piece) => piece == undefined).length == 1) {
+            return addMarker(combo[pieces.indexOf(undefined)], computerPiece)
+        }
+    }
 
+    //block opponent
     for (combo of winningCombos) {
         pieces = combo.map((x) => board[x])
         if (pieces.filter((piece) => piece == humanPiece).length == 2 && pieces.filter((piece) => piece == undefined).length == 1) {
-            pos = combo[pieces.indexOf(undefined)]
-            break
+            return addMarker(combo[pieces.indexOf(undefined)], computerPiece)
+        }
+    }
+
+    // random move
+    while (true) {
+        pos = Math.floor(Math.random() * 8);
+        if (board[pos] == undefined) {
+            return addMarker(pos, computerPiece)
         }
     }
 
 
-    if (pos == undefined || board[pos] != undefined) {
-        while (true) {
-            pos = Math.floor(Math.random() * 8);
-            if (board[pos] == undefined) {
-                break
-            }
-        }
-    }
-
-
-    addMarker(pos, piece)
 }
 
 //  game loop
