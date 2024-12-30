@@ -1,21 +1,38 @@
 const board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
 const winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-const humanPiece = 'x'
 var peer = undefined
+var turn = 0
+var myPiece = 'x'
+started = false
 
-window.onload = init;
+window.onload = () => {};
 
-function init() {
+function getPiece() {
+    return turn % 2 == 0 ? 'x' : 'o'
 }
 
+function getOpponentPiece() {
+    return getPiece() == 'x' ? 'o' : 'x'
+}
+
+function isTurn() {
+    return getPiece() == myPiece
+}
+
+function generateOnePlayerGame() {
+    started = true
+    turnIntroOff()
+}
 function turnIntroOff() {
     document.getElementById("intro").remove()
 }
 
 function generateNewTwoPlayerGame() {
     peer = new Peer();
+    myPiece = 'x'
     peer.on('connection', function(conn) {
         document.getElementById("you").innerHTML = "connected"
+        started = true
     });
     peer.on('open', function () {
         document.getElementById("you").innerHTML = "ID: " + peer.id
@@ -24,16 +41,17 @@ function generateNewTwoPlayerGame() {
 }
 
 function join(id) {
+    myPiece = 'o'
     if(peer == null) {
         peer = new Peer();
     }
-    console.log(id)
     const conn = peer.connect(id, {
         reliable: true
     });
     // on open will be launch when you successfully connect to PeerServer
     conn.on('open', function() {
         document.getElementById("you").innerHTML = "connected"
+        started = true
         turnIntroOff()
     });
     document.getElementById("you").innerHTML = peer.id
@@ -75,7 +93,7 @@ function gameOver() {
         return -1
     }
 
-    return undefined
+    return !started
 }
 
 //  converts row and column into position on 2D board
@@ -84,11 +102,8 @@ function computePosition(row, col) {
 }
 
 function computerTurn() {
-    if (humanPiece == 'o') {
-        computerPiece = 'x'
-    } else {
-        computerPiece = 'o'
-    }
+    humanPiece = getOpponentPiece()
+    computerPiece = getPiece()
 
     //look for winning positions
     for (combo of winningCombos) {
@@ -119,12 +134,14 @@ function computerTurn() {
 function mark(event) {
     const pos = parseInt(event.target.id.match(/[0-9]+/g));
 
-    if (gameOver() == undefined) {
+    if (!gameOver() && isTurn()) {
         //  run a valid human turn
-        addMarker(pos, humanPiece)
+        addMarker(pos, getPiece())
+        turn += 1
     }
-    if (gameOver() == undefined) {
+    if (!gameOver() && peer == undefined) {
         computerTurn()
+        turn += 1
     }
     gameOver()
 }
