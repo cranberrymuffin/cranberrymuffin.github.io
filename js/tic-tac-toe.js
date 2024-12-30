@@ -8,6 +8,41 @@ window.onload = init;
 function init() {
 }
 
+function turnIntroOff() {
+    document.getElementById("intro").remove()
+}
+
+function generateNewTwoPlayerGame() {
+    turnIntroOff()
+}
+
+function join(id) {
+    turnIntroOff()
+}
+
+function joinExistingTwoPlayerGame() {
+    join_code = document.createElement('input')
+    join_code.id = "join-code"
+    join_game_button = document.createElement('button')
+    join_game_button.textContent= 'join';
+    join_game_button.onclick = () => join(document.getElementById('join-code').value)
+
+    document.getElementById("options").replaceChildren(join_code, join_game_button)
+}
+
+function setUpTwoPlayerGame() {
+
+    new_game_button = document.createElement('button')
+    new_game_button.textContent= 'new game';
+    new_game_button.onclick = generateNewTwoPlayerGame
+
+    existing_game_button = document.createElement('button')
+    existing_game_button.textContent= 'join existing game';
+    existing_game_button.onclick = joinExistingTwoPlayerGame
+
+    document.getElementById("options").replaceChildren(new_game_button, existing_game_button)
+}
+
 //  checks if any of the winning combos have been achieved
 function gameOver() {
     for (combo of winningCombos) {

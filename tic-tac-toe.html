@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="stylesheets/tic-tac-toe.css">
-        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-      </head>
-    <body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/tic-tac-toe.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+</head>
+
+<body>
+    <div id="intro" class="overlay">
+        <div class="container">
+            <h1>Play tic-tac-toe</h1>
+            <div id="options">
+                <button onclick="turnIntroOff()"> against the computer </button>
+                <button onclick="setUpTwoPlayerGame()"> against a friend </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="you"></div>
+        <div id="opponent"></div>
         <h1 id="info"></h1>
         <div id="game" class="game">
             <div id="square-0" class="square" onclick="mark(event)"></div>
@@ -17,7 +31,9 @@
             <div id="square-7" class="square" onclick="mark(event)"></div>
             <div id="square-8" class="square" onclick="mark(event)"></div>
         </div>
-        <script src="js/common.js"></script>
-        <script src="js/tic-tac-toe.js"></script>
-    </body>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/tic-tac-toe.js"></script>
+</body>
+
 </html>
