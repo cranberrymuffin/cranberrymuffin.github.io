@@ -1,7 +1,7 @@
 const board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
 const winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 const humanPiece = 'x'
-
+var peer = undefined
 
 window.onload = init;
 
@@ -13,11 +13,30 @@ function turnIntroOff() {
 }
 
 function generateNewTwoPlayerGame() {
+    peer = new Peer();
+    peer.on('connection', function(conn) {
+        document.getElementById("you").innerHTML = "connected"
+    });
+    peer.on('open', function () {
+        document.getElementById("you").innerHTML = "ID: " + peer.id
+    });
     turnIntroOff()
 }
 
 function join(id) {
-    turnIntroOff()
+    if(peer == null) {
+        peer = new Peer();
+    }
+    console.log(id)
+    const conn = peer.connect(id, {
+        reliable: true
+    });
+    // on open will be launch when you successfully connect to PeerServer
+    conn.on('open', function() {
+        document.getElementById("you").innerHTML = "connected"
+        turnIntroOff()
+    });
+    document.getElementById("you").innerHTML = peer.id
 }
 
 function joinExistingTwoPlayerGame() {
@@ -112,7 +131,6 @@ function mark(event) {
 
 function addMarker(pos, piece) {
     const square = document.getElementById("square-" + pos)
-
     if (square.childElementCount == 0) {
         board[pos] = piece
         const markerElement = document.createElement("div")
