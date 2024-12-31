@@ -1,9 +1,10 @@
-const board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+var board = [null, null, null, null, null, null, null, null, null]
 const winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-var peer = undefined
+var peer = null
 var turn = 0
 var myPiece = 'x'
 started = false
+var opponentConn = null
 
 window.onload = () => {};
 
@@ -31,8 +32,14 @@ function generateNewTwoPlayerGame() {
     peer = new Peer();
     myPiece = 'x'
     peer.on('connection', function(conn) {
+        opponentConn = conn
         document.getElementById("you").innerHTML = "connected"
         started = true
+        opponentConn.on('data', function(data) {
+            board = data
+            updateBoard()
+            turn += 1
+        })
     });
     peer.on('open', function () {
         document.getElementById("you").innerHTML = "ID: " + peer.id
@@ -45,14 +52,19 @@ function join(id) {
     if(peer == null) {
         peer = new Peer();
     }
-    const conn = peer.connect(id, {
+    opponentConn = peer.connect(id, {
         reliable: true
     });
     // on open will be launch when you successfully connect to PeerServer
-    conn.on('open', function() {
+    opponentConn.on('open', function() {
         document.getElementById("you").innerHTML = "connected"
         started = true
         turnIntroOff()
+    });
+    opponentConn.on('data', function(data) {
+        board = data
+        updateBoard()
+        turn += 1
     });
     document.getElementById("you").innerHTML = peer.id
 }
@@ -83,12 +95,13 @@ function setUpTwoPlayerGame() {
 //  checks if any of the winning combos have been achieved
 function gameOver() {
     for (combo of winningCombos) {
-        if (board[combo[0]] == board[combo[1]] && board[combo[0]] == board[combo[2]] && board[combo[0]] != undefined) {
+        if (board[combo[0]] == board[combo[1]] && board[combo[0]] == board[combo[2]] && board[combo[0]] != null) {
             document.getElementById("info").innerHTML = "🏆 " + board[combo[0]] + " is the champion 🏆"
             return board[combo[0]]
         }
     }
-    if (!board.includes(undefined)) {
+    console.log(board)
+    if (!board.includes(null)) {
         document.getElementById("info").innerHTML = "No winner! x and ⭕ are tied 👔"
         return -1
     }
@@ -108,23 +121,23 @@ function computerTurn() {
     //look for winning positions
     for (combo of winningCombos) {
         pieces = combo.map((x) => board[x])
-        if (pieces.filter((piece) => piece == computerPiece).length == 2 && pieces.filter((piece) => piece == undefined).length == 1) {
-            return addMarker(combo[pieces.indexOf(undefined)], computerPiece)
+        if (pieces.filter((piece) => piece == computerPiece).length == 2 && pieces.filter((piece) => piece == null).length == 1) {
+            return addMarker(combo[pieces.indexOf(null)], computerPiece)
         }
     }
 
     //block opponent
     for (combo of winningCombos) {
         pieces = combo.map((x) => board[x])
-        if (pieces.filter((piece) => piece == humanPiece).length == 2 && pieces.filter((piece) => piece == undefined).length == 1) {
-            return addMarker(combo[pieces.indexOf(undefined)], computerPiece)
+        if (pieces.filter((piece) => piece == humanPiece).length == 2 && pieces.filter((piece) => piece == null).length == 1) {
+            return addMarker(combo[pieces.indexOf(null)], computerPiece)
         }
     }
 
     // random move
     while (true) {
         pos = Math.floor(Math.random() * 9);
-        if (board[pos] == undefined) {
+        if (board[pos] == null) {
             return addMarker(pos, computerPiece)
         }
     }
@@ -139,7 +152,7 @@ function mark(event) {
         addMarker(pos, getPiece())
         turn += 1
     }
-    if (!gameOver() && peer == undefined) {
+    if (!gameOver() && peer == null) {
         computerTurn()
         turn += 1
     }
@@ -150,8 +163,21 @@ function addMarker(pos, piece) {
     const square = document.getElementById("square-" + pos)
     if (square.childElementCount == 0) {
         board[pos] = piece
-        const markerElement = document.createElement("div")
-        markerElement.classList.add(piece == 'x' ? "cross" : "circle")
-        square.append(markerElement)
     }
+    updateBoard()
+    if(opponentConn != null){
+        opponentConn.send(board)
+    }
+}
+
+function updateBoard() {
+    for (let pos = 0; pos < board.length; pos++) {
+        const square = document.getElementById("square-" + pos)
+        if(board[pos] != null && !square.hasChildNodes()) {
+            const markerElement = document.createElement("div")
+            markerElement.classList.add(board[pos] == 'x' ? "cross" : "circle")
+            square.append(markerElement)
+        }
+    }
+    gameOver()
 }
