@@ -100,7 +100,7 @@ function gameOver() {
             return board[combo[0]]
         }
     }
-    console.log(board)
+    
     if (!board.includes(null)) {
         document.getElementById("info").innerHTML = "No winner! x and ⭕ are tied 👔"
         return -1
