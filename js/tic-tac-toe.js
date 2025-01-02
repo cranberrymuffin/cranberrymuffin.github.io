@@ -49,24 +49,28 @@ function generateNewTwoPlayerGame() {
 
 function join(id) {
     myPiece = 'o'
-    if(peer == null) {
-        peer = new Peer();
-    }
-    opponentConn = peer.connect(id, {
-        reliable: true
+    
+    peer = new Peer();
+
+    peer.on('open', function () {
+        opponentConn = peer.connect(id, {
+            reliable: true
+        });
+        // on open will be launch when you successfully connect to PeerServer
+        opponentConn.on('open', function() {
+            document.getElementById("you").innerHTML = "connected"
+            started = true
+            turnIntroOff()
+        });
+        opponentConn.on('data', function(data) {
+            board = data
+            updateBoard()
+            turn += 1
+        });
+    
+        document.getElementById("you").innerHTML = peer.id
     });
-    // on open will be launch when you successfully connect to PeerServer
-    opponentConn.on('open', function() {
-        document.getElementById("you").innerHTML = "connected"
-        started = true
-        turnIntroOff()
-    });
-    opponentConn.on('data', function(data) {
-        board = data
-        updateBoard()
-        turn += 1
-    });
-    document.getElementById("you").innerHTML = peer.id
+
 }
 
 function joinExistingTwoPlayerGame() {
@@ -74,7 +78,7 @@ function joinExistingTwoPlayerGame() {
     join_code.id = "join-code"
     join_game_button = document.createElement('button')
     join_game_button.textContent= 'join';
-    join_game_button.onclick = () => join(document.getElementById('join-code').value)
+    join_game_button.onclick = () => { join(document.getElementById('join-code').value) }
 
     document.getElementById("options").replaceChildren(join_code, join_game_button)
 }
