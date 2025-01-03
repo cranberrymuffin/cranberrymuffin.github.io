@@ -33,6 +33,7 @@ function generateNewTwoPlayerGame() {
     myPiece = 'x'
     peer.on('connection', function(conn) {
         opponentConn = conn
+        conn.send(board)
         document.getElementById("you").innerHTML = "connected"
         started = true
         opponentConn.on('data', function(data) {
@@ -53,11 +54,10 @@ function join(id) {
     peer = new Peer();
 
     peer.on('open', function () {
-        opponentConn = peer.connect(id, {
-            reliable: true
-        });
+        opponentConn = peer.connect(id);
         // on open will be launch when you successfully connect to PeerServer
         opponentConn.on('open', function() {
+            console.log("open")
             document.getElementById("you").innerHTML = "connected"
             started = true
             turnIntroOff()
