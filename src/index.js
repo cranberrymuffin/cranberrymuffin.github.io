@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import './style.css'
+import Experience from './Experience';
 import reportWebVitals from './reportWebVitals';
+import { Canvas } from '@react-three/fiber'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+        <Canvas>
+        <color attach="background" args={["black"]} /> 
+        <Experience />
+    </Canvas>
   </React.StrictMode>
 );
 
