@@ -4,7 +4,7 @@ import { TextureLoader } from 'three'
 
 export default function Experience()
 {
-    const colorMap = useLoader(TextureLoader, '/textures/snowflake.jpg')
+    const colorMap = useLoader(TextureLoader, 'snowflake.jpg')
 
     const count = 5000
     const positions = new Float32Array(count * 3)
