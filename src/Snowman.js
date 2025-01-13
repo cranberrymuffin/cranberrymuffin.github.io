@@ -1,15 +1,24 @@
 import React from 'react';
 import { useFrame } from '@react-three/fiber';
 
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generateRandomSnowmanPosition() {
+    return [random(-20, 20), random(-20, 20), random(-20, -2)];
+}
+
 function Snowman(props) {
   const groupRef = React.useRef();
   
 
   useFrame((state, delta) => {
     if(groupRef.current.position.z >= 0) {
-        groupRef.current.position.x = props.position[0]
-        groupRef.current.position.y = props.position[1]
-        groupRef.current.position.z = props.position[2]
+        const position = generateRandomSnowmanPosition()
+        groupRef.current.position.x = position[0]
+        groupRef.current.position.y = position[1]
+        groupRef.current.position.z = position[2]
         groupRef.current.visible = true
     } else {
         groupRef.current.position.z += delta
@@ -18,7 +27,7 @@ function Snowman(props) {
 
 
   return (
-    <group ref={groupRef} onClick={() => groupRef.current.visible = false} scale={[0.25,0.25,0.25]} position={props.position}>
+    <group ref={groupRef} onClick={() => groupRef.current.visible = false} scale={[0.25,0.25,0.25]} position={generateRandomSnowmanPosition()}>
       {/* Bottom sphere */}
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[1, 32, 32]} />

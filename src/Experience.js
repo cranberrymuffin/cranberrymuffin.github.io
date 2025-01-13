@@ -19,14 +19,6 @@ function generateRandomPointInSphere(radius) {
     return [x, y, z];
 }
 
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function generateRandomSnowmanPosition() {
-    return [random(-10, 10), random(-10, 10), random(-10, 0)];
-}
-
 export default function Experience() {
     useThree(({ camera }) => {
         camera.position.x = 0
@@ -75,10 +67,10 @@ export default function Experience() {
             <pointsMaterial size={0.1} sizeAttenuation={true} alphaMap={colorMap} transparent={true} depthWrite={false} />
         </points>
         {[...Array(100)].map((x, i) => 
-            <Snowman position={generateRandomSnowmanPosition()} evil={true}/>
+            <Snowman key={"evil-snowman-"+i} evil={true}/>
         )}
         {[...Array(100)].map((x, i) => 
-            <Snowman position={generateRandomSnowmanPosition()} evil={false}/>
+            <Snowman key={"good-snowman-"+i} evil={false}/>
         )}
         <ambientLight intensity={2} />
     </group>
