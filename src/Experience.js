@@ -31,7 +31,7 @@ export default function Experience() {
          snow.current.rotation.x -= delta
     })
 
-    const colorMap = useLoader(TextureLoader, 'textures/snowflake.png')
+    const colorMap = useLoader(TextureLoader, 'snowflake.png')
 
     const count = 30000
     const positions = new Float32Array(count * 3)
