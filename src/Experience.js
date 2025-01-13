@@ -1,5 +1,5 @@
 import { useLoader, useFrame, useThree } from '@react-three/fiber'
-import { TextureLoader } from 'three'
+import { AdditiveBlending, TextureLoader } from 'three'
 import { useRef } from 'react'
 
 function generateRandomPointInSphere(radius) {
@@ -27,13 +27,13 @@ export default function Experience() {
 
     const snow = useRef()
 
-    useFrame(() => {
-        snow.current.rotation.x -= 0.01;
+    useFrame((state, delta) => {
+         snow.current.rotation.x -= delta
     })
 
-    const colorMap = useLoader(TextureLoader, 'snowflake.jpg')
+    const colorMap = useLoader(TextureLoader, 'textures/snowflake.png')
 
-    const count = 5000
+    const count = 30000
     const positions = new Float32Array(count * 3)
     const radius = 5
 
@@ -43,7 +43,6 @@ export default function Experience() {
         positions[i + 1] = point[1]
         positions[i + 2] = point[2]
     }
-
 
     return <group>
         <points ref={snow}>
@@ -55,7 +54,7 @@ export default function Experience() {
                     array={positions}
                 />
             </bufferGeometry>
-            <pointsMaterial size={0.1} sizeAttenuation={true} map={colorMap} />
+            <pointsMaterial size={0.1} sizeAttenuation={true} alphaMap={colorMap} transparent={true} depthWrite={false} />
         </points>
     </group>
 }
