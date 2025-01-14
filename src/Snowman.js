@@ -14,7 +14,6 @@ const generateRandomSnowmanPosition = (camera) => {
 
     const x = (Math.random() - 0.5) * width; // Random X coordinate
     const y = (Math.random() - 0.5) * height; // Random Y coordinate
-    console.log( [x, y, -depth])
     return [x, y, -depth]; // Negative depth for forward in camera space
   };
 
