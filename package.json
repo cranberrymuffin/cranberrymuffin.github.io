@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cranberrymuffin.github.io/",
+  "homepage": "https://cranberrymuffin.github.io",
   "dependencies": {
     "@react-three/drei": "9.108",
     "@react-three/fiber": "8.16",
