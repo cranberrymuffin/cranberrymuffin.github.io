@@ -4,7 +4,7 @@ import Experience from './Experience';
 export default function App() {
     return <Router>
         <Routes>
-            <Route path="/" element={Experience} />
+            <Route path="/home/" element={Experience} />
         </Routes>
     </Router>
 }

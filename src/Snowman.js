@@ -1,21 +1,31 @@
 import React from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const generateRandomSnowmanPosition = (camera) => {
 
-function generateRandomSnowmanPosition() {
-    return [random(-20, 20), random(-20, 20), random(-20, -2)];
-}
+    const minDepth = 5
+    const maxDepth = 15
+    const depth =  Math.floor(Math.random() * (maxDepth - minDepth + 1)) + minDepth;
+
+    const aspect = camera.aspect;
+    const vFOV = (camera.fov * Math.PI) / 180; // Convert FOV to radians
+    const height = 2 * Math.tan(vFOV / 2) * depth; // Frustum height at depth
+    const width = height * aspect; // Frustum width at depth
+
+    const x = (Math.random() - 0.5) * width; // Random X coordinate
+    const y = (Math.random() - 0.5) * height; // Random Y coordinate
+    console.log( [x, y, -depth])
+    return [x, y, -depth]; // Negative depth for forward in camera space
+  };
 
 function Snowman(props) {
+    const { camera } = useThree();
+
   const groupRef = React.useRef();
-  
 
   useFrame((state, delta) => {
     if(groupRef.current.position.z >= 0) {
-        const position = generateRandomSnowmanPosition()
+        const position = generateRandomSnowmanPosition(camera)
         groupRef.current.position.x = position[0]
         groupRef.current.position.y = position[1]
         groupRef.current.position.z = position[2]
@@ -27,7 +37,11 @@ function Snowman(props) {
 
 
   return (
-    <group ref={groupRef} onClick={() => groupRef.current.visible = false} scale={[0.25,0.25,0.25]} position={generateRandomSnowmanPosition()}>
+    <group ref={groupRef} onClick={(event) => {
+      groupRef.current.visible = false
+      event.stopPropogation()
+    }
+    } scale={[0.25,0.25,0.25]} position={generateRandomSnowmanPosition(camera)}>
       {/* Bottom sphere */}
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[1, 32, 32]} />

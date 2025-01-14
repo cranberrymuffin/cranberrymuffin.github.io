@@ -44,16 +44,7 @@ export default function Experience() {
         positions[i + 1] = point[1]
         positions[i + 2] = point[2]
     }
-
-    const villanPositions = new Float32Array(count * 3)
-
-    for (let i = 0; i < count; i += 3) {
-        const point = generateRandomPointInSphere(radius)
-        villanPositions[i] = point[0]
-        villanPositions[i + 1] = point[1]
-        villanPositions[i + 2] = point[2]
-    }    
-
+    
     return <group>
         <points ref={snow}>
             <bufferGeometry >
