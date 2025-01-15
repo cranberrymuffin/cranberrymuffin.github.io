@@ -1,7 +1,7 @@
 import './resume.css';
 
 export default function Resume() {
-  return (<div className="resume" id="resume">
+  return (<div><div className="resume" id="resume">
     <div className="business-card">
       <h1>✨ Aparna ✨</h1>
       <p>
@@ -14,9 +14,10 @@ export default function Resume() {
     </div>
     <h2> Summary</h2>
     <p>
-      Full-Stack Software Engineer with 5 years of experience with a background in
-      mobile and web development. Seeking a (preferably) remote opportunity with a
-      role (preferably) on the web stack.
+      Software Engineer with 5 years of experience with a background in
+      mobile and web development. Seeking a (preferably) remote opportunity.
+      
+      You can find my current project at <a href="/">my home 🏠</a>.
     </p>
     <h2>Employment</h2>
     <h3>Meta</h3>
@@ -118,10 +119,10 @@ export default function Resume() {
     <h2> Education</h2>
     <p>
       {" "}
-      University of Maryland, B.S. Computer Science, 2015-2018
+      University of Maryland, B.S. Computer Science, 2018
       <br />
-      Brown University, M.S. Computer Science, 2020-2022
+      Brown University, M.S. Computer Science, 2022
     </p>
-  </div>
+  </div></div>
   );
 }

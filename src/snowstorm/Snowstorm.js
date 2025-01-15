@@ -3,8 +3,10 @@ import { Canvas } from '@react-three/fiber'
 import './snowstorm.css';
 
 export default function Snowstorm() {
-    return <Canvas>
-        <color attach="background" args={["black"]} />
-        <Experience />
-    </Canvas>
+    return <div id="snowstorm">
+        <Canvas>
+            <color attach="background" args={["black"]} />
+            <Experience />
+        </Canvas>
+    </div>
 }
