@@ -3,7 +3,7 @@ import './resume.css';
 export default function Resume() {
   return (<div><div className="resume" id="resume">
     <div className="business-card">
-      <h1>✨ Aparna ✨</h1>
+      <h1>✨ Aparna Natarajan ✨</h1>
       <p>
         cranberrymuffin.github.io
         <br />
