@@ -45,9 +45,7 @@ h3 {
   width: 50%;
 }
 
-html,
-body,
-#root
+#main
 {
   background: linear-gradient(#e66465, #9198e5);
   text-size-adjust: none;

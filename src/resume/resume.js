@@ -1,7 +1,7 @@
 import './resume.css';
 
 export default function Resume() {
-  return (<div><div className="resume" id="resume">
+  return (<div id="main" className='main'><div className="resume" id="resume">
     <div className="business-card">
       <h1>✨ Aparna Natarajan ✨</h1>
       <p>
