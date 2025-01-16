@@ -55,27 +55,26 @@ export default function TicTacToe() {
     }
 
     useEffect(() => {
+        let gameOver=false;
         winningCombos.forEach(array => {
             let circleWins = array.every(cell => board[cell] === "circle")
             if (circleWins) {
                 setWinningMessage("circle wins!")
-                return
+                gameOver=true
             }
         })
         winningCombos.forEach(array => {
             let crossWins = array.every(cell => board[cell] === "cross")
             if (crossWins) {
                 setWinningMessage("cross wins!")
-                return
+                gameOver=true
             }
         })
         if (!board.includes(EMPTY)) {
             setWinningMessage("no winner")
+            gameOver=true
         }
-    }, [turn])
-
-    useEffect(() => {
-        if (winningMessage === null && turn % 2 === 1) {
+        if (!gameOver && turn % 2 === 1) {
             computerTurn()
         }
     }, [turn])
