@@ -43,7 +43,7 @@ export default function TicTacToe() {
         }
 
         // random move
-        while (true) {
+        while (board.includes(EMPTY)) {
             let pos = Math.floor(Math.random() * 9);
             if (board[pos] === EMPTY) {
                 board[pos] = "cross"
@@ -69,7 +69,6 @@ export default function TicTacToe() {
                 return
             }
         })
-
         if (!board.includes(EMPTY)) {
             setWinningMessage("no winner")
         }
