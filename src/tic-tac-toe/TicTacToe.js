@@ -9,8 +9,19 @@ export default function TicTacToe() {
 
     const message = "it is now " + go + "'s go"
 
-    const checkScore = () => {
-        console.log("hello")
+    const handleClick = (index) => {
+        if (winningMessage === undefined) {
+            cells[index] = go
+            setCells(cells)
+            if (go === "cross") {
+                setGo("circle")
+            } else {
+                setGo("cross")
+            }
+        }
+    }
+
+    useEffect(() => {
         const winningCombos = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
         ]
@@ -32,24 +43,6 @@ export default function TicTacToe() {
         if (!cells.includes("")) {
             setWinningMessage("no winner")
         }
-    }
-
-    const handleClick = (index) => {
-        if (winningMessage === undefined) {
-            cells[index] = go
-            setCells(cells)
-            if (go === "cross") {
-                setGo("circle")
-            } else {
-                setGo("cross")
-            }
-            checkScore()
-        }
-    }
-
-
-    useEffect(() => {
-        checkScore()
     }, [cells])
 
     return (
