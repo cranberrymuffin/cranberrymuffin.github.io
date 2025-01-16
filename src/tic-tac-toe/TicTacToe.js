@@ -27,6 +27,10 @@ export default function TicTacToe() {
                 return
             }
         })
+        
+        if(!cells.includes("")) {
+            setWinningMessage("no winner")
+        }
     }
 
     useEffect(() => {
