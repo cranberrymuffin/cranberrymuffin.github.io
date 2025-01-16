@@ -39,7 +39,7 @@ export default function GameIntro() {
             </div>
         </div>)
     } else if (gameType === 1) {
-        return <TicTacToe />
+        return <TicTacToe turn={0}/>
     } else if (gameType === 2) {
         if (isHost === undefined) {
             return (<div id="intro" className="container">
