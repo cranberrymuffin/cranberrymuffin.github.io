@@ -5,16 +5,24 @@ const winningCombos = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
 ]
 const EMPTY = ""
-export default function TicTacToe() {
+export default function TicTacToe(props) {
     const [board, setBoard] = useState([EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY])
     const [winningMessage, setWinningMessage] = useState(null)
     const [turn, setTurn] = useState(0)
+
+    useEffect(() => {
+        props.conn?.on("data", (data) => {
+            setBoard(data)
+            setTurn(turn + 1)
+        })
+    }, [])
 
     const handleClick = (index) => {
         if (winningMessage === null && board[index] === EMPTY && turn % 2 === 0) {
             board[index] = "circle"
             setBoard(board)
             setTurn(turn + 1)
+            props.conn?.send(board)
         }
     }
 
@@ -74,7 +82,7 @@ export default function TicTacToe() {
             setWinningMessage("no winner")
             gameOver=true
         }
-        if (!gameOver && turn % 2 === 1) {
+        if (!gameOver && !props.conn && turn % 2 === 1) {
             computerTurn()
         }
     }, [turn])
