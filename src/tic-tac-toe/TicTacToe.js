@@ -75,7 +75,7 @@ export default function TicTacToe() {
     }, [turn])
 
     useEffect(() => {
-        if (turn % 2 === 1) {
+        if (winningMessage === null && turn % 2 === 1) {
             computerTurn()
         }
     }, [turn])
