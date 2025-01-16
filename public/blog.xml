@@ -1,20 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 
-<channel>
-  <title>cranberrymuffin</title>
-  <link>https://cranberrymuffin.github.io/</link>
-  <description>tech blog and playground</description>
-  <category>software</category>
-  <image>
-    <url>https://cranberrymuffin.github.io/cranberrymuffin.png</url>
+  <channel>
     <title>cranberrymuffin</title>
     <link>https://cranberrymuffin.github.io/</link>
-  </image>
-  <copyright>2025 cranberrymuffin. All rights reserved.</copyright>
-  <language>en-us</language>
+    <description>tech blog and playground</description>
+    <category>software</category>
+    <image>
+      <url>https://cranberrymuffin.github.io/cranberrymuffin.png</url>
+      <title>cranberrymuffin</title>
+      <link>https://cranberrymuffin.github.io/</link>
+    </image>
+    <copyright>2025 cranberrymuffin. All rights reserved.</copyright>
+    <language>en-us</language>
 
-  <!-- Stories here -->
-</channel>
-
+    <!-- Stories here -->
+  </channel>
+  <item>
+    <title>hello world</title>
+    <link>https://cranberrymuffin.github.io/helloworld.html</link>
+    <description>my first rss story</description>
+  </item>
 </rss>
