@@ -71,7 +71,7 @@ export default function GameIntro() {
                 </div>
             </div>)
         } else if(conn) {
-            return <TicTacToe conn={conn} />
+            return <TicTacToe conn={conn} turn={isHost ? 0 : 1} />
         }
     }
 }

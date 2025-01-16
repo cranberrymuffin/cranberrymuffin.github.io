@@ -13,15 +13,15 @@ export default function TicTacToe(props) {
     useEffect(() => {
         props.conn?.on("data", (data) => {
             setBoard(data)
-            setTurn(turn + 1)
+            setTurn(data.filter(val => val !== EMPTY).length)
         })
     }, [])
 
     const handleClick = (index) => {
-        if (winningMessage === null && board[index] === EMPTY && turn % 2 === 0) {
-            board[index] = "circle"
+        if (winningMessage === null && board[index] === EMPTY && turn % 2 === props.turn) {
+            board[index] = turn % 2 === 0 ? "circle" : "cross"
+            setTurn(board.filter(val => val !== EMPTY).length)
             setBoard(board)
-            setTurn(turn + 1)
             props.conn?.send(board)
         }
     }
