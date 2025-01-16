@@ -9,6 +9,3 @@ export default function App() {
         <Route path="/tic-tac-toe" element ={TicTacToe()} />
     </Routes>;
 }
-
-// Render updates for free
-// Camera positioning and intrinsics for free
