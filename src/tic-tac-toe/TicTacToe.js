@@ -11,7 +11,6 @@ export default function TicTacToe() {
     const [turn, setTurn] = useState(0)
 
     const handleClick = (index) => {
-        console.log(turn)
         if (winningMessage === null && cells[index] === EMPTY && turn % 2 === 0) {
             cells[index] = "circle"
             setCells(cells)
@@ -88,7 +87,7 @@ export default function TicTacToe() {
             <div id="opponent"></div>
             <h1 id="info">{winningMessage}</h1>
             <div id="game" className="game">
-                {cells.map((square, index) => <Square key={index} data={cells[index]} handleClick={() => handleClick(index)} />)}
+                {cells.map((_, index) => <Square key={index} data={cells[index]} handleClick={() => handleClick(index)} />)}
             </div>
         </div>
     );
