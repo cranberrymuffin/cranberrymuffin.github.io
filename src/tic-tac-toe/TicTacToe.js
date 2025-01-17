@@ -13,7 +13,6 @@ export default function TicTacToe(props) {
     useEffect(() => {
         props.conn?.on("data", (data) => {
             setBoard(data)
-            console.log(data)
             const nextTurn = data.filter(val => val !== EMPTY).length
             setTurn(nextTurn)
             if (nextTurn === 0) {

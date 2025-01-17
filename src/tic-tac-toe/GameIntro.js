@@ -25,7 +25,6 @@ export default function GameIntro() {
         conn?.on("open", () => {
             setConn(conn)
         })
-        console.log('todo')
     }
 
     if (gameType === undefined) {
