@@ -13,9 +13,24 @@ export default function TicTacToe(props) {
     useEffect(() => {
         props.conn?.on("data", (data) => {
             setBoard(data)
-            setTurn(data.filter(val => val !== EMPTY).length)
+            console.log(data)
+            const nextTurn = data.filter(val => val !== EMPTY).length
+            setTurn(nextTurn)
+            if (nextTurn === 0) {
+                setWinningMessage(null)
+            }
         })
     }, [])
+
+    const resetGame = () => {
+        if (winningMessage !== null) {
+            const nextBoard = [EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]
+            setBoard(nextBoard)
+            setTurn(0)
+            setWinningMessage(null)
+            props.conn?.send(nextBoard)
+        }
+    }
 
     const handleClick = (index) => {
         if (winningMessage === null && board[index] === EMPTY && turn % 2 === props.turn) {
@@ -63,24 +78,24 @@ export default function TicTacToe(props) {
     }
 
     useEffect(() => {
-        let gameOver=false;
+        let gameOver = false;
         winningCombos.forEach(array => {
             let circleWins = array.every(cell => board[cell] === "circle")
             if (circleWins) {
                 setWinningMessage("circle wins!")
-                gameOver=true
+                gameOver = true
             }
         })
         winningCombos.forEach(array => {
             let crossWins = array.every(cell => board[cell] === "cross")
             if (crossWins) {
                 setWinningMessage("cross wins!")
-                gameOver=true
+                gameOver = true
             }
         })
         if (!board.includes(EMPTY)) {
             setWinningMessage("no winner")
-            gameOver=true
+            gameOver = true
         }
         if (!gameOver && !props.conn && turn % 2 === 1) {
             computerTurn()
@@ -95,6 +110,7 @@ export default function TicTacToe(props) {
             <div id="game" className="game">
                 {board.map((_, index) => <Square key={index} data={board[index]} handleClick={() => handleClick(index)} />)}
             </div>
+            <button onClick={resetGame}>play again</button>
         </div>
     );
 }
