@@ -27,7 +27,7 @@ export default function Experience() {
             <Center position-z={-5} top>
                 <RigidBody type="fixed">
                     <Text3D font="./fonts/Bartex_Regular.json">
-                        cranberrymuffin
+                        CranberryMuffin
                         <meshMatcapMaterial matcap={matCapTexture} />
                     </Text3D>
                 </RigidBody>
@@ -39,7 +39,7 @@ export default function Experience() {
                 </mesh>
             </RigidBody>
 
-            {Array.from({ length: 50 }).map((_, index) => {
+            {Array.from({ length: 10 }).map((_, index) => {
                 return (<RigidBody key={'muffin-' + index} >
                     <Muffin position={generateRandomMuffinPosition(camera, index)} />
                 </RigidBody>);
