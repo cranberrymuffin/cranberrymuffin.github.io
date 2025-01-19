@@ -12,7 +12,7 @@ const generateRandomMuffinPosition = (camera, i) => {
     const width = height * aspect; // Frustum width at depth
 
     const x = (Math.random() - 0.5) * width; // Random X coordinate
-    const y = height + (5 + i); // Random Y coordinate
+    const y = height + (5 + i);
     return [x, y, -depth]; // Negative depth for forward in camera space
 };
 
@@ -24,7 +24,7 @@ export default function Experience() {
         <directionalLight castShadow position={[13, 2, 3]} intensity={4.5} />
         <ambientLight intensity={1.5} />
         <Physics>
-            <Center position-z={-5} top left>
+            <Center position-z={-5} top>
                 <RigidBody type="fixed">
                     <Text3D font="./fonts/Bartex_Regular.json">
                         cranberrymuffin
