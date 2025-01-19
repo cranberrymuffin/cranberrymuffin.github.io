@@ -1,5 +1,4 @@
 import { Text3D, OrbitControls, Center, useMatcapTexture } from '@react-three/drei';
-import { Perf } from 'r3f-perf'
 import { Physics, RigidBody } from '@react-three/rapier'
 import { useRef } from 'react'
 import Muffin from './muffin';
@@ -30,8 +29,6 @@ export default function Experience() {
 
     return (<>
         <OrbitControls />
-        <Perf position="top-left" />
-
         <directionalLight castShadow position={[13, 2, 3]} intensity={4.5} />
         <ambientLight intensity={1.5} />
         <Physics>
