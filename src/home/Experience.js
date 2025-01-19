@@ -2,7 +2,7 @@ import { Text3D, Center, useMatcapTexture } from '@react-three/drei';
 import { Physics, RigidBody } from '@react-three/rapier'
 import Muffin from './muffin';
 import { useThree } from '@react-three/fiber';
-const generateRandomMuffinPosition = (camera) => {
+const generateRandomMuffinPosition = (camera, i) => {
 
     const depth = 5
 
@@ -12,7 +12,7 @@ const generateRandomMuffinPosition = (camera) => {
     const width = height * aspect; // Frustum width at depth
 
     const x = (Math.random() - 0.5) * width; // Random X coordinate
-    const y = (Math.random()) * height + 5; // Random Y coordinate
+    const y = height + (5 + i); // Random Y coordinate
     return [x, y, -depth]; // Negative depth for forward in camera space
 };
 
@@ -24,7 +24,7 @@ export default function Experience() {
         <directionalLight castShadow position={[13, 2, 3]} intensity={4.5} />
         <ambientLight intensity={1.5} />
         <Physics>
-            <Center position-z={-5} top>
+            <Center position-z={-5} top left>
                 <RigidBody type="fixed">
                     <Text3D font="./fonts/Bartex_Regular.json">
                         cranberrymuffin
@@ -39,9 +39,9 @@ export default function Experience() {
                 </mesh>
             </RigidBody>
 
-            {Array.from({ length: 5 }).map((_, index) => {
+            {Array.from({ length: 50 }).map((_, index) => {
                 return (<RigidBody key={'muffin-' + index} >
-                    <Muffin position={generateRandomMuffinPosition(camera)} />
+                    <Muffin position={generateRandomMuffinPosition(camera, index)} />
                 </RigidBody>);
             })}
         </Physics>
