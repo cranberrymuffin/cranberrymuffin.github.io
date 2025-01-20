@@ -20,6 +20,8 @@ export default function Experience() {
     const [matCapTexture] = useMatcapTexture('89204B_17080D_DA4377_F780B5', 256)
     const { camera } = useThree();
 
+    const positions = Array.from({ length: 5 }).map((_, index) => generateRandomMuffinPosition(camera, index) )
+
     return (<>
         <directionalLight castShadow position={[13, 2, 3]} intensity={4.5} />
         <ambientLight intensity={1.5} />
@@ -39,9 +41,9 @@ export default function Experience() {
                 </mesh>
             </RigidBody>
 
-            {Array.from({ length: 5 }).map((_, index) => {
+            {positions.map((pos, index) => {
                 return (<RigidBody key={'muffin-' + index} >
-                    <Muffin position={generateRandomMuffinPosition(camera, index)} />
+                    <Muffin position={pos} />
                 </RigidBody>);
             })}
         </Physics>
