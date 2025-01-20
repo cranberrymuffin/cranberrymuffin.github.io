@@ -2,30 +2,43 @@ import './tic-tac-toe.css';
 import { useState, useEffect } from 'react';
 import TicTacToe from './TicTacToe';
 import Peer from 'peerjs';
+import { useParams } from 'react-router-dom';
 export default function GameIntro() {
+    const { shareCode } = useParams();
+
+
 
     const [gameType, setGameType] = useState(undefined);
     const [isHost, setIsHost] = useState(undefined)
     const [peer, setPeer] = useState(undefined)
     const [code, setCode] = useState(undefined)
-    const [joinCode, setJoinCode] = useState(undefined)
     const [conn, setConn] = useState(undefined)
-    
+
+
+    useEffect(() => {
+        if (shareCode !== undefined) {
+            setGameType(2)
+            setIsHost(false)
+            if (peer === undefined) {
+                setPeer(new Peer())
+            }
+        }
+    }, [])
+
     useEffect(() => {
         peer?.on('open', () => {
             setCode(peer.id)
+            if (shareCode !== undefined && conn === undefined) {
+                const conn = peer?.connect(shareCode)
+                conn?.on("open", () => {
+                    setConn(conn)
+                })
+            }
         })
         peer?.on('connection', (conn) => {
             setConn(conn)
         })
     }, [peer])
-
-    const join = () => {
-        const conn = peer?.connect(joinCode)
-        conn?.on("open", () => {
-            setConn(conn)
-        })
-    }
 
     if (gameType === undefined) {
         return (<div id="intro" className="container">
@@ -33,43 +46,32 @@ export default function GameIntro() {
                 <h1>Play tic-tac-toe</h1>
                 <div id="options">
                     <button onClick={() => { setGameType(1) }}> against the computer </button>
-                    <button onClick={() => { setGameType(2); setPeer(new Peer()) }}> against a friend </button>
+                    <button onClick={() => { setGameType(2); setPeer(new Peer()); setIsHost(true); }}> host game </button>
                 </div>
             </div>
         </div>)
     } else if (gameType === 1) {
-        return <TicTacToe turn={0}/>
+        return <TicTacToe turn={0} />
     } else if (gameType === 2) {
-        if (isHost === undefined) {
+        if (isHost && !conn) {
             return (<div id="intro" className="container">
                 <div className="container">
                     <h1>Play tic-tac-toe</h1>
                     <div id="options">
-                        <button onClick={() => { setIsHost(true) }}> host new game </button>
-                        <button onClick={() => { setIsHost(false) }}> play against a friend </button>
+                        {code === undefined ? "connecting" : <button onClick={() => {
+                            navigator.clipboard.writeText("cranberrymuffin.github.io/#/tic-tac-toe/" + code)
+                        }}>copy share code</button>}
                     </div>
                 </div>
             </div>)
-        } else if (isHost && !conn) {
+        } else if (!isHost && !conn) {
             return (<div id="intro" className="container">
                 <div className="container">
                     <h1>Play tic-tac-toe</h1>
-                    <div id="options">
-                        {code}
-                    </div>
+                    connecting...
                 </div>
             </div>)
-        } else if(!isHost && !conn) {
-            return (<div id="intro" className="container">
-                <div className="container">
-                    <h1>Play tic-tac-toe</h1>
-                    <div id="options">
-                        <input onChange={(e) => setJoinCode(e.target.value)}/>
-                        <button onClick={join}> join </button>
-                    </div>
-                </div>
-            </div>)
-        } else if(conn) {
+        } else if (conn) {
             return <TicTacToe conn={conn} turn={isHost ? 0 : 1} />
         }
     }

@@ -19,6 +19,9 @@ export default function TicTacToe(props) {
                 setWinningMessage(null)
             }
         })
+        props.conn?.on("open", () => {
+            props.conn?.send(board)
+        })
     }, [])
 
     const resetGame = () => {
