@@ -6,9 +6,9 @@ import Home from "./home/Home";
 
 export default function App() {
     return <Routes>
-        <Route path="/" element={Home()} />
-        <Route path="/resume" element ={Resume()} />
-        <Route path="/tic-tac-toe" element ={GameIntro()} />
-        <Route path="/snowstorm" element={Snowstorm()} />
+        <Route path="/" element={<Home />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/tic-tac-toe" element={<GameIntro />} />
+        <Route path="/snowstorm" element={<Snowstorm />} />
     </Routes>;
 }
