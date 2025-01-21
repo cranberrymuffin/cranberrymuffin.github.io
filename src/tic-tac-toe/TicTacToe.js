@@ -8,13 +8,14 @@ const EMPTY = ""
 export const initialBoard = () => [EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]
 
 export default function TicTacToe(props) {
-    const [board, setBoard] = useState(initialBoard)
+    const [board, setBoard] = useState(initialBoard())
     const [winningMessage, setWinningMessage] = useState(null)
     const [turn, setTurn] = useState(0)
 
     useEffect(() => {
         props.conn?.on("data", (data) => {
-            setBoard(structuredClone(data))
+            console.log(data)
+            setBoard(data)
         })
         props.conn?.on("open", () => {
             props.conn?.send(board)
@@ -31,9 +32,9 @@ export default function TicTacToe(props) {
 
     const resetGame = () => {
         if (winningMessage !== null) {
-            setBoard(initialBoard)
+            setBoard(initialBoard())
             setWinningMessage(null)
-            props.conn?.send(board)
+            props.conn?.send(initialBoard())
         }
     }
 

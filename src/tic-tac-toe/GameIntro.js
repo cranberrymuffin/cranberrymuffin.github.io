@@ -77,7 +77,7 @@ export default function GameIntro() {
                 </div>
             </div>)
         } else if (conn) {
-            return <TicTacToe conn={conn} turn={isHost ? 0 : 1} />
+            return <TicTacToe conn={conn} peer={peer} turn={isHost ? 0 : 1} />
         }
     }
 }
