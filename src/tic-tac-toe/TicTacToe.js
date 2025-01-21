@@ -5,7 +5,7 @@ const winningCombos = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
 ]
 const EMPTY = ""
-const initialBoard = [EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]
+export const initialBoard = () => [EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]
 
 export default function TicTacToe(props) {
     const [board, setBoard] = useState(initialBoard)
@@ -14,11 +14,7 @@ export default function TicTacToe(props) {
 
     useEffect(() => {
         props.conn?.on("data", (data) => {
-            data = setBoard(structuredClone(data))
-            const nextTurn = data.filter(val => val !== EMPTY).length
-            if (nextTurn === 0) {
-                setWinningMessage(null)
-            }
+            setBoard(structuredClone(data))
         })
         props.conn?.on("open", () => {
             props.conn?.send(board)
@@ -26,22 +22,26 @@ export default function TicTacToe(props) {
     }, [])
 
     useEffect(() => {
-        props.conn?.send(board)
-        setTurn(board.filter(val => val !== EMPTY).length)
-        console.log(board)
-    }, [board, props.conn])
+        const nextTurn = board.filter(val => val !== EMPTY).length
+        if (nextTurn === 0) {
+            setWinningMessage(null)
+        }
+        setTurn(nextTurn)
+    }, [board])
 
     const resetGame = () => {
         if (winningMessage !== null) {
-            setBoard(structuredClone(initialBoard))
+            setBoard(initialBoard)
             setWinningMessage(null)
+            props.conn?.send(board)
         }
     }
 
     const handleClick = (index) => {
-        if (winningMessage === null && turn % 2 === props.turn) {
+        if (winningMessage === null && turn % 2 === props.turn && board[index] === EMPTY) {
             board[index] = turn % 2 === 0 ? "circle" : "cross"
             setBoard(structuredClone(board))
+            props.conn?.send(board)
         }
     }
 
@@ -81,17 +81,18 @@ export default function TicTacToe(props) {
     useEffect(() => {
         let gameOver = false;
 
-        winningCombos.forEach(array => {
-            let circleWins = array.every(cell => board[cell] === "circle")
-            let crossWins = array.every(cell => board[cell] === "cross")
+        winningCombos.forEach(combo => {
+            let circleWins = combo.every(cell => board[cell] === "circle")
+            let crossWins = combo.every(cell => board[cell] === "cross")
 
             if (circleWins) {
                 setWinningMessage("circle wins!")
                 gameOver = true
-            }
-            if (crossWins) {
+                return
+            } else if (crossWins) {
                 setWinningMessage("cross wins!")
                 gameOver = true
+                return
             }
         })
 

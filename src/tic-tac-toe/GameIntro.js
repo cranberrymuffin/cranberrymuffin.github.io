@@ -1,6 +1,6 @@
 import './tic-tac-toe.css';
 import { useState, useEffect } from 'react';
-import TicTacToe from './TicTacToe';
+import TicTacToe, { initialBoard } from './TicTacToe';
 import Peer from 'peerjs';
 import { useParams } from 'react-router-dom';
 export default function GameIntro() {
@@ -33,9 +33,8 @@ export default function GameIntro() {
             }
         })
         peer?.on('connection', (conn) => {
-            console.log("hello")
             setConn(conn)
-            conn.send(["", "", "", "", "", "", "", "", ""])
+            conn.send(initialBoard)
         })
     }, [peer])
 
