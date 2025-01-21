@@ -6,14 +6,11 @@ import { useParams } from 'react-router-dom';
 export default function GameIntro() {
     const { shareCode } = useParams();
 
-
-
     const [gameType, setGameType] = useState(undefined);
     const [isHost, setIsHost] = useState(undefined)
     const [peer, setPeer] = useState(undefined)
     const [code, setCode] = useState(undefined)
     const [conn, setConn] = useState(undefined)
-
 
     useEffect(() => {
         if (shareCode !== undefined) {
@@ -36,7 +33,9 @@ export default function GameIntro() {
             }
         })
         peer?.on('connection', (conn) => {
+            console.log("hello")
             setConn(conn)
+            conn.send(["", "", "", "", "", "", "", "", ""])
         })
     }, [peer])
 
@@ -59,8 +58,15 @@ export default function GameIntro() {
                     <h1>Play tic-tac-toe</h1>
                     <div id="options">
                         {code === undefined ? "connecting" : <button onClick={() => {
+                            if (navigator.share) {
+                                navigator.share({
+                                    title: 'Share Tic-Tac-Toe Game Code',
+                                    url: "cranberrymuffin.github.io/#/tic-tac-toe/" + code
+                                }).catch(console.error);
+                            }
                             navigator.clipboard.writeText("cranberrymuffin.github.io/#/tic-tac-toe/" + code)
-                        }}>copy share code</button>}
+                            
+                        }}> share code</button>}
                     </div>
                 </div>
             </div>)
