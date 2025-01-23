@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
+import { usePointsStore } from './Snowstorm';
 
 const generateRandomSnowmanPosition = (camera) => {
 
@@ -18,6 +19,9 @@ const generateRandomSnowmanPosition = (camera) => {
   };
 
 function Snowman(props) {
+  const increasePoints = usePointsStore((state) => state.increasePoints)
+  const decreasePoints = usePointsStore((state) => state.decreasePoints)
+
     const { camera } = useThree();
 
   const groupRef = React.useRef();
@@ -38,7 +42,12 @@ function Snowman(props) {
   return (
     <group ref={groupRef} onClick={(event) => {
       groupRef.current.visible = false
-      event.stopPropogation()
+      event.stopPropagation()
+      if(props.evil) {
+        increasePoints()
+      } else {
+        decreasePoints()
+      }
     }
     } scale={[0.25,0.25,0.25]} position={generateRandomSnowmanPosition(camera)}>
       {/* Bottom sphere */}

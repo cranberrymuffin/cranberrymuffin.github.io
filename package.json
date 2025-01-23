@@ -6,13 +6,15 @@
   "dependencies": {
     "@react-three/drei": "9.108",
     "@react-three/fiber": "8.16",
+    "@react-three/rapier": "^1.5.0",
     "cra-template": "1.2.0",
     "peerjs": "^1.5.4",
     "react": "18.3",
     "react-dom": "18.3",
     "react-router-dom": "^7.1.1",
     "react-scripts": "^5.0.1",
-    "three": "^0.166.1"
+    "three": "^0.166.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "4.3",
