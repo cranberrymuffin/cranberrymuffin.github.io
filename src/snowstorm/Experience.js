@@ -1,6 +1,6 @@
 import { useLoader, useFrame, useThree } from '@react-three/fiber'
 import { TextureLoader } from 'three'
-import { useRef } from 'react'
+import { memo, useRef } from 'react'
 import Snowman from './Snowman';
 
 function generateRandomPointInSphere(radius) {
@@ -19,7 +19,7 @@ function generateRandomPointInSphere(radius) {
     return [x, y, z];
 }
 
-export default function Experience() {
+const Experience = memo(function Experience(props) {
     useThree(({ camera }) => {
         camera.position.x = 0
         camera.position.y = 0
@@ -44,6 +44,8 @@ export default function Experience() {
         positions[i + 1] = point[1]
         positions[i + 2] = point[2]
     }
+        console.log("rerender")
+    
     
     return <group>
         <points ref={snow}>
@@ -58,11 +60,13 @@ export default function Experience() {
             <pointsMaterial size={0.1} sizeAttenuation={true} alphaMap={colorMap} transparent={true} depthWrite={false} />
         </points>
         {[...Array(100)].map((x, i) => 
-            <Snowman key={"evil-snowman-"+i} evil={true}/>
+            <Snowman key={"evil-snowman-"+i} evil={true} increasePoints = { props.increasePoints}/>
         )}
         {[...Array(100)].map((x, i) => 
-            <Snowman key={"good-snowman-"+i} evil={false}/>
+            <Snowman key={"good-snowman-"+i} evil={false} decreasePoints = {props.decreasePoints}/>
         )}
         <ambientLight intensity={2} />
     </group>
-}
+})
+
+export default Experience;

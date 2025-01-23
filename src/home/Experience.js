@@ -2,16 +2,14 @@ import { Text3D, Center, useMatcapTexture } from '@react-three/drei';
 import { Physics, RigidBody } from '@react-three/rapier'
 import Muffin from './muffin';
 import { useThree } from '@react-three/fiber';
-const generateRandomMuffinPosition = (camera, i) => {
+const generateMuffinPosition = (camera, i) => {
 
     const depth = 5
 
-    const aspect = camera.aspect;
     const vFOV = (camera.fov * Math.PI) / 180; // Convert FOV to radians
     const height = 2 * Math.tan(vFOV / 2) * depth; // Frustum height at depth
-    const width = height * aspect; // Frustum width at depth
 
-    const x = (Math.random() - 0.5) * width; // Random X coordinate
+    const x = (i);
     const y = height + (5 + i);
     return [x, y, -depth]; // Negative depth for forward in camera space
 };
@@ -20,7 +18,7 @@ export default function Experience() {
     const [matCapTexture] = useMatcapTexture('89204B_17080D_DA4377_F780B5', 256)
     const { camera } = useThree();
 
-    const positions = Array.from({ length: 5 }).map((_, index) => generateRandomMuffinPosition(camera, index) )
+    const positions = Array.from({ length: 5 }).map((_, index) => generateMuffinPosition(camera, index) )
 
     return (<>
         <directionalLight castShadow position={[13, 2, 3]} intensity={4.5} />
