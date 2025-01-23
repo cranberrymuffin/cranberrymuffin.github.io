@@ -59,7 +59,7 @@ function Snowman(props) {
       {/* Middle sphere */}
       <mesh position={[0, 1.2, 0]}>
         <sphereGeometry args={[0.8, 32, 32]} />
-        <meshStandardMaterial color={props.evil ? "red" : "green"} />
+        <meshStandardMaterial color={props.evil ? "darkred" : "#8ACE00"} />
       </mesh>
 
       {/* Head */}

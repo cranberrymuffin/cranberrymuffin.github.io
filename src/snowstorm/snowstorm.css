@@ -22,8 +22,8 @@ code {
   z-index: -1;
 }
 
-#info {
-  background: rgb(53, 205, 219);
+#snowstorm-info {
+  background: #8ACE00;
 }
 
 #nav-element {
