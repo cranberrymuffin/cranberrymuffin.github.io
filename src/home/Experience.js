@@ -6,12 +6,10 @@ const generateRandomMuffinPosition = (camera, i) => {
 
     const depth = 5
 
-    const aspect = camera.aspect;
     const vFOV = (camera.fov * Math.PI) / 180; // Convert FOV to radians
     const height = 2 * Math.tan(vFOV / 2) * depth; // Frustum height at depth
-    const width = height * aspect; // Frustum width at depth
 
-    const x = Math.round((Math.random() - 0.5) * width); // Random X coordinate
+    const x = i; // Random X coordinate
     const y = height + (5 + i);
     return [x, y, -depth]; // Negative depth for forward in camera space
 };
