@@ -1,6 +1,6 @@
-import { Canvas } from '@react-three/fiber';
-import { BufferGeometry, Float32BufferAttribute, MeshNormalMaterial } from 'three';
-
+import { useFrame } from '@react-three/fiber';
+import { BufferGeometry, Float32BufferAttribute } from 'three';
+import { useRef } from 'react';
 // Custom heart geometry function
 function createHeartGeometry() {
     const geometry = new BufferGeometry();
@@ -49,9 +49,16 @@ function createHeartGeometry() {
 export default function Valentine(props) {
     const heartGeometry = createHeartGeometry()
 
+    const heartRef = useRef()
+
+    useFrame((_, delta) => 
+    {
+        heartRef.current.rotation.y -= delta
+    })
+
     return (
-        <mesh geometry={heartGeometry}>
-            <meshStandardMaterial color="#ff6699" metalness={0.5} roughness={0.4} />
+        <mesh ref = {heartRef} geometry={heartGeometry}>
+            <meshStandardMaterial color={props.color} metalness={0.5} roughness={0.4} />
         </mesh>
     );
 };
