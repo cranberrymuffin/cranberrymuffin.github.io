@@ -7,10 +7,10 @@ const useColorStore = create((set) => ({
     red: 224,
     green: 33,
     blue: 138,
-    setRed: (event) => set((state) => ({ red: event.target.value })),
-    setGreen: (event) => set((state) => ({ green: event.target.value })),
-    setBlue: (event) => set((state) => ({ blue: event.target.value })),
-  }))
+    setRed: (event) => set((_) => ({ red: event.target.value })),
+    setGreen: (event) => set((_) => ({ green: event.target.value })),
+    setBlue: (event) => set((_) => ({ blue: event.target.value })),
+}))
 
 export function ColorSettings() {
     const red = useColorStore((state) => state.red)
@@ -21,7 +21,7 @@ export function ColorSettings() {
     const setBlue = useColorStore((state) => state.setBlue)
 
     return (
-        <div id="color">
+        <div id="settings">
             <div id="header">Color</div>
             <div id="sliders">
                 <input id="red" value={red} onChange={setRed} key="red" type="range" min="0" max="255" />
@@ -36,7 +36,6 @@ export default function Valentines() {
     const red = useColorStore((state) => state.red)
     const green = useColorStore((state) => state.green)
     const blue = useColorStore((state) => state.blue)
-    console.log("rgb("+red+","+green+","+blue+")")
     return (
         <div>
             <ColorSettings />
@@ -46,7 +45,7 @@ export default function Valentines() {
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1} />
                     <directionalLight position={[-10, -10, -10]} intensity={0.5} />
-                    <Valentine color={"rgb("+red+","+green+","+blue+")"}/>
+                    <Valentine color={"rgb(" + red + "," + green + "," + blue + ")"}/>
                 </Canvas>
             </div>
         </div>)

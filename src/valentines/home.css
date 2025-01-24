@@ -55,8 +55,9 @@ code {
   color: purple;
 }
 
-#color {
-  position: absolute;
+#settings {
   padding: 5px;
   margin: 5px;
+  width: absolute;
+  position: absolute;
 }
