@@ -11,6 +11,6 @@ export default function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/tic-tac-toe/:shareCode?" element={<GameIntro />} />
         <Route path="/snowstorm" element={<Snowstorm />} />
-        <Route path="/valentines" element={<Valentines />} />
+        <Route path="/valentine" element={<Valentines />} />
     </Routes>;
 }
