@@ -20,7 +20,7 @@ function Points() {
 export default function Snowstorm() {
     return <div>
         <div id="snowstorm-info">Winter Assignment: Destroy all evil (red team) snowmen. Destroying good (green team) snowmen results in lost points.</div>
-        <Points/>
+        <Points />
         <div id="snowstorm">
             <Canvas>
                 <color attach="background" args={["black"]} />

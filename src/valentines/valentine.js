@@ -51,13 +51,12 @@ export default function Valentine(props) {
 
     const heartRef = useRef()
 
-    useFrame((_, delta) => 
-    {
+    useFrame((_, delta) => {
         heartRef.current.rotation.y -= delta
     })
 
     return (
-        <mesh ref = {heartRef} geometry={heartGeometry}>
+        <mesh ref={heartRef} geometry={heartGeometry}>
             <meshStandardMaterial color={props.color} metalness={0.5} roughness={0.4} />
         </mesh>
     );

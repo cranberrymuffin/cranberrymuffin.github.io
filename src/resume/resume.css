@@ -5,7 +5,7 @@
   max-width: 750px;
   margin: auto;
   z-index: 2;
-  overflow-y:auto
+  overflow-y: auto
 }
 
 .canvas {
@@ -45,8 +45,7 @@ h3 {
   width: 50%;
 }
 
-#main
-{
+#main {
   background: linear-gradient(#e66465, #9198e5);
   text-size-adjust: none;
   -webkit-text-size-adjust: none;

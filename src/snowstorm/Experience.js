@@ -29,7 +29,7 @@ export default function Experience() {
     const snow = useRef()
 
     useFrame((state, delta) => {
-         snow.current.rotation.x -= delta * 0.05
+        snow.current.rotation.x -= delta * 0.05
     })
 
     const colorMap = useLoader(TextureLoader, 'snowflake.png')
@@ -44,7 +44,7 @@ export default function Experience() {
         positions[i + 1] = point[1]
         positions[i + 2] = point[2]
     }
-    
+
     return <group>
         <points ref={snow}>
             <bufferGeometry >
@@ -57,11 +57,11 @@ export default function Experience() {
             </bufferGeometry>
             <pointsMaterial size={0.1} sizeAttenuation={true} alphaMap={colorMap} transparent={true} depthWrite={false} />
         </points>
-        {[...Array(100)].map((x, i) => 
-            <Snowman key={"evil-snowman-"+i} evil={true}/>
+        {[...Array(100)].map((x, i) =>
+            <Snowman key={"evil-snowman-" + i} evil={true} />
         )}
-        {[...Array(100)].map((x, i) => 
-            <Snowman key={"good-snowman-"+i} evil={false}/>
+        {[...Array(100)].map((x, i) =>
+            <Snowman key={"good-snowman-" + i} evil={false} />
         )}
         <ambientLight intensity={2} />
     </group>

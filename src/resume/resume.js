@@ -16,7 +16,7 @@ export default function Resume() {
     <p>
       Software Engineer with 5 years of experience with a background in
       mobile and web development. Seeking a (preferably) remote opportunity.
-      
+
       You can find my work on <a href="/">my website (cranberrymuffin.github.io)</a>.
     </p>
     <h2>Employment</h2>

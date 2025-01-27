@@ -18,7 +18,7 @@ export default function Experience() {
     const [matCapTexture] = useMatcapTexture('89204B_17080D_DA4377_F780B5', 256)
     const { camera } = useThree();
 
-    const positions = Array.from({ length: 5 }).map((_, index) => generateRandomMuffinPosition(camera, index) )
+    const positions = Array.from({ length: 5 }).map((_, index) => generateRandomMuffinPosition(camera, index))
 
     return (<>
         <directionalLight castShadow position={[13, 2, 3]} intensity={4.5} />

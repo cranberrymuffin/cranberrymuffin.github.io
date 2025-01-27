@@ -45,7 +45,7 @@ export default function Valentines() {
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1} />
                     <directionalLight position={[-10, -10, -10]} intensity={0.5} />
-                    <Valentine color={"rgb(" + red + "," + green + "," + blue + ")"}/>
+                    <Valentine color={"rgb(" + red + "," + green + "," + blue + ")"} />
                 </Canvas>
             </div>
         </div>)

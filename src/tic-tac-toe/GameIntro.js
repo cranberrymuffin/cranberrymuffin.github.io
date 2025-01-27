@@ -64,7 +64,7 @@ export default function GameIntro() {
                                 }).catch(console.error);
                             }
                             navigator.clipboard.writeText("cranberrymuffin.github.io/#/tic-tac-toe/" + code)
-                            
+
                         }}> share code</button>}
                     </div>
                 </div>
