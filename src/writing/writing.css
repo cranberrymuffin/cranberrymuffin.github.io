@@ -1,0 +1,19 @@
+#main
+{
+  background: linear-gradient(#e66465, #9198e5);
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  height: 100vh;
+
+}
+
+.writing {
+  box-sizing: content-box;
+  width: 80vw;
+  max-width: 750px;
+  margin: auto;
+  z-index: 2;
+  overflow-y:auto
+}
