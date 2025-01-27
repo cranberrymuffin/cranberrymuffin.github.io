@@ -9,6 +9,7 @@ export default function Home() {
                 <a id="nav-element" href="/#/snowstorm">snowstorm</a>
                 <a id="nav-element" href="/#/tic-tac-toe">tic-tac-toe</a>
                 <a id="nav-element" href="/#/valentine">valentine</a>
+                <a id="nav-element" href="/#/blog">writing</a>
             </div>
             <div id="home">
                 <Canvas>

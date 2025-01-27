@@ -4,8 +4,16 @@
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
-  height: 100vh;
+  height: 100vh
+}
 
+#blog {
+  background: linear-gradient(#e66465, #9198e5);
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  height: max-content
 }
 
 .writing {
