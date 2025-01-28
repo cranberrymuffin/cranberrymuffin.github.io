@@ -1,4 +1,3 @@
-import Snowstorm from '../snowstorm/Snowstorm';
 import './writing.css';
 
 export default function SnowstormBlogPost() {
@@ -96,8 +95,6 @@ function Snowman(props) {
       <h3>Movement</h3>
       Every frame, the snowman moves closer to the camera (or forward on the z-axis). In order to achieve this, we use React Three Fiber's useFrame hook to execute code before every rendered frame. The code we will execute is a function call to increment the snowman group's position forward on the z-axis.
       Once the snowman moves past the camera, its position is reset to a random point in the camera frustum.
-      <h3>Good vs. Evil</h3>
-      The snowmen are created with a React prop called "evil" which describes whether the snowman should be green or red. Red snowmen are evil. green snowmen are good.
       <h3>Destroying snowmen</h3>
       The onClick property of the snowman mesh makes snowmen invisible once triggered. Once they are invisible they are destroyed.
       <h2>Points</h2>
