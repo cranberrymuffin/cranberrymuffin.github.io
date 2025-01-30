@@ -5,7 +5,8 @@ export default function Writing() {
     <div id="writing" className='writing'>
       <h1> Writing </h1>
       <ul>
-        <li><a href="/#/blog/snowstorm">Snowstorm</a></li>
+        <li><a href="/#/blog/snowstorm">Snowstorm</a></li>        
+        <li><a href="/#/blog/valentine">Valentine</a></li>
       </ul>
     </div>
   </div>
