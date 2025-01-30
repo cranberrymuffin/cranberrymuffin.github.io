@@ -15,10 +15,15 @@
     <language>en-us</language>
 
     <!-- Stories here -->
+    <item>
+      <title>Snowstorm</title>
+      <link>https://cranberrymuffin.github.io/#/blog/snowstorm</link>
+      <description>Building Snowstorm: A Wintertime Web Game</description>
+    </item>
+    <item>
+      <title>Valentine</title>
+      <link>https://cranberrymuffin.github.io/#/blog/valentine</link>
+      <description>Building a 3D Heart with Math</description>
+    </item>
   </channel>
-  <item>
-    <title>hello world</title>
-    <link>https://cranberrymuffin.github.io/</link>
-    <description>my first rss story</description>
-  </item>
 </rss>
