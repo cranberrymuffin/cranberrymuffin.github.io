@@ -11,7 +11,7 @@ export default function ValentineBlogPost() {
         Shapes can be represented as equations in 3D space.
       </p>
       <h2>Implicit Equations</h2>
-      <p>An implicit equation is a mathematical equation that defines a relationship between variables without explicitly solving for one variable in terms of the others. Instead of expressing
+      <p>An implicit equation defines a relationship between variables without explicitly solving for one variable in terms of others. Instead of expressing
         y or
         z directly as a function of
         x, an implicit equation combines all variables into a single equation.</p>
@@ -20,7 +20,9 @@ export default function ValentineBlogPost() {
       </p>
       <h2>Parametric Equations</h2>
       <p>
-        A parametric define all coordinates of a surface as functions of an independent parameter. Instead of expressing one variable in terms of another, parametric equations define each variable as a function of one or more independent parameters.
+        A parametric equation expresses a set of variables as functions of one or more independent parameters, rather than directly relating them to each other. Essentially, you use an independent parameter (i.e.
+        t) to describe the values of multiple variables simultaneously, and each variable is a function of
+        t.
       </p>
       <p>
         A sphere can be represented by the parametric equation
