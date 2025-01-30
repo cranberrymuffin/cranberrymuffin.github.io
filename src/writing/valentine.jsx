@@ -20,7 +20,7 @@ export default function ValentineBlogPost() {
       </p>
       <h2>Parametric Equations</h2>
       <p>
-        A parametric equation expresses a set of variables as functions of one or more independent parameters, rather than directly relating them to each other. Essentially, you use an independent parameter (i.e.
+        A parametric equation expresses each variable as functions of one or more independent parameters, rather than directly relating them to each other. Essentially, you use an independent parameter (i.e.
         t) to describe the values of multiple variables simultaneously, and each variable is a function of
         t.
       </p>
