@@ -7,14 +7,14 @@ export default function Writing() {
         <h1> Writing </h1>
         <ul>
           <li>
+            February 4, 2025:{" "}
+            <a href="/#/blog/tic-tac-toe">WebRTC Tic-Tac-Toe</a>
+          </li>
+          <li>
             January 30, 2025: <a href="/#/blog/valentine">Valentine</a>
           </li>
           <li>
             January 27, 2025: <a href="/#/blog/snowstorm">Snowstorm</a>
-          </li>
-          <li>
-            February 4, 2025:{" "}
-            <a href="/#/blog/tic-tac-toe">WebRTC Tic-Tac-Toe</a>
           </li>
         </ul>
       </div>
