@@ -16,6 +16,11 @@
 
     <!-- Stories here -->
     <item>
+      <title>WebRTC Tic-Tac-Toe</title>
+      <link>https://cranberrymuffin.github.io/#/blog/tic-tac-toe</link>
+      <description>WebRTC Tic-Tac-Toe</description>
+    </item>
+    <item>
       <title>Snowstorm</title>
       <link>https://cranberrymuffin.github.io/#/blog/snowstorm</link>
       <description>Building Snowstorm: A Wintertime Web Game</description>
