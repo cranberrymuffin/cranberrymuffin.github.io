@@ -7,6 +7,10 @@ export default function Writing() {
         <h1> Writing </h1>
         <ul>
           <li>
+            February 11, 2025:{" "}
+            <a href="/#/blog/gemini-akinator">Gemini AI Akinator</a>
+          </li>
+          <li>
             February 4, 2025:{" "}
             <a href="/#/blog/tic-tac-toe">WebRTC Tic-Tac-Toe</a>
           </li>
