@@ -4,7 +4,10 @@ export default function GeminiAkinator() {
   return (
     <div id="blog" className="blog">
       <div id="writing" className="writing">
-        <h1>My Gemini AI Powered Akinator Game</h1>
+        <h1>
+          My Gemini AI Powered{" "}
+          <a href="https://akinator.rcdis.co/">Akinator Game</a>
+        </h1>
         <i>
           First published <time datetime="2025-02-11">Feb 11, 2025</time>.
         </i>
