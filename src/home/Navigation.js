@@ -23,19 +23,19 @@ export default function Navigation() {
           Resume
         </a>
         <a id="nav-element" href="/#/snowstorm">
-          snowstorm
+          Snowstorm
         </a>
         <a id="nav-element" href="/#/tic-tac-toe">
-          tic-tac-toe
+          Tic-Tac-Toe
         </a>
         <a id="nav-element" href="/#/valentine">
-          valentine
+          Valentine
         </a>
         <a id="nav-element" href="https://akinator.rcdis.co/">
-          gemini ai akinator
+          Gemini AI Akinator
         </a>
         <a id="nav-element" href="/#/blog">
-          writing
+          Writing
         </a>
       </div>
     </div>
