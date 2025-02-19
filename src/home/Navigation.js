@@ -34,6 +34,9 @@ export default function Navigation() {
         <a id="nav-element" href="https://akinator.rcdis.co/">
           Gemini AI Akinator
         </a>
+        <a id="nav-element" href="/ascii-art">
+          ASCII Art Generator
+        </a>
         <a id="nav-element" href="/#/blog">
           Writing
         </a>
