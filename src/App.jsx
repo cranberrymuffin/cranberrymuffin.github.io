@@ -7,6 +7,7 @@ import TicTacToeBlogPost from "./writing/tic-tac-toe";
 import SnowstormBlogPost from "./writing/snowstorm";
 import MuffinsBlogPost from "./writing/muffins";
 import GeminiAkinator from "./writing/gemini-akinator";
+import AsciiArtBlogPost from "./writing/ascii";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/blog/muffins" element={<MuffinsBlogPost />} />
       <Route path="/blog/Snowstorm" element={<SnowstormBlogPost />} />
       <Route path="/blog/gemini-akinator" element={<GeminiAkinator />} />
+      <Route path="/blog/ascii-art" element={<AsciiArtBlogPost />} />
     </Routes>
   );
 }
