@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Snowstorm from "./snowstorm/Snowstorm";
 import Resume from "./resume/resume";
-import GameIntro from "./tic-tac-toe/GameIntro";
 import Home from "./home/Home";
 import Valentines from "./valentines/Valentines";
 import Writing from "./writing/writing";
