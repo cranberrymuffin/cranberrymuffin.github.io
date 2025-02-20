@@ -25,7 +25,7 @@ export default function Navigation() {
         <a id="nav-element" href="/#/snowstorm">
           Snowstorm
         </a>
-        <a id="nav-element" href="/#/tic-tac-toe">
+        <a id="nav-element" href="/tic-tac-toe">
           Tic-Tac-Toe
         </a>
         <a id="nav-element" href="/#/valentine">
