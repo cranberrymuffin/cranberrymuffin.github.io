@@ -28,7 +28,7 @@ export default function Navigation() {
         <a id="nav-element" href="/tic-tac-toe">
           Tic-Tac-Toe
         </a>
-        <a id="nav-element" href="/#/valentine">
+        <a id="nav-element" href="/valentine">
           Valentine
         </a>
         <a id="nav-element" href="https://akinator.rcdis.co/">

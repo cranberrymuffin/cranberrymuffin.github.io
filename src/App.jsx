@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Resume from "./resume/resume";
 import Home from "./home/Home";
-import Valentines from "./valentines/Valentines";
 import Writing from "./writing/writing";
 import ValentineBlogPost from "./writing/valentine";
 import TicTacToeBlogPost from "./writing/tic-tac-toe";
@@ -14,7 +13,6 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/resume" element={<Resume />} />
-      <Route path="/valentine" element={<Valentines />} />
       <Route path="/blog" element={<Writing />} />
       <Route path="/blog/valentine" element={<ValentineBlogPost />} />
       <Route path="/blog/tic-tac-toe" element={<TicTacToeBlogPost />} />
