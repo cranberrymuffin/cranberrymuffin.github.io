@@ -4,8 +4,8 @@ import restart from "vite-plugin-restart";
 
 export default {
   root: "src/",
-  base: "/cranberrymuffin.github.io/",
   publicDir: "../public/",
+  base: "/",
   plugins: [
     // Restart server on static/public file change
     restart({ restart: ["../public/**"] }),
