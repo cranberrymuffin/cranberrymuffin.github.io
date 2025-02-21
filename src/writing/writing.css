@@ -4,7 +4,7 @@
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
-  height: 100vh
+  height: 100vh;
 }
 
 #blog {
@@ -13,7 +13,7 @@
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
-  height: max-content
+  height: max-content;
 }
 
 .writing {
@@ -22,5 +22,5 @@
   max-width: 750px;
   margin: auto;
   z-index: 2;
-  overflow-y: auto
+  overflow-y: auto;
 }

@@ -1,188 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- saved from url=(0035)http://localhost:5173/#/tic-tac-toe -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <script type="module">
-import RefreshRuntime from "/@react-refresh"
-RefreshRuntime.injectIntoGlobalHook(window)
-window.$RefreshReg$ = () => {}
-window.$RefreshSig$ = () => (type) => type
-window.__vite_plugin_react_preamble_installed__ = true
-</script>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="module">
+      import RefreshRuntime from "/@react-refresh";
+      RefreshRuntime.injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+      window.__vite_plugin_react_preamble_installed__ = true;
+    </script>
 
-  <script type="module" src="./cranberrymuffin_files/client"></script>
+    <script type="module" src="./cranberrymuffin_files/client"></script>
 
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cranberrymuffin</title>
-<style type="text/css" data-vite-dev-id="/Users/aparna/cranberrymuffin.github.io/src/snowstorm/snowstorm.css">body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    <style
+      type="text/css"
+      data-vite-dev-id="/Users/aparna/cranberrymuffin.github.io/src/snowstorm/snowstorm.css"
+    >
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+      code {
+        font-family:
+          source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+      }
 
-#snowstorm
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  overflow: hidden;
-}</style><style type="text/css" data-vite-dev-id="/Users/aparna/cranberrymuffin.github.io/src/resume/resume.css">.resume {
-  height: max-content;
-  box-sizing: content-box;
-  width: 80vw;
-  max-width: 750px;
-  margin: auto;
-  z-index: 2;
-  overflow-y:auto
-}
-
-.canvas {
-  position: absolute;
-  z-index: 1;
-}
-
-.business-card {
-  text-align: center
-}
-
-.row {
-  font-style: italic;
-}
-
-h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-ul {
-  margin-top: 0;
-}
-
-h3 {
-  margin-bottom: 0;
-}
-
-.date {
-  float: left;
-  text-align: right;
-  width: 50%;
-}
-
-.role {
-  float: left;
-  width: 50%;
-}
-
-#main
-{
-  background: linear-gradient(#e66465, #9198e5);
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-}</style><style type="text/css" data-vite-dev-id="/Users/aparna/cranberrymuffin.github.io/src/tic-tac-toe/tic-tac-toe.css">.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    height: 100%;
-    left: 0;
-    right: 0;
-    background: linear-gradient(#e66465, #9198e5);
-}
-
-.game {
-    height: 300px;
-    width: 300px;
-    border: solid 1px pink;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.square {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    box-sizing: border-box;
-    border: solid 1px pink;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    border: 15px solid pink;
-    box-sizing: border-box;
-}
-
-.cross {
-    height: 90px;
-    width: 90px;
-    position: relative;
-    transform: rotate(45deg);
-}
-
-.cross:before,
-.cross:after {
-    content: "";
-    position: absolute;
-    background-color: pink;
-}
-
-.cross:before {
-    left: 50%;
-    width: 20%;
-    height: 100%;
-    margin-left: -10%
-}
-
-.cross:after {
-    top: 50%;
-    height: 20%;
-    width: 100%;
-    margin-top: -10%;
-}</style></head>
-<body data-new-gr-c-s-check-loaded="14.1216.0" data-gr-ext-installed="">
-    <div id="root"><div class="container"><div id="you"></div><div id="opponent"></div><h1 id="info"></h1><div id="game" class="game"><div id="0" class="square"><div class="circle"></div></div><div id="1" class="square"></div><div id="2" class="square"></div><div id="3" class="square"></div><div id="4" class="square"></div><div id="5" class="square"></div><div id="6" class="square"></div><div id="7" class="square"></div><div id="8" class="square"><div class="cross"></div></div></div></div></div>
-    <script type="module" src="./cranberrymuffin_files/index.js"></script>
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
-      div.grammarly-desktop-integration {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
+      #snowstorm {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select:none;
-        user-select:none;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/Users/aparna/cranberrymuffin.github.io/src/resume/resume.css"
+    >
+      .resume {
+        height: max-content;
+        box-sizing: content-box;
+        width: 80vw;
+        max-width: 750px;
+        margin: auto;
+        z-index: 2;
+        overflow-y: auto;
       }
 
-      div.grammarly-desktop-integration:before {
-        content: attr(data-content);
+      .canvas {
+        position: absolute;
+        z-index: 1;
       }
-    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
+
+      .business-card {
+        text-align: center;
+      }
+
+      .row {
+        font-style: italic;
+      }
+
+      h4 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        margin-top: 0;
+      }
+
+      h3 {
+        margin-bottom: 0;
+      }
+
+      .date {
+        float: left;
+        text-align: right;
+        width: 50%;
+      }
+
+      .role {
+        float: left;
+        width: 50%;
+      }
+
+      #main {
+        background: linear-gradient(#e66465, #9198e5);
+        text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/Users/aparna/cranberrymuffin.github.io/src/tic-tac-toe/tic-tac-toe.css"
+    >
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(#e66465, #9198e5);
+      }
+
+      .game {
+        height: 300px;
+        width: 300px;
+        border: solid 1px pink;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        box-sizing: border-box;
+        border: solid 1px pink;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .circle {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        border: 15px solid pink;
+        box-sizing: border-box;
+      }
+
+      .cross {
+        height: 90px;
+        width: 90px;
+        position: relative;
+        transform: rotate(45deg);
+      }
+
+      .cross:before,
+      .cross:after {
+        content: "";
+        position: absolute;
+        background-color: pink;
+      }
+
+      .cross:before {
+        left: 50%;
+        width: 20%;
+        height: 100%;
+        margin-left: -10%;
+      }
+
+      .cross:after {
+        top: 50%;
+        height: 20%;
+        width: 100%;
+        margin-top: -10%;
+      }
+    </style>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1216.0" data-gr-ext-installed="">
+    <div id="root">
+      <div class="container">
+        <div id="you"></div>
+        <div id="opponent"></div>
+        <h1 id="info"></h1>
+        <div id="game" class="game">
+          <div id="0" class="square"><div class="circle"></div></div>
+          <div id="1" class="square"></div>
+          <div id="2" class="square"></div>
+          <div id="3" class="square"></div>
+          <div id="4" class="square"></div>
+          <div id="5" class="square"></div>
+          <div id="6" class="square"></div>
+          <div id="7" class="square"></div>
+          <div id="8" class="square"><div class="cross"></div></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./cranberrymuffin_files/index.js"></script>
+  </body>
+  <grammarly-desktop-integration data-grammarly-shadow-root="true"
+    ><template shadowrootmode="open"
+      ><style>
+        div.grammarly-desktop-integration {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        div.grammarly-desktop-integration:before {
+          content: attr(data-content);
+        }
+      </style>
+      <div
+        aria-label="grammarly-integration"
+        role="group"
+        tabindex="-1"
+        class="grammarly-desktop-integration"
+        data-content='{"mode":"full","isActive":true,"isUserDisabled":false}'
+      ></div></template
+  ></grammarly-desktop-integration>
+</html>

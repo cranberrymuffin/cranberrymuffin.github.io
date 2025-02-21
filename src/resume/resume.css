@@ -5,7 +5,7 @@
   max-width: 750px;
   margin: auto;
   z-index: 2;
-  overflow-y: auto
+  overflow-y: auto;
 }
 
 .canvas {
@@ -14,7 +14,7 @@
 }
 
 .business-card {
-  text-align: center
+  text-align: center;
 }
 
 .row {

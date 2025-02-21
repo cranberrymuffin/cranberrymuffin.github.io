@@ -5,7 +5,7 @@ export default function TicTacToeBlogPost() {
     <div id="blog" className="blog">
       <div id="writing" className="writing">
         <h1>
-          WebRTC multiplayer <a href="/#/tic-tac-toe">Tic-Tac-Toe</a>
+          WebRTC multiplayer <a href="/tic-tac-toe">Tic-Tac-Toe</a>
         </h1>
         <i>
           First published <time datetime="2025-01-30">Feb 4, 2025</time>.
@@ -15,7 +15,7 @@ export default function TicTacToeBlogPost() {
           without needing a backend server? Just two players connected directly
           through the magic of <strong>WebRTC</strong> and{" "}
           <strong>PeerJS</strong>. We are going to explore how this was
-          accomplished in <a href="/#/tic-tac-toe">Tic-Tac-Toe</a>.
+          accomplished in <a href="/tic-tac-toe">Tic-Tac-Toe</a>.
         </p>
 
         <h2>Peer-to-Peer: No Servers, No Problem</h2>
