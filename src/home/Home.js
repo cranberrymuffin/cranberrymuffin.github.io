@@ -10,7 +10,7 @@ export default function Home() {
       <Navigation /> {/* Use Navigation component */}
       <div id="home">
         <Canvas>
-          <color attach="background" args={['blue']} />
+          <color attach="background" args={['hotpink']} />
           <Experience />
         </Canvas>
       </div>
