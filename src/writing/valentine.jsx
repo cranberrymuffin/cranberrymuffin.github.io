@@ -1,4 +1,4 @@
-import "./writing.css";
+import './writing.css';
 
 export default function ValentineBlogPost() {
   return (
@@ -51,13 +51,13 @@ export default function ValentineBlogPost() {
         <h2> Equation of a Heart</h2>
         <ul>
           <li>
-            Implicit Equation:{" "}
+            Implicit Equation:{' '}
             <a href="https://mathworld.wolfram.com/HeartSurface.html">
-              Taubin's Heart{" "}
+              Taubin's Heart{' '}
             </a>
           </li>
           <li>
-            Parametric Equations:{" "}
+            Parametric Equations:{' '}
             <a href="https://math.stackexchange.com/questions/3416410/parametric-equation-for-taubin-heart-surface">
               Julia's Heart
             </a>
@@ -111,7 +111,7 @@ export default function ValentineBlogPost() {
         verticies.
         <pre>
           <code>
-            {" "}
+            {' '}
             {`
 // Custom heart geometry function
 function createHeartGeometry() {

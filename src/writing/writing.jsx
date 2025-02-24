@@ -1,4 +1,4 @@
-import "./writing.css";
+import './writing.css';
 
 export default function Writing() {
   return (
@@ -7,15 +7,15 @@ export default function Writing() {
         <h1> Writing </h1>
         <ul>
           <li>
-            February 20, 2025:{" "}
+            February 20, 2025:{' '}
             <a href="/#/blog/ascii-art">ASCII Art Generation</a>
           </li>
           <li>
-            February 11, 2025:{" "}
+            February 11, 2025:{' '}
             <a href="/#/blog/gemini-akinator">Gemini AI Akinator</a>
           </li>
           <li>
-            February 4, 2025:{" "}
+            February 4, 2025:{' '}
             <a href="/#/blog/tic-tac-toe">WebRTC Tic-Tac-Toe</a>
           </li>
           <li>

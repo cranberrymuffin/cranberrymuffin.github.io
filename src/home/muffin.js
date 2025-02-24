@@ -1,7 +1,7 @@
-import { Canvas } from "@react-three/fiber";
+import { Canvas } from '@react-three/fiber';
 
 // Function to generate random points on the surface of a half-sphere
-const getRandomPointOnHalfSphere = (radius) => {
+const getRandomPointOnHalfSphere = radius => {
   const u = Math.random(); // Random value for latitude
   const theta = Math.random() * Math.PI * 2; // Random value for longitude
 

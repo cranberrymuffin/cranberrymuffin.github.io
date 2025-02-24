@@ -1,11 +1,11 @@
-import "./writing.css";
+import './writing.css';
 
 export default function AsciiArtBlogPost() {
   return (
     <div id="blog" className="blog">
       <div id="writing" className="writing">
         <h1>
-          Transforming Images into{" "}
+          Transforming Images into{' '}
           <a href="https://cranberrymuffin.github.io/ascii-art/">ASCII Art</a>
         </h1>
         <i>
@@ -33,21 +33,21 @@ export default function AsciiArtBlogPost() {
               <b> Focus on the Subject: </b> By eliminating the background, the
               ASCII art focuses solely on the subject of the image. This allows
               the key details and features to stand out more clearly, creating a
-              more recognizable representation.{" "}
+              more recognizable representation.{' '}
             </li>
             <li>
               <b>Improved Contrast:</b> Backgrounds often consist of neutral
               colors or flat patterns that don’t contribute meaningfully to the
               structure of the image. When these are removed, the contrast
               between the subject and its surroundings becomes more defined,
-              making the ASCII art cleaner and easier to interpret.{" "}
+              making the ASCII art cleaner and easier to interpret.{' '}
             </li>
             <li>
               <b>Reduced Noise:</b> Sometimes the background includes random
               details, textures, or colors that can add "noise" to the ASCII
               art, making it more difficult to see the subject. By removing the
               background, only the important elements are left, leading to a
-              smoother and more aesthetically pleasing result.{" "}
+              smoother and more aesthetically pleasing result.{' '}
             </li>
           </ol>
           I used the <b>@imgly/background-removal</b> library to remove
@@ -64,7 +64,7 @@ export default function AsciiArtBlogPost() {
         </p>
         <ol>
           <li>
-            <strong>Create a Canvas:</strong> A new <code>&lt;canvas&gt;</code>{" "}
+            <strong>Create a Canvas:</strong> A new <code>&lt;canvas&gt;</code>{' '}
             element is created to draw the image and extract its pixel data.
           </li>
           <li>
@@ -78,7 +78,7 @@ export default function AsciiArtBlogPost() {
           <li>
             <strong>Identify Non-Transparent Pixels:</strong> The code loops
             through every pixel and checks the alpha channel (transparency). If
-            a pixel is not fully transparent (alpha {">"} 128), it updates the
+            a pixel is not fully transparent (alpha {'>'} 128), it updates the
             boundaries of the image’s content (top, bottom, left, and right).
           </li>
           <li>
@@ -109,9 +109,9 @@ export default function AsciiArtBlogPost() {
           ASCII art by mapping the brightness of pixels to ASCII characters.
           Brighter pixels are represented with lighter characters (e.g.,
           spaces), while darker pixels are depicted with denser characters
-          (e.g., `@` or `#`). The set of characters we mapped each pixel to is{" "}
+          (e.g., `@` or `#`). The set of characters we mapped each pixel to is{' '}
           <code>
-            {" "}
+            {' '}
             const asciiChars: string[] = [ '@', '%', '#', '*', '+', '=', '-',
             ':', '.', ' ', ];
           </code>
@@ -161,7 +161,7 @@ export default function AsciiArtBlogPost() {
         <p>
           This project was a fun and rewarding experience that combined my
           interest in image processing with web development. If you’re
-          interested in trying out this ASCII art tool, you can find it on{" "}
+          interested in trying out this ASCII art tool, you can find it on{' '}
           <a
             href="https://github.com/cranberrymuffin/ascii-art"
             target="_blank"

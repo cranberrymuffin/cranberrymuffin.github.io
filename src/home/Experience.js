@@ -1,7 +1,7 @@
-import { Text3D, Center, useMatcapTexture } from "@react-three/drei";
-import { Physics, RigidBody } from "@react-three/rapier";
-import Muffin from "./muffin";
-import { useThree } from "@react-three/fiber";
+import { Text3D, Center, useMatcapTexture } from '@react-three/drei';
+import { Physics, RigidBody } from '@react-three/rapier';
+import Muffin from './muffin';
+import { useThree } from '@react-three/fiber';
 const generateRandomMuffinPosition = (camera, i) => {
   const depth = 5;
 
@@ -14,7 +14,7 @@ const generateRandomMuffinPosition = (camera, i) => {
 };
 
 export default function Experience() {
-  const [matCapTexture] = useMatcapTexture("89204B_17080D_DA4377_F780B5", 256);
+  const [matCapTexture] = useMatcapTexture('89204B_17080D_DA4377_F780B5', 256);
   const { camera } = useThree();
 
   const positions = Array.from({ length: 5 }).map((_, index) =>
@@ -43,7 +43,7 @@ export default function Experience() {
 
         {positions.map((pos, index) => {
           return (
-            <RigidBody key={"muffin-" + index}>
+            <RigidBody key={'muffin-' + index}>
               <Muffin position={pos} />
             </RigidBody>
           );

@@ -1,4 +1,4 @@
-import "./writing.css";
+import './writing.css';
 
 export default function TicTacToeBlogPost() {
   return (
@@ -13,7 +13,7 @@ export default function TicTacToeBlogPost() {
         <p>
           What if you could play a game online with a friend, peer-to-peer,
           without needing a backend server? Just two players connected directly
-          through the magic of <strong>WebRTC</strong> and{" "}
+          through the magic of <strong>WebRTC</strong> and{' '}
           <strong>PeerJS</strong>. We are going to explore how this was
           accomplished in <a href="/tic-tac-toe">Tic-Tac-Toe</a>.
         </p>
@@ -45,9 +45,9 @@ export default function TicTacToeBlogPost() {
 
         <h2>PeerJS: Making WebRTC Easy</h2>
         <p>
-          WebRTC is great, but setting it up can be a headache. Enter{" "}
+          WebRTC is great, but setting it up can be a headache. Enter{' '}
           <strong>PeerJS</strong>, which simplifies everything. Instead of
-          dealing with connection details, PeerJS assigns each player a{" "}
+          dealing with connection details, PeerJS assigns each player a{' '}
           <strong>unique ID</strong>. One player shares their ID, the other
           connects, and boom—game on.
         </p>
@@ -55,7 +55,7 @@ export default function TicTacToeBlogPost() {
         <p>
           Each player needs to have an instance of <code>new Peer()</code> to
           participate in PeerJs backed WebRTC. The peer object takes some time
-          to be set up. So once a new Peer() is created, we must wait for the{" "}
+          to be set up. So once a new Peer() is created, we must wait for the{' '}
           <code>peer.on('open', ...</code>) event handler to be triggered in
           order to guarantee the Peer object has been competely set up.
         </p>
@@ -65,7 +65,7 @@ export default function TicTacToeBlogPost() {
           open Event Handler is triggered on the host peer, its code can be
           shared to a client to create a data channel. Once that data channel is
           created, the host peer's <code>peer.on('connection', ...)</code> event
-          handler is triggered. The event handler will pass a ready peer js{" "}
+          handler is triggered. The event handler will pass a ready peer js{' '}
           <code>DataConnection</code> object to the callback triggered. This
           DataConnection is a data channel to send and recieve messages to the
           connected client.
@@ -73,20 +73,20 @@ export default function TicTacToeBlogPost() {
         <h3>Step 3: Joining</h3>
         <p>
           The other player's <code>Peer</code> object will connect to a host
-          using the host's peer ID. This will be done via{" "}
+          using the host's peer ID. This will be done via{' '}
           <code> const conn = peer.connect(hostPeerId)</code>
-          conn in this code snippet is of type <code>DataConnection</code>. The{" "}
+          conn in this code snippet is of type <code>DataConnection</code>. The{' '}
           <code>DataConnection</code> takes some time to set up once
-          <code>connect</code> is called. We will listen to the{" "}
+          <code>connect</code> is called. We will listen to the{' '}
           <code>DataConnection</code>'s <code>conn.on("open", ...)</code> event
           handler to be triggered to ensure the DataConnection is done being set
           up.
         </p>
         <h3>Step 4: Sending and Recieving data</h3>
         <p>
-          Both the host and the client should subscribe to the{" "}
+          Both the host and the client should subscribe to the{' '}
           <code>conn.on("data", ...)</code> event handler. This event handler
-          will trigger a callback and pass data recieved via the{" "}
+          will trigger a callback and pass data recieved via the{' '}
           <code>DataConnection</code>. Both the host and the client can send
           data via <code>conn.send</code>
         </p>

@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import Resume from "./resume/resume";
-import Home from "./home/Home";
-import Writing from "./writing/writing";
-import ValentineBlogPost from "./writing/valentine";
-import TicTacToeBlogPost from "./writing/tic-tac-toe";
-import SnowstormBlogPost from "./writing/snowstorm";
-import MuffinsBlogPost from "./writing/muffins";
-import GeminiAkinator from "./writing/gemini-akinator";
-import AsciiArtBlogPost from "./writing/ascii";
+import { Routes, Route } from 'react-router-dom';
+import Resume from './resume/resume';
+import Home from './home/Home';
+import Writing from './writing/writing';
+import ValentineBlogPost from './writing/valentine';
+import TicTacToeBlogPost from './writing/tic-tac-toe';
+import SnowstormBlogPost from './writing/snowstorm';
+import MuffinsBlogPost from './writing/muffins';
+import GeminiAkinator from './writing/gemini-akinator';
+import AsciiArtBlogPost from './writing/ascii';
 
 export default function App() {
   return (

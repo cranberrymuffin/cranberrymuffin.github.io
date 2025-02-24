@@ -1,4 +1,4 @@
-import "./resume.css";
+import './resume.css';
 
 export default function Resume() {
   return (
@@ -18,7 +18,7 @@ export default function Resume() {
         <p>
           Software Engineer with 5 years of experience with a background in
           mobile and web development. Seeking a (preferably) remote opportunity.
-          You can find my work on{" "}
+          You can find my work on{' '}
           <a href="/">my website (cranberrymuffin.github.io)</a>.
         </p>
         <h2>Employment</h2>
@@ -122,7 +122,7 @@ export default function Resume() {
         </p>
         <h2> Education</h2>
         <p>
-          {" "}
+          {' '}
           University of Maryland, B.S. Computer Science, 2018
           <br />
           Brown University, M.S. Computer Science, 2022

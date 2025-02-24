@@ -1,11 +1,11 @@
-import "./writing.css";
+import './writing.css';
 
 export default function GeminiAkinator() {
   return (
     <div id="blog" className="blog">
       <div id="writing" className="writing">
         <h1>
-          My Gemini AI Powered{" "}
+          My Gemini AI Powered{' '}
           <a href="https://akinator.rcdis.co/">Akinator Game</a>
         </h1>
         <i>
@@ -25,16 +25,16 @@ export default function GeminiAkinator() {
           the app for production.
         </p>
         <p>
-          The <strong>Node.js</strong> backend, with the help of the{" "}
+          The <strong>Node.js</strong> backend, with the help of the{' '}
           <strong>Express</strong> framework, serves these static files. The
-          backend’s primary role is to handle communication with the{" "}
+          backend’s primary role is to handle communication with the{' '}
           <strong>Gemini AI API</strong>, acting as an intermediary to forward
           requests from the frontend to the API and sending the AI’s responses
           back to the frontend. The static React files are served by the backend
           via <code>node server.js</code>.
         </p>
         <p>
-          You can view the React app’s main component here:{" "}
+          You can view the React app’s main component here:{' '}
           <a
             href="https://github.com/cranberrymuffin/akinator-app/blob/main/src/App.jsx"
             target="_blank"
@@ -49,7 +49,7 @@ export default function GeminiAkinator() {
           and backend in one unified app.
         </p>
         <p>
-          You can check out the server code here:{" "}
+          You can check out the server code here:{' '}
           <a
             href="https://github.com/cranberrymuffin/akinator-app/blob/main/server.js"
             target="_blank"
@@ -62,13 +62,13 @@ export default function GeminiAkinator() {
         <h2>2. Disco Hosting</h2>
         <p>
           To host both the frontend and backend, I use <strong>Disco</strong>, a
-          reliable platform for deploying full-stack applications.{" "}
+          reliable platform for deploying full-stack applications.{' '}
           <strong>Disco</strong> provides an efficient environment for serving
           both the static files (generated from the React app) and the Express
           backend.
         </p>
         <p>
-          The app’s deployment is managed with <strong>Docker</strong>. The{" "}
+          The app’s deployment is managed with <strong>Docker</strong>. The{' '}
           <strong>Dockerfile</strong> automates the process by:
         </p>
         <ul>
@@ -77,7 +77,7 @@ export default function GeminiAkinator() {
             static files for the frontend.
           </li>
           <li>
-            Serving these static files through the{" "}
+            Serving these static files through the{' '}
             <strong>Express server</strong> using <code>node server.js</code>.
           </li>
           <li>
@@ -87,20 +87,20 @@ export default function GeminiAkinator() {
         </ul>
         <p>
           Additionally, the <strong>server</strong> I’m using to run this app is
-          a <strong>Raspberry Pi</strong> located at the{" "}
+          a <strong>Raspberry Pi</strong> located at the{' '}
           <strong>Recurse Center</strong>. The setup allows for a powerful
           development environment while running on minimal hardware.
         </p>
         <p>
-          You can view the{" "}
+          You can view the{' '}
           <a href="https://docs.letsdisco.dev/" target="_blank">
             Disco documentation
-          </a>{" "}
+          </a>{' '}
           for more details about how the hosting platform works and how I
           integrated it into my project.
         </p>
         <p>
-          You can also view the Dockerfile here:{" "}
+          You can also view the Dockerfile here:{' '}
           <a
             href="https://github.com/cranberrymuffin/akinator-app/blob/main/Dockerfile"
             target="_blank"
@@ -127,8 +127,8 @@ export default function GeminiAkinator() {
           guessing what the user is thinking.
         </p>
         <p>
-          For more details on the Gemini API’s{" "}
-          <strong>chat functionality</strong>, check out the{" "}
+          For more details on the Gemini API’s{' '}
+          <strong>chat functionality</strong>, check out the{' '}
           <a
             href="https://ai.google.dev/gemini-api/docs/text-generation?lang=node#chat"
             target="_blank"

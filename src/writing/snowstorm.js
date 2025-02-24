@@ -1,4 +1,4 @@
-import "./writing.css";
+import './writing.css';
 
 export default function SnowstormBlogPost() {
   return (
@@ -25,11 +25,11 @@ export default function SnowstormBlogPost() {
           <ol>
             <li>
               I generated particles positioned at random places within a 3D
-              spherical bounding volume, each representing a snowflake.{" "}
+              spherical bounding volume, each representing a snowflake.{' '}
             </li>
             <pre>
               <code>
-                {" "}
+                {' '}
                 {`
 function generateRandomParticleInSphere(radius) {
     // Generate random values for phi and theta
@@ -52,15 +52,15 @@ function generateRandomParticleInSphere(radius) {
               By slowly rotating the particles generated within the sphere
               around the x-axis, the particles will appear to swirl gently,
               creating an illusion of a snowstorm. We can modify the rotation of
-              the particles using{" "}
+              the particles using{' '}
               <a href="https://sbcode.net/react-three-fiber/use-frame/">
                 React Three Fiber's useFrame hook
-              </a>{" "}
+              </a>{' '}
               to execute code before every rendered frame.
             </li>
             <pre>
               <code>
-                {" "}
+                {' '}
                 {`
 useFrame((state, delta) => {
     snow.current.rotation.x -= delta * 0.05
@@ -83,7 +83,7 @@ useFrame((state, delta) => {
         green or red. Red snowmen are evil. Green snowmen are good.
         <pre>
           <code>
-            {" "}
+            {' '}
             {`
 function Snowman(props) {
   return (<group>

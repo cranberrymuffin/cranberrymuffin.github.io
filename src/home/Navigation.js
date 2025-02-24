@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./home.css";
+import React, { useState } from 'react';
+import './home.css';
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Navigation() {
       </div>
 
       {/* Menu items */}
-      <div className={`menu ${menuOpen ? "open" : ""}`}>
+      <div className={`menu ${menuOpen ? 'open' : ''}`}>
         <a id="nav-element" href="/#/resume">
           Resume
         </a>
