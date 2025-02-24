@@ -37,6 +37,9 @@ export default function Navigation() {
         <a id="nav-element" href="/ascii-art">
           ASCII Art Generator
         </a>
+        <a id="nav-element" href="/peerjs-video-chat">
+          WebRTC Video Chat
+        </a>
         <a id="nav-element" href="/#/blog">
           Writing
         </a>
