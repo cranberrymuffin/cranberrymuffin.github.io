@@ -1,0 +1,156 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  background-color: pink;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Portfolio Section */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  background: pink;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden; /* Prevents overflow from the pseudo-element */
+}
+
+/* Animated Gradient Border */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, #ff0099, #ff6600, #ff0099, #6600ff);
+  background-size: 300% 300%;
+  border-radius: 15px;
+  z-index: -2;
+  animation: borderAnimation 7s linear infinite;
+}
+
+/* Overlay to Cover Inner Part */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: pink;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/* Text Gradient */
+.card h2,
+.card p,
+header,
+.btn {
+  background: linear-gradient(45deg, #ff0099, #ff6600, #ff0099, #6600ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textGradient 7s linear infinite;
+}
+
+/* Buttons */
+.btn {
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 5px 10px; /* Reduced padding */
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1;
+  border: 3px solid transparent; /* Border is transparent by default */
+  font-weight: bold;
+  background: transparent; /* Transparent background */
+  background-clip: padding-box; /* Ensures the background does not overlap the border */
+  transition: border-color 0.3s ease-in-out;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #ff0099, #ff6600, #ff0099, #6600ff);
+  background-size: 300% 300%;
+  border-radius: 10px;
+  z-index: -1;
+  animation: borderAnimation 7s linear infinite;
+}
+
+/* Ensure buttons appear in a row */
+.button-row {
+  display: flex;
+  justify-content: space-between; /* Distribute buttons evenly */
+  gap: 10px; /* Add space between the buttons */
+  margin-top: 20px; /* Add some spacing at the top */
+}
+
+/* Buttons inside the row */
+.button-row .btn {
+  flex: 1; /* Make buttons take equal width */
+  text-align: center; /* Center text inside the button */
+  padding: 5px 10px; /* Same reduced padding for buttons inside row */
+}
+
+/* Text Gradient Animation */
+@keyframes textGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Border Animation */
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Description Styling */
+.desc {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
