@@ -51,7 +51,7 @@ const projects = [
 
 export default function PortfolioPage() {
   return (
-    <div>
+    <div className="portfolio-container">
       <header>
         <h1>Aparna Natarajan</h1>
         <p>Full Stack Developer</p>
