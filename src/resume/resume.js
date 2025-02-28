@@ -1,8 +1,10 @@
+import Navigation from '../navigation/Navigation';
 import './resume.css';
 
 export default function Resume() {
   return (
     <div id="content" className="content">
+      <Navigation />
       <div className="resume" id="resume">
         <div className="business-card">
           <h1>✨ Aparna Natarajan ✨</h1>

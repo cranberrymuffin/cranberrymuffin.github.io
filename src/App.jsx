@@ -8,7 +8,7 @@ import SnowstormBlogPost from './writing/snowstorm';
 import MuffinsBlogPost from './writing/muffins';
 import GeminiAkinator from './writing/gemini-akinator';
 import AsciiArtBlogPost from './writing/ascii';
-import PortfolioPage from './home/PortfolioPage';
+import PortfolioPage from './portfolio/PortfolioPage';
 
 export default function App() {
   return (

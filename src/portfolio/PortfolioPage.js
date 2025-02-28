@@ -1,5 +1,6 @@
 import React from 'react';
 import './portfolio.css';
+import Navigation from '../navigation/Navigation'; // Import the Navigation component
 
 const projects = [
   {

@@ -1,8 +1,10 @@
+import Navigation from '../navigation/Navigation';
 import './writing.css';
 
 export default function Writing() {
   return (
     <div id="main" className="main">
+      <Navigation />
       <div id="writing" className="writing">
         <h1> Writing </h1>
         <ul>

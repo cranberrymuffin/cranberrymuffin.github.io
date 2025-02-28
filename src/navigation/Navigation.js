@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './home.css';
+import './navigation.css';
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);

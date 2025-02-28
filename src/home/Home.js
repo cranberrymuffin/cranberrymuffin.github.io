@@ -1,7 +1,7 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import Experience from './Experience';
-import Navigation from './Navigation'; // Import the Navigation component
+import Navigation from '../navigation/Navigation'; // Import the Navigation component
 import './home.css'; // Your general styles
 
 export default function Home() {
