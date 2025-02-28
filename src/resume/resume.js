@@ -6,8 +6,13 @@ export default function Resume() {
       <div className="resume" id="resume">
         <div className="business-card">
           <h1>✨ Aparna Natarajan ✨</h1>
+          <p>Full Stack Developer</p>
           <p>
-            Portfolio | GitHub | LinkedIn
+            <a href="/#/portfolio">Portfolio</a> |{' '}
+            <a href="https://www.github.com/cranberrymuffin">GitHub</a> |
+            <a href="https://www.linkedin.com/in/aparna-n-569179335/">
+              LinkedIn
+            </a>
             <br />
             aparnalovestocode@gmail.com
             <br />
