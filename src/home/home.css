@@ -28,7 +28,7 @@ code {
 
 /* Navigation Styles */
 #nav {
-  background: #8ace00;
+  background: #7b0048;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +64,7 @@ code {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background: #8ace00;
+  background: #7b0048;
   width: 100%; /* Ensure the menu spans the full width */
   position: absolute;
   top: 100%; /* Position the menu below the navbar */
@@ -91,7 +91,7 @@ code {
   .menu a {
     padding: 10px 15px;
     border-top: none;
-    color: #8ace00; /* Make the menu items green on larger screens */
+    color: #7b0048; /* Make the menu items green on larger screens */
   }
 
   .hamburger {
