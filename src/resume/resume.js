@@ -5,9 +5,9 @@ export default function Resume() {
     <div id="content" className="content">
       <div className="resume" id="resume">
         <div className="business-card">
-          <h1>✨ Aparna ✨</h1>
+          <h1>✨ Aparna Natarajan ✨</h1>
           <p>
-            cranberrymuffin.github.io
+            Portfolio | GitHub | LinkedIn
             <br />
             aparnalovestocode@gmail.com
             <br />
@@ -16,116 +16,106 @@ export default function Resume() {
         </div>
         <h2> Summary</h2>
         <p>
-          Software Engineer with 5 years of experience with a background in
-          mobile and web development. Seeking a (preferably) remote opportunity.
-          You can find my work on{' '}
-          <a href="/">my website (cranberrymuffin.github.io)</a>.
+          Software Engineer with 6+ years of expertise at Meta, Activision, and
+          J.P. Morgan. Proficient in scalable systems, cross-platform solutions,
+          and UI enhancements. Currently at the Recurse Center working on
+          projects available at <a href="/">cranberrymuffin.github.io</a>.
         </p>
-        <h2>Employment</h2>
+        <h2>Professional Experience</h2>
         <h3>Meta</h3>
         <div className="row">
           <h4 className="role">Software Engineer</h4>
           <h4 className="date">May 2022 - Dec 2024</h4>
         </div>
         <ul>
-          <strong>Reality Labs</strong>
           <li>
-            Enabled independent app updates for 57 apps running on an embedded
-            Android OS by designing new Interface Definition Language (IDL) for
-            interprocess communication (IPC) with version-safety guarantees.
+            Unlocked independent app updates for 57 apps by designing a
+            version-safe Interface Definition Language (IDL) for
+            application-level interprocess communication (IPC) on embedded
+            Android devices. Developed a Rust library that transpiles IDL
+            declarations into data transfer object stubs.
           </li>
           <li>
-            Replaced default Android OS IPC library with custom Rust library
-            which transpiled IDL declarations to Kotlin data transfer object
-            stubs.
+            Reduced on-call security workload by 40% by designing and developing
+            a CI pipeline to automate app permission management.
           </li>
           <li>
-            Reduced on-call security workload by 40% by architecting and
-            deploying a CI pipeline to automate app permission grants.
-          </li>
-          <strong>Facebook Design Systems</strong>
-          <li>
-            Led UI/UX improvements for the Facebook Android app, optimizing
-            notifications, post headers, and the text truncation algorithm as
-            part of Facebook Design System modernization.
+            Implemented UI updates for the Facebook Android app, aligning with
+            design bets on motion, notifications, post headers, and text
+            truncation within Facebook Design Systems.
           </li>
           <li>
-            Spearheaded a cross-platform iconography update for Facebook
-            aligning with brand guidelines and improving visual consistency.
+            Led the modernization of Facebook's mobile app iconography by
+            upgrading asset storage, download, and caching infrastructure used
+            across all mobile teams.
           </li>
           <li>
-            Ran A/B tests to optimize front-end changes, using data-driven
-            insights to enhance the user interface and boost app engagement.
+            Managed A/B tests to evaluate design bets, leveraging data-driven
+            insights to drive release decisions on front-end changes that
+            increased app engagement.
           </li>
         </ul>
-        <h3>Activision Publishing Inc.</h3>
+        <h3>Activision</h3>
         <div className="row">
-          <h4 className="role">Software Engineer</h4>
-          <h4 className="date"> May 2021 - December 2021</h4>
+          <h4 className="role">Software Engineer (Part-time)</h4>
+          <h4 className="date">May 2021 - Dec 2021</h4>
         </div>
         <ul>
           <li>
-            Developed and maintained Spring Boot applications to deliver store
+            Developed and maintained Spring Boot REST APIs to deliver store
             bundles, personalized recommendations, and schedules to the Call of
-            Duty companion app, integrating JWT authentication and custom
-            Jackson Serializers.
+            Duty companion app.
           </li>
           <li>
-            Led migration from AWS to GCP, optimizing APIs to leverage GCP
-            services such as Sharded Redis Cache and Secret Manager, enhancing
-            scalability and security.
+            Led cloud services migration from AWS to GCP, optimizing APIs to
+            leverage GCP services such as Sharded Redis Cache and Secret
+            Manager, enhancing scalability and security.
           </li>
-          <li>Set up CI/CD pipelines with ArgoCD and Kubernetes</li>
+          <li>Implemented cloud-based CI/CD deployment pipelines.</li>
         </ul>
-        <h3>J.P. Morgan Chase &amp; Co.</h3>
+        <h3>J.P. Morgan</h3>
         <div className="row">
           <h4 className="role">Software Engineer</h4>
-          <h4 className="date"> July 2018 - July 2020</h4>
+          <h4 className="date">July 2018 - July 2020</h4>
         </div>
         <ul>
           <li>
-            Developed a blue-green deployment pipeline using Cloud Foundry and
-            Jenkins, eliminating downtime during deployments and improving
-            service availability and customer satisfaction.
+            Developed a blue-green deployment pipeline using Cloud Foundry,
+            ensuring 100% service availability during releases.
           </li>
           <li>
-            Designed and built a React.js-based front-end for a live trade
-            execution blotter, with state management powered by MobX Reactor
-            Core.
+            Designed and built live trade execution UI with React and MobX.
           </li>
           <li>
-            Created a secure Kotlin REST API using Spring Boot, JDBC, and
-            Ehcache to deliver trading data across teams.
+            Created Spring Boot REST API to deliver trading data across teams.
           </li>
           <li>
-            Developed a CRUD web application with Java Spring Boot, React.js,
-            and SQL to manage trading data in Oracle databases.
+            Developed a CRUD web application to manage and query trading SQL
+            database.
           </li>
           <li>
             Integrated FIX messaging for communication between an Asset
             Management trading application and Tradeweb, enabling real-time
             financial transaction data exchange.
           </li>
-          <li>
-            Contributed to the development of a trading application using WPF C#
-            and Kotlin, implementing Google Protocol Buffers for efficient data
-            serialization between front-end and backend systems.
-          </li>
         </ul>
-        <h2> Skills</h2>
+        <h2>Education</h2>
         <p>
-          Java, Kotlin, Javascript, C++, Typescript, C#, C, Ruby, Python, R,
-          Scala, OCaml, Assembly, Prolog, Matlab, Go, PHP, y86 Assembly, shell
-          scripting, SQL, Rust, React.js, Redux, MobX, Spring Boot, Spring MVC,
-          Angular.js, WPF, Android, Git, Jenkins, Cloud Foundry, AWS, Heroku,
-          GCP, Kubernetes, Kafka, Node, Node.js, Redis, PostgreSQL, CSS
-        </p>
-        <h2> Education</h2>
-        <p>
-          {' '}
-          University of Maryland, B.S. Computer Science, 2018
+          Masters in Computer Science, Brown University, 2022
           <br />
-          Brown University, M.S. Computer Science, 2022
+          Bachelors in Computer Science, University of Maryland, 2018
+        </p>
+        <h2>Skills</h2>
+        <p>
+          <strong>Languages:</strong> Java, Kotlin, JavaScript, C++, TypeScript,
+          C#, C, Ruby, Python, R, Scala, OCaml, Prolog, Matlab, GoLang, PHP,
+          bash, PostgreSQL, Rust, CSS
+          <br />
+          <strong>Frameworks:</strong> React, Redux, MobX, Spring Boot, Spring
+          MVC, Angular.js, WPF, GraphQL, Redis, Angular, Vue.js
+          <br />
+          <strong>Other:</strong> Android, Git, Jenkins, Cloud Foundry, AWS,
+          Heroku, GCP, Kubernetes, Kafka, Node
         </p>
       </div>
     </div>
