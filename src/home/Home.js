@@ -7,7 +7,7 @@ import './home.css'; // Your general styles
 export default function Home() {
   return (
     <div>
-      <Navigation /> {/* Use Navigation component */}
+      <Navigation textColor={'#8d2746'} /> {/* Use Navigation component */}
       <div id="home">
         <Canvas>
           <color attach="background" args={['hotpink']} />

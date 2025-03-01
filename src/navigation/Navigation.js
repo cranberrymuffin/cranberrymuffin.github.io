@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './navigation.css';
 
-export default function Navigation() {
+export default function Navigation({ textColor = '#000000' }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,7 +9,7 @@ export default function Navigation() {
   };
 
   return (
-    <div id="nav">
+    <div id="nav" style={{ '--nav-text-color': textColor }}>
       {/* Hamburger menu for mobile */}
       <div className="hamburger" onClick={toggleMenu}>
         <div className="line"></div>

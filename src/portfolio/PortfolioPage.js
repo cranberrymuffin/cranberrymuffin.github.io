@@ -53,6 +53,7 @@ const projects = [
 export default function PortfolioPage() {
   return (
     <div className="portfolio-container">
+      <Navigation textColor="linear-gradient(45deg, #ff0099, #ff6600, #ff0099, #6600ff)" />
       <header>
         <h1>Aparna Natarajan</h1>
         <p>Full Stack Developer</p>
