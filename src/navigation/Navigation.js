@@ -19,6 +19,9 @@ export default function Navigation() {
 
       {/* Menu items */}
       <div className={`menu ${menuOpen ? 'open' : ''}`}>
+        <a id="nav-element" href="/">
+          Home
+        </a>
         <a id="nav-element" href="/#/portfolio">
           Portfolio
         </a>
