@@ -8,6 +8,7 @@ const projects = [
     description: `A JSON validator built with a custom toy parser written in javascript.`,
     projectLink: '/json-validator/',
     codeLink: 'https://github.com/cranberrymuffin/json-validator', // Replace with your code repo link
+    blogLink: '/#/blog/json-validator', // Replace with your blog link
   },
   {
     title: 'WebRTC Video Chat',

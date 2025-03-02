@@ -9,6 +9,9 @@ export default function Writing() {
         <h1> Writing </h1>
         <ul>
           <li>
+            February 20, 2025: <a href="/#/blog/json-parser">Json Parser</a>
+          </li>
+          <li>
             February 20, 2025:{' '}
             <a href="/#/blog/ascii-art">ASCII Art Generation</a>
           </li>

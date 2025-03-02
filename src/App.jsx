@@ -9,6 +9,7 @@ import MuffinsBlogPost from './writing/muffins';
 import GeminiAkinator from './writing/gemini-akinator';
 import AsciiArtBlogPost from './writing/ascii';
 import PortfolioPage from './portfolio/PortfolioPage';
+import JSONParserBlogPost from './writing/json-parser';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/blog/Snowstorm" element={<SnowstormBlogPost />} />
       <Route path="/blog/gemini-akinator" element={<GeminiAkinator />} />
       <Route path="/blog/ascii-art" element={<AsciiArtBlogPost />} />
+      <Route path="/blog/json-validator" element={<JSONParserBlogPost />} />
     </Routes>
   );
 }
