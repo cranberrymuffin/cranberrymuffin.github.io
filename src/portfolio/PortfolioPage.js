@@ -5,7 +5,7 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 const projects = [
   {
     title: 'Toy JSON Validator',
-    description: `A JSON validator built with a custom toy parser written in javascript.`,
+    description: `A JSON validator built with a custom parser written in javascript.`,
     projectLink: '/json-validator/',
     codeLink: 'https://github.com/cranberrymuffin/json-validator', // Replace with your code repo link
     blogLink: '/#/blog/json-validator', // Replace with your blog link
