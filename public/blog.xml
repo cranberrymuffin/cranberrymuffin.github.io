@@ -16,6 +16,21 @@
 
     <!-- Stories here -->
     <item>
+      <title>ASCII Art Generation</title>
+      <link>https://cranberrymuffin.github.io/#/blog/json-validator</link>
+      <description>Building a JSON Validator by Parsing from Scratch</description>
+    </item>
+    <item>
+      <title>ASCII Art Generation</title>
+      <link>https://cranberrymuffin.github.io/#/blog/ascii-art</link>
+      <description>Transforming Images into ASCII Art</description>
+    </item>
+    <item>
+      <title>Gemini AI Akinator</title>
+      <link>https://cranberrymuffin.github.io/#/blog/gemini-akinator</link>
+      <description>My Gemini AI Powered Akinator Game</description>
+    </item>
+    <item>
       <title>WebRTC Tic-Tac-Toe</title>
       <link>https://cranberrymuffin.github.io/#/blog/tic-tac-toe</link>
       <description>WebRTC Tic-Tac-Toe</description>
