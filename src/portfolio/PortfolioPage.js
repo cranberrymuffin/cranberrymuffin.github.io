@@ -5,7 +5,7 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 const projects = [
   {
     title: 'Toy XML Visualizer',
-    description: `A toy XML Parser and Visualizer with basic feature support.`,
+    description: `A toy XML Parser with basic feature support. Parsed XML tree is visuzlied with D3.`,
     projectLink: '/xml-tree/',
     codeLink: 'https://github.com/cranberrymuffin/xml-tree/', // Replace with your code repo link
   },
