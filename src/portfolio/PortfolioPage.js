@@ -4,6 +4,12 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 
 const projects = [
   {
+    title: 'Toy XML Visualizer',
+    description: `A toy XML Parser and Visualizer with basic feature support.`,
+    projectLink: '/xml-tree/',
+    codeLink: 'https://github.com/cranberrymuffin/xml-tree/', // Replace with your code repo link
+  },
+  {
     title: 'Toy JSON Validator',
     description: `A JSON validator built with a custom parser written in javascript.`,
     projectLink: '/json-validator/',
