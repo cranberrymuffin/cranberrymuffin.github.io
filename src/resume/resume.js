@@ -8,6 +8,7 @@ export default function Resume() {
       <div className="resume" id="resume">
         <div className="business-card">
           <h1>✨ Aparna Natarajan ✨</h1>
+          <img alt="pro-pic-2.jpeg" src="/pro-pic-2.jpeg"></img>
           <p>Full Stack Developer</p>
           <p>
             <a href="/#/portfolio">Portfolio</a> |{' '}

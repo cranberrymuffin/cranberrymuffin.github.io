@@ -8,6 +8,11 @@
   overflow-y: auto;
 }
 
+img {
+  border-radius: 50%;
+  width: 150px;
+}
+
 .canvas {
   position: absolute;
   z-index: 1;
