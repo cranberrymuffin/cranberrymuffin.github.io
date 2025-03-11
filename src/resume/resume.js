@@ -32,7 +32,7 @@ export default function Resume() {
           Software Engineer with 6+ years of expertise at Meta, Activision, and
           J.P. Morgan. Proficient in scalable systems, cross-platform solutions,
           and UI enhancements. Currently at the Recurse Center working on
-          projects available at <a href="/">cranberrymuffin.github.io</a>.
+          projects available on <a href="/#/portfolio">my portfolio</a>.
         </p>
         <h2>Professional Experience</h2>
         <h3>Meta</h3>
