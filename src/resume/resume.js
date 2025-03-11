@@ -1,5 +1,6 @@
 import Navigation from '../navigation/Navigation';
 import './resume.css';
+import HoverImage from './HoverImage';
 
 export default function Resume() {
   return (
@@ -8,8 +9,12 @@ export default function Resume() {
       <div className="resume" id="resume">
         <div className="business-card">
           <h1>✨ Aparna Natarajan ✨</h1>
-          <img alt="pro-pic-2.jpeg" src="/pro-pic-2.jpeg"></img>
           <p>Full Stack Developer</p>
+          <HoverImage
+            defaultSrc="/pro-pic-2.jpeg"
+            hoverSrc="/cranberrymuffin.png"
+            alt="Profile Picture"
+          />
           <p>
             <a href="/#/portfolio">Portfolio</a> |{' '}
             <a href="https://www.github.com/cranberrymuffin">GitHub</a> |
