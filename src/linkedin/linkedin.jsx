@@ -24,7 +24,7 @@ const LinkedInProfile = () => {
     }
   };
   return (
-    <>
+    <div class="linkedin">
       <header className="navbar">
         <div class="nav-left">
           <a className="linkedin-logo" href="https://www.linkedin.com/feed/">
@@ -134,8 +134,7 @@ const LinkedInProfile = () => {
             <div className="profile-background"></div>
             <div className="profile-info">
               <div className="profile-name">
-                <h1>Aparna Natarajan</h1>
-                <span className="verified-icon">✓</span>
+                <h1 className="name">Aparna Natarajan</h1>
               </div>
               <div className="profile-headline">Software Engineer</div>
               <div className="profile-location">
@@ -568,7 +567,7 @@ const LinkedInProfile = () => {
           </section>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
