@@ -4,6 +4,14 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 
 const projects = [
   {
+    title: 'Animal Emoji Chrome Extension',
+    description:
+      'A chrome extension that replaces animal names with their corresponding emojis across webpages.',
+    projectLink:
+      'https://chromewebstore.google.com/detail/emojizoo/lcjbmbipfajbefepfpfoogancikbeack',
+    codeLink: 'https://github.com/cranberrymuffin/zoo-emoji-extension', // Replace with your code repo link
+  },
+  {
     title: 'Toy XML Visualizer',
     description: `A toy XML Parser with basic feature support. Parsed XML tree is visualized with D3.`,
     projectLink: '/xml-tree/',
