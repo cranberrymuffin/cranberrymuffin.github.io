@@ -9,20 +9,32 @@ const LinkedInProfile = () => {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: -scrollByAmount,
+      const newScrollLeft = Math.max(
+        carouselRef.current.scrollLeft - scrollByAmount,
+        0,
+      );
+      carouselRef.current.scrollTo({
+        left: newScrollLeft,
         behavior: 'smooth',
       });
     }
   };
+
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: scrollByAmount,
+      const maxScrollLeft =
+        carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+      const newScrollLeft = Math.min(
+        carouselRef.current.scrollLeft + scrollByAmount,
+        maxScrollLeft,
+      );
+      carouselRef.current.scrollTo({
+        left: newScrollLeft,
         behavior: 'smooth',
       });
     }
   };
+
   return (
     <div class="linkedin">
       <header className="navbar">
