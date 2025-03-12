@@ -10,6 +10,7 @@ import GeminiAkinator from './writing/gemini-akinator';
 import AsciiArtBlogPost from './writing/ascii';
 import PortfolioPage from './portfolio/PortfolioPage';
 import JSONParserBlogPost from './writing/json-parser';
+import LinkedInProfile from './linkedin/linkedin';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/resume" element={<Resume />} />
       <Route path="/blog" element={<Writing />} />
+      <Route path="/linkedin" element={<LinkedInProfile />} />
       <Route path="/blog/valentine" element={<ValentineBlogPost />} />
       <Route path="/blog/tic-tac-toe" element={<TicTacToeBlogPost />} />
       <Route path="/blog/muffins" element={<MuffinsBlogPost />} />
