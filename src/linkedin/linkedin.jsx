@@ -466,7 +466,11 @@ const LinkedInProfile = () => {
                 <img src="./crystal-ball.png" alt="Project thumbnail" />
               </div>
               <div class="experience-details">
-                <div class="job-title">Gemini AI Akinator</div>
+                <div class="job-title">
+                  <a class="title-link" href="https://akinator.rcdis.co/">
+                    Gemini AI Akinator
+                  </a>
+                </div>
                 <div class="company-name">
                   LLM-powered Akinator game that guesses who you're thinking of
                   with dynamic yes/no questions. Built with React, Node.js,
@@ -508,7 +512,10 @@ const LinkedInProfile = () => {
               <div class="recommender">
                 <div class="recommender-info">
                   <div class="recommender-name">
-                    <a href="https://www.linkedin.com/in/bdettmer/">
+                    <a
+                      className="title-link"
+                      href="https://www.linkedin.com/in/bdettmer/"
+                    >
                       Bradley Dettmer
                     </a>
                   </div>
@@ -550,7 +557,7 @@ const LinkedInProfile = () => {
               </div>
               <div class="experience-details">
                 <a
-                  class="job-title"
+                  class="job-title title-link"
                   href="https://www.recurse.com/scout/click?t=4f0d21efdf10880bb07e8f0ac2e22146"
                 >
                   Recurse Center
