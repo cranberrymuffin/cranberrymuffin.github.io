@@ -94,6 +94,13 @@ a {
   padding: 16px;
   display: grid;
   gap: 24px;
+  min-width: 300px; /* Ensure minimum width */
+}
+
+.carousel-container,
+.comments-list {
+  width: 80vw;
+  max-width: 1000px;
 }
 
 .title-link {
