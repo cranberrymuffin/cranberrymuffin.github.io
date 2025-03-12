@@ -713,4 +713,7 @@ a {
   .profile-photo {
     top: 150px;
   }
+  .carousel-btn {
+    display: none;
+  }
 }
