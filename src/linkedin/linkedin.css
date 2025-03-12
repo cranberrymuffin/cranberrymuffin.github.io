@@ -98,6 +98,10 @@ a {
   gap: 24px;
 }
 
+a {
+  color: black;
+}
+
 .profile-section {
   background: white;
   border-radius: 8px;
