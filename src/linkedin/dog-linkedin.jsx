@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './linkedin.css';
 import Navbar from './components/Navbar';
 import ProfileHeader from './components/ProfileHeader';
@@ -7,40 +7,10 @@ import Post from './components/Post';
 import ExperienceItem from './components/ExperienceItem';
 import SkillItem from './components/SkillItem';
 import Recommendation from './components/Recommendation';
+import Carousel from './components/Carousel';
 
 const DogLinkedInProfile = () => {
   const [activeTab, setActiveTab] = useState('posts');
-  const carouselRef = useRef(null);
-
-  const scrollByAmount = 300 + 16; // Card width + gap
-
-  const scrollLeft = () => {
-    if (carouselRef.current) {
-      const newScrollLeft = Math.max(
-        carouselRef.current.scrollLeft - scrollByAmount,
-        0,
-      );
-      carouselRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (carouselRef.current) {
-      const maxScrollLeft =
-        carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
-      const newScrollLeft = Math.min(
-        carouselRef.current.scrollLeft + scrollByAmount,
-        maxScrollLeft,
-      );
-      carouselRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   const posts = [
     {
@@ -51,17 +21,6 @@ const DogLinkedInProfile = () => {
         <div>
           <p>Just had an amazing day at the park! 🐕</p>
           <p>Made some new friends and showed off my fetch skills! 🎾</p>
-        </div>
-      ),
-    },
-    {
-      profileImage: '/dog-profile.jpg',
-      author: 'Loretta',
-      meta: 'Professional Good Girl · 2mo · Edited',
-      content: (
-        <div>
-          <p>Just graduated from Advanced Obedience Training! 🎓</p>
-          <p>Now I can sit, stay, and roll over with the best of them! 🐾</p>
         </div>
       ),
     },
@@ -106,31 +65,28 @@ const DogLinkedInProfile = () => {
 
   const experience = [
     {
-      logo: '/central-park.png',
-      title: 'Professional Park Explorer',
-      company: 'Central Park · Full-time',
-      duration: '2020 - Present · 4 yrs',
+      logo: '/urban-park.png',
+      title: 'Urban Dog',
+      company: 'New York City · Full-time',
+      startDate: '2023-08-01',
+      endDate: 'Present',
     },
     {
-      logo: '/training-academy.png',
-      title: 'Advanced Obedience Training',
-      company: 'Paw Training Academy',
-      duration: '2019 - 2020 · 1 yr',
-    },
-    {
-      logo: '/dog-treats.png',
-      title: 'Treat Taster',
-      company: 'Dog Treats Inc · Part-time',
-      duration: '2018 - 2019 · 1 yr',
+      logo: '/suburban-park.png',
+      title: 'Suburban Dog',
+      company: 'Kentucky · Full-time',
+      startDate: '2018-02-01',
+      endDate: '2023-08-01',
     },
   ];
 
   const education = [
     {
-      logo: '/training-academy.png',
-      title: 'Paw Training Academy',
-      company: 'Certified Good Girl',
-      duration: '2020',
+      logo: '/petco.png',
+      title: 'Petco Positive Dog Training Program',
+      company: 'Petco',
+      startDate: '2023-11-01',
+      endDate: '2024-01-01',
     },
   ];
 
@@ -178,6 +134,7 @@ const DogLinkedInProfile = () => {
             email="loretta@example.com"
             blogLink="/#/blog"
             portfolioLink="/#/portfolio"
+            isDogProfile={true}
           />
 
           <ProfileCard title="About" id="about">
@@ -207,19 +164,11 @@ const DogLinkedInProfile = () => {
             </div>
             <div className="activity-section">
               {activeTab === 'posts' && (
-                <div className="carousel-container">
-                  <button className="carousel-btn prev" onClick={scrollLeft}>
-                    &lt;
-                  </button>
-                  <div className="carousel" ref={carouselRef}>
-                    {posts.map((post, index) => (
-                      <Post key={index} {...post} />
-                    ))}
-                  </div>
-                  <button className="carousel-btn next" onClick={scrollRight}>
-                    &gt;
-                  </button>
-                </div>
+                <Carousel>
+                  {posts.map((post, index) => (
+                    <Post key={index} {...post} />
+                  ))}
+                </Carousel>
               )}
               {activeTab === 'comments' && (
                 <div className="comments-list">
@@ -262,24 +211,12 @@ const DogLinkedInProfile = () => {
               <div className="tab active">Received</div>
             </div>
             <Recommendation
-              name="Max"
-              title="Professional Park Explorer"
-              company="Central Park"
-              date="February 15, 2024, Max worked with Loretta at Central Park"
-              content="Loretta is the most enthusiastic and friendly dog I've ever met! Her energy is contagious, and she's always ready for an adventure. She's great with other dogs and humans alike. Her advanced fetch skills are truly impressive, and she's always willing to share her toys. I would highly recommend Loretta for any position that requires a positive attitude and excellent social skills!"
-              link="#"
-            />
-          </ProfileCard>
-
-          <ProfileCard title="Interests" id="interests">
-            <div className="tablist">
-              <div className="tab active">Companies</div>
-            </div>
-            <ExperienceItem
-              logo="/dog-treats.png"
-              title="Dog Treats Inc"
-              company="300 connections"
-              link="#"
+              name="Muddy Paws Rescue"
+              title="Animal Rescue Organization"
+              company="New York City"
+              date="August 31, 2023, Muddy Paws Rescue worked with Loretta at their facility"
+              content="At 5 years young, Loretta is the eldest of our Only Dogs pack. If Meryl Streep's Loretta is known for loving the stage, our Loretta should be known for her love of walks! And unlike her namesake, she's not too timid to lean in for a kiss or two 😘"
+              link="https://www.instagram.com/muddypawsrescuenyc/reel/CwnJEhLgXzP/"
             />
           </ProfileCard>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './linkedin.css';
 import Navbar from './components/Navbar';
 import ProfileHeader from './components/ProfileHeader';
@@ -7,44 +7,14 @@ import Post from './components/Post';
 import ExperienceItem from './components/ExperienceItem';
 import SkillItem from './components/SkillItem';
 import Recommendation from './components/Recommendation';
+import Carousel from './components/Carousel';
 
 const LinkedInProfile = () => {
   const [activeTab, setActiveTab] = useState('posts');
-  const carouselRef = useRef(null);
-
-  const scrollByAmount = 300 + 16; // Card width + gap
-
-  const scrollLeft = () => {
-    if (carouselRef.current) {
-      const newScrollLeft = Math.max(
-        carouselRef.current.scrollLeft - scrollByAmount,
-        0,
-      );
-      carouselRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (carouselRef.current) {
-      const maxScrollLeft =
-        carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
-      const newScrollLeft = Math.min(
-        carouselRef.current.scrollLeft + scrollByAmount,
-        maxScrollLeft,
-      );
-      carouselRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   const posts = [
     {
-      profileImage: '/pro-pic-2.jpeg',
+      profileImage: '/pro-pic-2.png',
       author: 'Aparna Natarajan',
       meta: 'Software Engineer · 1mo · Edited',
       content: (
@@ -65,7 +35,7 @@ const LinkedInProfile = () => {
       ),
     },
     {
-      profileImage: '/pro-pic-2.jpeg',
+      profileImage: '/pro-pic-2.png',
       author: 'Aparna Natarajan',
       meta: 'Software Engineer · 1mo · Edited',
       content: (
@@ -78,7 +48,7 @@ const LinkedInProfile = () => {
       ),
     },
     {
-      profileImage: '/pro-pic-2.jpeg',
+      profileImage: '/pro-pic-2.png',
       author: 'Aparna Natarajan',
       meta: 'Software Engineer · 3mo · Edited',
       content: (
@@ -91,7 +61,7 @@ const LinkedInProfile = () => {
       ),
     },
     {
-      profileImage: '/pro-pic-2.jpeg',
+      profileImage: '/pro-pic-2.png',
       author: 'Aparna Natarajan',
       meta: 'Software Engineer · 3mo · Edited',
       content: (
@@ -136,19 +106,22 @@ const LinkedInProfile = () => {
       logo: '/meta.png',
       title: 'Software Engineer',
       company: 'Meta · Full-time',
-      duration: 'May 2022 - Dec 2024 · 2 yrs 8 mos',
+      startDate: '2022-05-01',
+      endDate: '2024-12-01',
     },
     {
       logo: '/activision.jpg',
       title: 'Back End Developer',
       company: 'Activision · Part-time',
-      duration: 'May 2021 - Dec 2021 · 8 mos',
+      startDate: '2021-05-01',
+      endDate: '2021-12-01',
     },
     {
       logo: '/jpmorgan.png',
       title: 'Software Engineer',
       company: 'J.P. Morgan Asset Management · Full-time',
-      duration: 'Jul 2018 - Jul 2020 · 2 yrs 1 mo',
+      startDate: '2018-07-01',
+      endDate: '2020-07-01',
     },
   ];
 
@@ -194,7 +167,7 @@ const LinkedInProfile = () => {
       <main className="main-content">
         <div className="profile-content">
           <ProfileHeader
-            profileImage="/pro-pic-2.jpeg"
+            profileImage="/pro-pic-2.png"
             name="Aparna Natarajan"
             headline="Software Engineer"
             location="New York, New York, United States"
@@ -233,19 +206,11 @@ const LinkedInProfile = () => {
             </div>
             <div className="activity-section">
               {activeTab === 'posts' && (
-                <div className="carousel-container">
-                  <button className="carousel-btn prev" onClick={scrollLeft}>
-                    &lt;
-                  </button>
-                  <div className="carousel" ref={carouselRef}>
-                    {posts.map((post, index) => (
-                      <Post key={index} {...post} />
-                    ))}
-                  </div>
-                  <button className="carousel-btn next" onClick={scrollRight}>
-                    &gt;
-                  </button>
-                </div>
+                <Carousel>
+                  {posts.map((post, index) => (
+                    <Post key={index} {...post} />
+                  ))}
+                </Carousel>
               )}
               {activeTab === 'comments' && (
                 <div className="comments-list">
