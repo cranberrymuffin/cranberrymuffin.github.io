@@ -185,7 +185,6 @@ const DogLinkedInProfile = () => {
             {skills.map((skill, index) => (
               <SkillItem key={index} {...skill} />
             ))}
-            <a href="#">Show all 12 skills →</a>
           </ProfileCard>
 
           <ProfileCard title="Recommendations" id="recommendations">
