@@ -11,6 +11,7 @@ import AsciiArtBlogPost from './writing/ascii';
 import PortfolioPage from './portfolio/PortfolioPage';
 import JSONParserBlogPost from './writing/json-parser';
 import LinkedInProfile from './linkedin/linkedin';
+import DogLinkedInProfile from './linkedin/dog-linkedin';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Route path="/resume" element={<Resume />} />
       <Route path="/blog" element={<Writing />} />
       <Route path="/linkedin" element={<LinkedInProfile />} />
+      <Route path="/linkedin/dog" element={<DogLinkedInProfile />} />
       <Route path="/blog/valentine" element={<ValentineBlogPost />} />
       <Route path="/blog/tic-tac-toe" element={<TicTacToeBlogPost />} />
       <Route path="/blog/muffins" element={<MuffinsBlogPost />} />

@@ -8,7 +8,7 @@ import ExperienceItem from './components/ExperienceItem';
 import SkillItem from './components/SkillItem';
 import Recommendation from './components/Recommendation';
 
-const LinkedInProfile = () => {
+const DogLinkedInProfile = () => {
   const [activeTab, setActiveTab] = useState('posts');
   const carouselRef = useRef(null);
 
@@ -44,63 +44,36 @@ const LinkedInProfile = () => {
 
   const posts = [
     {
-      profileImage: '/pro-pic-2.jpeg',
-      author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 1mo · Edited',
+      profileImage: '/dog-profile.jpg',
+      author: 'Loretta',
+      meta: 'Professional Good Girl · 1mo · Edited',
       content: (
         <div>
-          <p>
-            I started blogging about the web graphics projects I have been
-            working on!
-          </p>
-          <p>
-            <a href="/#/blog/snowstorm">
-              Building Snowstorm ❄️: A Wintertime Web Game
-            </a>
-          </p>
-          <p>
-            <a href="/#/blog/valentine">Building a 3D Heart ❤️ with Math</a>
-          </p>
+          <p>Just had an amazing day at the park! 🐕</p>
+          <p>Made some new friends and showed off my fetch skills! 🎾</p>
         </div>
       ),
     },
     {
-      profileImage: '/pro-pic-2.jpeg',
-      author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 1mo · Edited',
+      profileImage: '/dog-profile.jpg',
+      author: 'Loretta',
+      meta: 'Professional Good Girl · 2mo · Edited',
       content: (
         <div>
-          <p>
-            I'm reaching out to my network for feedback on my{' '}
-            <a href="/#/resume">resume</a>!
-          </p>
+          <p>Just graduated from Advanced Obedience Training! 🎓</p>
+          <p>Now I can sit, stay, and roll over with the best of them! 🐾</p>
         </div>
       ),
     },
     {
-      profileImage: '/pro-pic-2.jpeg',
-      author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 3mo · Edited',
+      profileImage: '/dog-profile.jpg',
+      author: 'Loretta',
+      meta: 'Professional Good Girl · 3mo · Edited',
       content: (
         <div>
+          <p>Looking for new opportunities in the treat industry! 🦴</p>
           <p>
-            I will be participating in the Recurse Center's Winter 2, 2025
-            batch!
-          </p>
-        </div>
-      ),
-    },
-    {
-      profileImage: '/pro-pic-2.jpeg',
-      author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 3mo · Edited',
-      content: (
-        <div>
-          <p>
-            Something new I am trying this year!{' '}
-            <a href="https://adventofcode.com/2024/">
-              https://adventofcode.com/2024/
-            </a>
+            I have extensive experience in belly rubs and being a good girl.
           </p>
         </div>
       ),
@@ -109,82 +82,84 @@ const LinkedInProfile = () => {
 
   const comments = [
     {
-      name: 'Aparna Natarajan',
-      title: 'Software Engineer',
-      company: 'Meta',
+      name: 'Max',
+      title: 'Professional Park Explorer',
+      company: 'Central Park',
       date: '1mo',
-      content: 'Congrats!',
+      content: 'Your fetch skills are impressive! 🎾',
     },
     {
-      name: 'Aparna Natarajan',
-      title: 'Software Engineer',
-      company: 'Meta',
-      date: '1mo',
-      content: 'So exciting 🔥🔥🔥',
+      name: 'Bella',
+      title: 'Senior Good Girl',
+      company: 'Dog Park',
+      date: '2mo',
+      content: 'Congratulations on your training! 🎓',
     },
     {
-      name: 'Aparna Natarajan',
-      title: 'Software Engineer',
-      company: 'Meta',
-      date: '1mo',
-      content: '🔥🔥🔥',
+      name: 'Charlie',
+      title: 'Treat Taster',
+      company: 'Dog Treats Inc',
+      date: '3mo',
+      content: 'You would be perfect for our team! 🦴',
     },
   ];
 
   const experience = [
     {
-      logo: '/meta.png',
-      title: 'Software Engineer',
-      company: 'Meta · Full-time',
-      duration: 'May 2022 - Dec 2024 · 2 yrs 8 mos',
+      logo: '/central-park.png',
+      title: 'Professional Park Explorer',
+      company: 'Central Park · Full-time',
+      duration: '2020 - Present · 4 yrs',
     },
     {
-      logo: '/activision.jpg',
-      title: 'Back End Developer',
-      company: 'Activision · Part-time',
-      duration: 'May 2021 - Dec 2021 · 8 mos',
+      logo: '/training-academy.png',
+      title: 'Advanced Obedience Training',
+      company: 'Paw Training Academy',
+      duration: '2019 - 2020 · 1 yr',
     },
     {
-      logo: '/jpmorgan.png',
-      title: 'Software Engineer',
-      company: 'J.P. Morgan Asset Management · Full-time',
-      duration: 'Jul 2018 - Jul 2020 · 2 yrs 1 mo',
+      logo: '/dog-treats.png',
+      title: 'Treat Taster',
+      company: 'Dog Treats Inc · Part-time',
+      duration: '2018 - 2019 · 1 yr',
     },
   ];
 
   const education = [
     {
-      logo: '/brown.jpg',
-      title: 'Brown University',
-      company: 'Master of Science - MS, Computer Science',
-      duration: '2022',
-    },
-    {
-      logo: '/umd.webp',
-      title: 'University of Maryland',
-      company: 'Bachelor of Science - BS, Computer Science',
-      duration: '2018',
+      logo: '/training-academy.png',
+      title: 'Paw Training Academy',
+      company: 'Certified Good Girl',
+      duration: '2020',
     },
   ];
 
   const projects = [
     {
-      logo: '/crystal-ball.png',
-      title: 'Gemini AI Akinator',
+      logo: '/dog-treats.png',
+      title: 'Treat Testing Program',
       company:
-        "LLM-powered Akinator game that guesses who you're thinking of with dynamic yes/no questions. Built with React, Node.js, Express, and Gemini AI. Deployed with Docker on Disco hosting.",
-      link: 'https://akinator.rcdis.co/',
+        'Led a team of dogs in testing new treat flavors and textures. Achieved 100% satisfaction rate among testers.',
+      link: 'https://example.com/treats',
     },
   ];
 
   const skills = [
     {
-      name: 'Google Gemini',
-      endorsement: 'Gemini AI Akinator',
+      name: 'Advanced Fetch',
+      endorsement: 'Central Park',
     },
     {
-      name: 'Large Language Models (LLM)',
-      endorsement: 'Gemini AI Akinator',
+      name: 'Belly Rubs',
+      endorsement: 'Dog Park',
+    },
+    {
+      name: 'Treat Tasting',
+      endorsement: 'Dog Treats Inc',
+    },
+    {
+      name: 'Being a Good Girl',
+      endorsement: 'Paw Training Academy',
     },
   ];
 
@@ -194,29 +169,28 @@ const LinkedInProfile = () => {
       <main className="main-content">
         <div className="profile-content">
           <ProfileHeader
-            profileImage="/pro-pic-2.jpeg"
-            name="Aparna Natarajan"
-            headline="Software Engineer"
+            profileImage="/dog-profile.jpg"
+            name="Loretta"
+            headline="Professional Good Girl"
             location="New York, New York, United States"
-            followers={170}
-            connections={158}
-            email="aparnalovestocode@gmail.com"
+            followers={500}
+            connections={300}
+            email="loretta@example.com"
             blogLink="/#/blog"
             portfolioLink="/#/portfolio"
           />
 
           <ProfileCard title="About" id="about">
             <p>
-              Software Engineer with 5 years of experience in mobile and web
-              development. Currently on sabbatical at{' '}
-              <a href="https://www.recurse.com/about">
-                https://www.recurse.com/about
-              </a>
+              Experienced professional dog with expertise in park exploration,
+              treat tasting, and being a good girl. Certified in advanced
+              obedience and belly rub techniques. Passionate about making new
+              friends and spreading joy through tail wags.
             </p>
           </ProfileCard>
 
           <ProfileCard title="Activity" id="activity">
-            <div>170 followers</div>
+            <div>500 followers</div>
             <div className="action-buttons">
               <div
                 className={`info-button ${activeTab === 'posts' ? 'active' : ''}`}
@@ -276,19 +250,11 @@ const LinkedInProfile = () => {
             ))}
           </ProfileCard>
 
-          <ProfileCard title="Projects" id="projects">
-            {projects.map((project, index) => (
-              <ExperienceItem key={index} {...project} />
-            ))}
-          </ProfileCard>
-
           <ProfileCard title="Skills" id="skills">
             {skills.map((skill, index) => (
               <SkillItem key={index} {...skill} />
             ))}
-            <a href="https://github.com/cranberrymuffin#languages-and-tools">
-              Show all 45 skills →
-            </a>
+            <a href="#">Show all 12 skills →</a>
           </ProfileCard>
 
           <ProfileCard title="Recommendations" id="recommendations">
@@ -296,12 +262,12 @@ const LinkedInProfile = () => {
               <div className="tab active">Received</div>
             </div>
             <Recommendation
-              name="Bradley Dettmer"
-              title="Staff Software Engineer"
-              company="Hustle"
-              date="February 5, 2025, Bradley worked with Aparna but they were at different companies"
-              content="Aparna is an amazing engineer with an ability to learn quickly and integrate the right technologies to make a project successful. She is also driven and hard working. While working with her on building a multiplayer game, she quickly learned how to use peerjs and zustand integrated them into the project. She is fantastic and good to work with and I would recommend her for any role that needs someone who can figure things out and propel the team forward!"
-              link="https://www.linkedin.com/in/bdettmer/"
+              name="Max"
+              title="Professional Park Explorer"
+              company="Central Park"
+              date="February 15, 2024, Max worked with Loretta at Central Park"
+              content="Loretta is the most enthusiastic and friendly dog I've ever met! Her energy is contagious, and she's always ready for an adventure. She's great with other dogs and humans alike. Her advanced fetch skills are truly impressive, and she's always willing to share her toys. I would highly recommend Loretta for any position that requires a positive attitude and excellent social skills!"
+              link="#"
             />
           </ProfileCard>
 
@@ -310,10 +276,10 @@ const LinkedInProfile = () => {
               <div className="tab active">Companies</div>
             </div>
             <ExperienceItem
-              logo="/rc-scout.png"
-              title="Recurse Center"
-              company="4,516 followers"
-              link="https://www.recurse.com/scout/click?t=4f0d21efdf10880bb07e8f0ac2e22146"
+              logo="/dog-treats.png"
+              title="Dog Treats Inc"
+              company="300 connections"
+              link="#"
             />
           </ProfileCard>
         </div>
@@ -322,4 +288,4 @@ const LinkedInProfile = () => {
   );
 };
 
-export default LinkedInProfile;
+export default DogLinkedInProfile;
