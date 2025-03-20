@@ -123,9 +123,8 @@ const DogLinkedInProfile = () => {
 
           <ProfileCard title="About" id="about">
             <p>
-              Experienced professional dog with expertise in park exploration,
-              treat tasting, and tricks. Passionate about making new friends and
-              spreading joy.
+              Expertise in park exploration, treat tasting, and tricks.
+              Passionate about making new friends and spreading joy.
             </p>
           </ProfileCard>
 
