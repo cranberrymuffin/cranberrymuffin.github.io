@@ -31,9 +31,7 @@ const DogLinkedInProfile = () => {
       content: (
         <div>
           <p>Looking for new opportunities in the treat industry! 🦴</p>
-          <p>
-            I have extensive experience in belly rubs and being a good girl.
-          </p>
+          <p>I have extensive experience in chicken.</p>
         </div>
       ),
     },
@@ -90,24 +88,10 @@ const DogLinkedInProfile = () => {
     },
   ];
 
-  const projects = [
-    {
-      logo: '/dog-treats.png',
-      title: 'Treat Testing Program',
-      company:
-        'Led a team of dogs in testing new treat flavors and textures. Achieved 100% satisfaction rate among testers.',
-      link: 'https://example.com/treats',
-    },
-  ];
-
   const skills = [
     {
       name: 'Advanced Fetch',
       endorsement: 'Central Park',
-    },
-    {
-      name: 'Belly Rubs',
-      endorsement: 'Dog Park',
     },
     {
       name: 'Treat Tasting',
@@ -140,9 +124,8 @@ const DogLinkedInProfile = () => {
           <ProfileCard title="About" id="about">
             <p>
               Experienced professional dog with expertise in park exploration,
-              treat tasting, and being a good girl. Certified in advanced
-              obedience and belly rub techniques. Passionate about making new
-              friends and spreading joy through tail wags.
+              treat tasting, and tricks. Passionate about making new friends and
+              spreading joy.
             </p>
           </ProfileCard>
 

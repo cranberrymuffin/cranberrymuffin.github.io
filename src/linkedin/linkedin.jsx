@@ -181,10 +181,7 @@ const LinkedInProfile = () => {
           <ProfileCard title="About" id="about">
             <p>
               Software Engineer with 5 years of experience in mobile and web
-              development. Currently on sabbatical at{' '}
-              <a href="https://www.recurse.com/about">
-                https://www.recurse.com/about
-              </a>
+              development. Find my dog <a href="/#/linkedin/dog">here.</a>
             </p>
           </ProfileCard>
 
