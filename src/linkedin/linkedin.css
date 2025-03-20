@@ -657,8 +657,8 @@ a {
   background: white;
   border-radius: 8px;
   padding: 16px;
+  width: calc(min(300px, 100%) - 25px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
 }
 
 .carousel-btn {
