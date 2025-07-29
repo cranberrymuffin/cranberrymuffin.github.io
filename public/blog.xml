@@ -16,6 +16,11 @@
 
     <!-- Stories here -->
     <item>
+      <title>Path Recorder</title>
+      <link>https://cranberrymuffin.github.io/#/blog/path-recorder</link>
+      <description>Building my first iOS app: Path Recorder</description>
+    </item>
+    <item>
       <title>ASCII Art Generation</title>
       <link>https://cranberrymuffin.github.io/#/blog/json-validator</link>
       <description>Building a JSON Validator by Parsing from Scratch</description>

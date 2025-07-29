@@ -1,8 +1,14 @@
-import React from 'react';
 import './portfolio.css';
 import Navigation from '../navigation/Navigation'; // Import the Navigation component
 
 const projects = [
+  {
+    title: 'Path Recorder',
+    description: 'An iOS app that tracks and visualizes your foot paths.',
+    projectLink: 'https://apps.apple.com/us/app/pathrecorder/id6749169358',
+    codeLink: 'https://github.com/cranberrymuffin/PathRecorder', // Replace with your code repo link
+    blogLink: '/#/blog/path-recorder',
+  },
   {
     title: 'Animal Emoji Chrome Extension',
     description:

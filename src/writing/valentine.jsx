@@ -1,8 +1,11 @@
+import Navigation from '../navigation/Navigation';
+import './writing.css';
 import './writing.css';
 
 export default function ValentineBlogPost() {
   return (
     <div id="blog" className="blog">
+      <Navigation />
       <div id="writing" className="writing">
         <h1>
           Building a <a href="/valentine">3D Heart</a> with Math

@@ -9,6 +9,12 @@ export default function Writing() {
         <h1> Writing </h1>
         <ul>
           <li>
+            July 29, 2025:{' '}
+            <a href="/#/blog/path-recorder">
+              Building my first iOS app: Path Recorder
+            </a>
+          </li>
+          <li>
             March 2, 2025: <a href="/#/blog/json-validator">Json Parser</a>
           </li>
           <li>
