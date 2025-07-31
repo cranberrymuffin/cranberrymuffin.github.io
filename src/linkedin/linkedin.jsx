@@ -103,6 +103,13 @@ const LinkedInProfile = () => {
 
   const experience = [
     {
+      logo: '/paperless-post.png',
+      title: 'Software Engineer',
+      company: 'Paperless Post · Full-time',
+      startDate: '2025-04-01',
+      endDate: 'Present',
+    },
+    {
       logo: '/meta.png',
       title: 'Software Engineer',
       company: 'Meta · Full-time',
