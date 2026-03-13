@@ -23,14 +23,14 @@ export default function Resume() {
         </div>
         <h2> Summary</h2>
         <p>
-          Software Engineer with 6+ years of expertise at Paperless Post, Meta,
-          Activision, and J.P. Morgan. Proficient in scalable systems,
+          Senior Software Engineer with 6+ years of expertise at Paperless Post,
+          Meta, Activision, and J.P. Morgan. Proficient in scalable systems,
           cross-platform solutions, and UI enhancements.
         </p>
         <h2>Professional Experience</h2>
         <h3>Paperless Post</h3>
         <div className="row">
-          <h4 className="role">Software Engineer</h4>
+          <h4 className="role">Senior Software Engineer</h4>
           <h4 className="date">April 2025 - Present</h4>
         </div>
         <ul>
