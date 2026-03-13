@@ -14,9 +14,11 @@ export default function Resume() {
             <a href="https://www.github.com/cranberrymuffin">GitHub</a> |{' '}
             <a href="/#/linkedin">LinkedIn</a>
             <br />
-            aparnalovestocode@gmail.com
+            <a href="mailto:aparnalovestocode@gmail.com">
+              aparnalovestocode@gmail.com
+            </a>
             <br />
-            +1 (917) 301-7943
+            <a href="tel:+19173017943">+1 (917) 301-7943</a>
           </p>
         </div>
         <h2> Summary</h2>
