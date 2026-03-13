@@ -20,29 +20,7 @@ const LinkedInProfile = () => {
       content: (
         <div>
           <p>
-            I started blogging about the web graphics projects I have been
-            working on!
-          </p>
-          <p>
-            <a href="/#/blog/snowstorm">
-              Building Snowstorm ❄️: A Wintertime Web Game
-            </a>
-          </p>
-          <p>
-            <a href="/#/blog/valentine">Building a 3D Heart ❤️ with Math</a>
-          </p>
-        </div>
-      ),
-    },
-    {
-      profileImage: '/pro-pic-2.png',
-      author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 1mo · Edited',
-      content: (
-        <div>
-          <p>
-            I'm reaching out to my network for feedback on my{' '}
-            <a href="/#/resume">resume</a>!
+            I'm open to work, check out my <a href="/#/resume">resume</a>!
           </p>
         </div>
       ),
@@ -149,22 +127,25 @@ const LinkedInProfile = () => {
 
   const projects = [
     {
-      logo: '/crystal-ball.png',
-      title: 'Gemini AI Akinator',
-      company:
-        "LLM-powered Akinator game that guesses who you're thinking of with dynamic yes/no questions. Built with React, Node.js, Express, and Gemini AI. Deployed with Docker on Disco hosting.",
-      link: 'https://akinator.rcdis.co/',
+      logo: '/pathrecorder.png',
+      title: 'Path Recorder',
+      company: 'An iOS app that tracks and visualizes your foot paths.',
+      link: 'https://apps.apple.com/us/app/run-hike-walk-path-recorder/id6749169358',
     },
   ];
 
   const skills = [
     {
-      name: 'Google Gemini',
-      endorsement: 'Gemini AI Akinator',
+      name: 'React',
+      endorsement: 'Paperless Post',
     },
     {
-      name: 'Large Language Models (LLM)',
-      endorsement: 'Gemini AI Akinator',
+      name: 'Android',
+      endorsement: 'Meta',
+    },
+    {
+      name: 'iOS',
+      endorsement: 'Path Recorder',
     },
   ];
 
@@ -181,14 +162,14 @@ const LinkedInProfile = () => {
             followers={170}
             connections={158}
             email="aparnalovestocode@gmail.com"
-            blogLink="/#/blog"
-            portfolioLink="/#/portfolio"
+            resumeLink="/#/resume"
+            dogLink="/#/linkedin/dog"
           />
 
           <ProfileCard title="About" id="about">
             <p>
-              Software Engineer with 5 years of experience in mobile and web
-              development. Find my dog <a href="/#/linkedin/dog">here.</a>
+              Software Engineer with 6+ years of experience in mobile and web
+              development.
             </p>
           </ProfileCard>
 

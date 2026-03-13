@@ -7,11 +7,11 @@ export default function Resume() {
       <Navigation />
       <div className="resume" id="resume">
         <div className="business-card">
-          <h1>✨ Aparna Natarajan ✨</h1>
+          <h1> Aparna Natarajan </h1>
           <p>Full Stack Developer</p>
           <p>
             <a href="/#/portfolio">Portfolio</a> |{' '}
-            <a href="https://www.github.com/cranberrymuffin">GitHub</a> |
+            <a href="https://www.github.com/cranberrymuffin">GitHub</a> |{' '}
             <a href="/#/linkedin">LinkedIn</a>
             <br />
             aparnalovestocode@gmail.com
@@ -21,12 +21,35 @@ export default function Resume() {
         </div>
         <h2> Summary</h2>
         <p>
-          Software Engineer with 6+ years of expertise at Meta, Activision, and
-          J.P. Morgan. Proficient in scalable systems, cross-platform solutions,
-          and UI enhancements. Currently at the Recurse Center working on
-          projects available on <a href="/#/portfolio">my portfolio</a>.
+          Software Engineer with 6+ years of expertise at Paperless Post, Meta,
+          Activision, and J.P. Morgan. Proficient in scalable systems,
+          cross-platform solutions, and UI enhancements.
         </p>
         <h2>Professional Experience</h2>
+        <h3>Paperless Post</h3>
+        <div className="row">
+          <h4 className="role">Software Engineer</h4>
+          <h4 className="date">April 2025 - Present</h4>
+        </div>
+        <ul>
+          <li>
+            Architected frontend pricing design system to communicate pricing
+            information effectively across user facing card and flyer editors.
+          </li>
+          <li>
+            Developed reusable React components that dynamically display pricing
+            information based on active A/B test configurations.
+          </li>
+          <li>
+            Collaborated with design to ship UI and UX refinements that made
+            monetized features more discoverable and easier to use.
+          </li>
+          <li>
+            Modernized and unified cost calculation logic by designing a shared
+            TypeScript purchase recommendation library used across frontend
+            services.
+          </li>
+        </ul>
         <h3>Meta</h3>
         <div className="row">
           <h4 className="role">Software Engineer</h4>
@@ -34,15 +57,9 @@ export default function Resume() {
         </div>
         <ul>
           <li>
-            Unlocked independent app updates for 57 apps by designing a
-            version-safe Interface Definition Language (IDL) for
-            application-level interprocess communication (IPC) on embedded
-            Android devices. Developed a Rust library that transpiles IDL
-            declarations into data transfer object stubs.
-          </li>
-          <li>
-            Reduced on-call security workload by 40% by designing and developing
-            a CI pipeline to automate app permission management.
+            Led the modernization of Facebook's mobile app iconography by
+            upgrading asset storage, download, and caching infrastructure used
+            across all mobile teams.
           </li>
           <li>
             Implemented UI updates for the Facebook Android app, aligning with
@@ -50,14 +67,19 @@ export default function Resume() {
             truncation within Facebook Design Systems.
           </li>
           <li>
-            Led the modernization of Facebook's mobile app iconography by
-            upgrading asset storage, download, and caching infrastructure used
-            across all mobile teams.
-          </li>
-          <li>
             Managed A/B tests to evaluate design bets, leveraging data-driven
             insights to drive release decisions on front-end changes that
-            increased app engagement.
+            increased mobile app engagement.
+          </li>
+          <li>
+            Unlocked independent app updates for 57 embedded Android apps by
+            designing a version-safe Interface Definition Language (IDL) for
+            application-level interprocess communication (IPC). Developed a Rust
+            library that transpiles the IDL into data transfer object stubs.
+          </li>
+          <li>
+            Reduced on-call security workload by 40% by designing and developing
+            a CI pipeline to automate app permission management.
           </li>
         </ul>
         <h3>Activision</h3>
@@ -112,15 +134,21 @@ export default function Resume() {
         </p>
         <h2>Skills</h2>
         <p>
-          <strong>Languages:</strong> Java, Kotlin, JavaScript, C++, TypeScript,
-          C#, C, Ruby, Python, R, Scala, OCaml, Prolog, Matlab, GoLang, PHP,
-          bash, PostgreSQL, Rust, CSS
+          <p>
+            I am a polyglot. I can develop applications in many languages and
+            frameworks and pick up new ones quickly.{' '}
+          </p>
+          <p>Here are some I have used: </p>
+          <strong>Languages:</strong>
+          Java, Kotlin, JavaScript, TypeScript, C++, C#, C, Ruby, Python, R,
+          Scala, OCaml, Prolog, Matlab, GoLang, PHP, bash, PostgreSQL, Rust,
+          CSS, Ruby, Swift
           <br />
-          <strong>Frameworks:</strong> React, Redux, MobX, Spring Boot, Spring
-          MVC, Angular.js, WPF, GraphQL, Redis, Angular, Vue.js
+          <strong>Frameworks:</strong> React, Redux, Spring Boot, GraphQL,
+          Next.js, Ruby on Rails
           <br />
           <strong>Other:</strong> Android, Git, Jenkins, Cloud Foundry, AWS,
-          Heroku, GCP, Kubernetes, Kafka, Node
+          Heroku, GCP, Kubernetes, Kafka, Node, Jest, Cypress
         </p>
       </div>
     </div>

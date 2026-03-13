@@ -8,8 +8,8 @@ const ProfileHeader = ({
   followers,
   connections,
   email,
-  blogLink,
-  portfolioLink,
+  resumeLink,
+  dogLink,
   isDogProfile = false,
 }) => {
   return (
@@ -42,11 +42,11 @@ const ProfileHeader = ({
             <a href={`mailto:${email}`} className="primary-button">
               Message
             </a>
-            <a href={blogLink} className="secondary-button">
-              View my blog
+            <a href={resumeLink} className="secondary-button">
+              View my resume
             </a>
-            <a href={portfolioLink} className="secondary-button">
-              View my portfolio
+            <a href={dogLink} className="secondary-button">
+              Meet my dog
             </a>
           </div>
         )}
