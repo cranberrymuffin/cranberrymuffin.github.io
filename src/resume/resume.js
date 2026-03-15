@@ -35,8 +35,8 @@ export default function Resume() {
         </div>
         <ul>
           <li>
-            Architected frontend pricing design system to communicate pricing
-            information effectively across user facing card and flyer editors.
+            Architected frontend pricing design system to communicate cost
+            information across user facing card and flyer editor toolsets.
           </li>
           <li>
             Developed reusable React components that dynamically display pricing
