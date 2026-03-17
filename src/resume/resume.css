@@ -27,7 +27,7 @@ img {
 }
 
 .row::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -58,7 +58,6 @@ h3 {
 }
 
 #content {
-  background: linear-gradient(#e66465, #9198e5);
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;

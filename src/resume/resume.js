@@ -4,7 +4,7 @@ import './resume.css';
 export default function Resume() {
   return (
     <div id="content" className="content">
-      <Navigation />
+      <Navigation styleOverride={{ backgroundColor: 'transparent', borderBottom: '1px solid black' }} />
       <div className="resume" id="resume">
         <div className="business-card">
           <h1> Aparna Natarajan </h1>
