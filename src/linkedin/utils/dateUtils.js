@@ -1,3 +1,16 @@
+export const getRelativeTime = date => {
+  const diffMs = Date.now() - date.getTime();
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  const diffWeeks = Math.floor(diffDays / 7);
+  const diffMonths = Math.floor(diffDays / 30);
+  const diffYears = Math.floor(diffDays / 365);
+  if (diffDays < 1) return 'just now';
+  if (diffDays < 7) return `${diffDays}d ago`;
+  if (diffWeeks < 4) return `${diffWeeks}w ago`;
+  if (diffMonths < 12) return `${diffMonths}mo ago`;
+  return `${diffYears}yr ago`;
+};
+
 export const computeDuration = (startDate, endDate = 'Present') => {
   // Create dates with timezone offset to ensure correct month
   const start = new Date(startDate + 'T00:00:00');
