@@ -1,5 +1,7 @@
 import React from 'react';
 import LinkedInProfileTemplate from './LinkedInProfileTemplate';
+import ProfileCard from './components/ProfileCard';
+import ExperienceItem from './components/ExperienceItem';
 
 const posts = [
   {
@@ -114,7 +116,19 @@ const DogLinkedInProfile = () => (
         "At 5 years young, Loretta is the eldest of our Only Dogs pack. If Meryl Streep's Loretta is known for loving the stage, our Loretta should be known for her love of walks! And unlike her namesake, she's not too timid to lean in for a kiss or two 😘",
       link: 'https://www.instagram.com/muddypawsrescuenyc/reel/CwnJEhLgXzP/',
     }}
-  />
+  >
+    <ProfileCard title="Interests" id="interests">
+      <div className="tablist">
+        <div className="tab active">Companies</div>
+      </div>
+      <ExperienceItem
+        logo="/muddy-paws.png"
+        title="Muddy Paws Rescue"
+        company="13,200 followers"
+        link="https://www.muddypawsrescue.org/"
+      />
+    </ProfileCard>
+  </LinkedInProfileTemplate>
 );
 
 export default DogLinkedInProfile;
