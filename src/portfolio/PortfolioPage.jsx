@@ -9,6 +9,20 @@ const projects = [
     codeLink: 'https://github.com/cranberrymuffin/PathRecorder', // Replace with your code repo link
     blogLink: '/#/blog/path-recorder',
   },
+  {
+    title: 'Animal Emoji Chrome Extension',
+    description:
+      'A chrome extension that replaces animal names with their corresponding emojis across webpages.',
+    projectLink:
+      'https://chromewebstore.google.com/detail/emojizoo/lcjbmbipfajbefepfpfoogancikbeack',
+    codeLink: 'https://github.com/cranberrymuffin/zoo-emoji-extension',
+  },
+  {
+    title: 'WebRTC Video Chat',
+    description: `WebRTC two person video chat app built with React and PeerJS.`,
+    projectLink: '/peerjs-video-chat/',
+    codeLink: 'https://github.com/cranberrymuffin/peerjs-video-chat',
+  },
 ];
 
 export default function PortfolioPage() {
