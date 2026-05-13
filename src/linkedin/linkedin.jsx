@@ -198,7 +198,7 @@ const LinkedInProfile = () => {
 
       <ProfileCard title="Interests" id="interests">
         <div className="tablist">
-          <div className="tab active">Companies</div>
+          <div className="tab active">Organizations</div>
         </div>
         <ExperienceItem
           logo="/rc-scout.png"
