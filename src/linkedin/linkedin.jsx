@@ -9,26 +9,27 @@ import SkillItem from './components/SkillItem';
 import Recommendation from './components/Recommendation';
 import Carousel from './components/Carousel';
 
+const getRelativeTime = date => {
+  const diffMs = Date.now() - date.getTime();
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  const diffWeeks = Math.floor(diffDays / 7);
+  const diffMonths = Math.floor(diffDays / 30);
+  const diffYears = Math.floor(diffDays / 365);
+  if (diffDays < 1) return 'just now';
+  if (diffDays < 7) return `${diffDays}d ago`;
+  if (diffWeeks < 4) return `${diffWeeks}w ago`;
+  if (diffMonths < 12) return `${diffMonths}mo ago`;
+  return `${diffYears}yr ago`;
+};
+
 const LinkedInProfile = () => {
   const [activeTab, setActiveTab] = useState('posts');
 
   const posts = [
     {
+      date: new Date('2025-05-12'),
       profileImage: '/pro-pic-2.png',
       author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 1mo · Edited',
-      content: (
-        <div>
-          <p>
-            I'm open to work, check out my <a href="/#/resume">resume</a>!
-          </p>
-        </div>
-      ),
-    },
-    {
-      profileImage: '/pro-pic-2.png',
-      author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 3mo · Edited',
       content: (
         <div>
           <p>
@@ -39,17 +40,44 @@ const LinkedInProfile = () => {
       ),
     },
     {
+      date: new Date('2025-08-15'),
       profileImage: '/pro-pic-2.png',
       author: 'Aparna Natarajan',
-      meta: 'Software Engineer · 3mo · Edited',
       content: (
         <div>
-          <p>
-            Something new I am trying this year!{' '}
-            <a href="https://adventofcode.com/2024/">
-              https://adventofcode.com/2024/
-            </a>
-          </p>
+          <p>Check out my first iOS App:</p>
+          <a
+            className="link-preview"
+            href="https://apps.apple.com/us/app/run-hike-walk-path-recorder/id6749169358"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="link-preview-domain">apps.apple.com</div>
+            <div className="link-preview-title">
+              Run Hike Walk - Path Recorder
+            </div>
+          </a>
+        </div>
+      ),
+    },
+    {
+      date: new Date('2026-01-15'),
+      profileImage: '/pro-pic-2.png',
+      author: 'Aparna Natarajan',
+      content: (
+        <div>
+          <p>Take a survey to help me gather data for my social app!</p>
+          <a
+            className="link-preview"
+            href="https://forms.gle/vX9Yjg7KtjCyCtkD6"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="link-preview-domain">forms.gle</div>
+            <div className="link-preview-title">
+              Your Relationships and Meaningful Moments
+            </div>
+          </a>
         </div>
       ),
     },
@@ -159,8 +187,8 @@ const LinkedInProfile = () => {
             name="Aparna Natarajan"
             headline="Software Engineer"
             location="New York, New York, United States"
-            followers={170}
-            connections={158}
+            followers={291}
+            connections={291}
             email="aparnalovestocode@gmail.com"
             resumeLink="/#/resume"
             dogLink="/#/linkedin/dog"
@@ -192,9 +220,15 @@ const LinkedInProfile = () => {
             <div className="activity-section">
               {activeTab === 'posts' && (
                 <Carousel>
-                  {posts.map((post, index) => (
-                    <Post key={index} {...post} />
-                  ))}
+                  {[...posts]
+                    .sort((a, b) => b.date - a.date)
+                    .map((post, index) => (
+                      <Post
+                        key={index}
+                        {...post}
+                        meta={`Software Engineer · ${getRelativeTime(post.date)}`}
+                      />
+                    ))}
                 </Carousel>
               )}
               {activeTab === 'comments' && (

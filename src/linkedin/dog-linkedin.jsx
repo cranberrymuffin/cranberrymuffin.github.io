@@ -16,7 +16,7 @@ const DogLinkedInProfile = () => {
     {
       profileImage: '/dog-profile.jpg',
       author: 'Loretta',
-      meta: 'Professional Good Girl · 1mo · Edited',
+      meta: 'Professional Good Girl · 1wk ago',
       content: (
         <div>
           <p>Just had an amazing day at the park! 🐕</p>
@@ -27,7 +27,7 @@ const DogLinkedInProfile = () => {
     {
       profileImage: '/dog-profile.jpg',
       author: 'Loretta',
-      meta: 'Professional Good Girl · 3mo · Edited',
+      meta: 'Professional Good Girl · 3mo ago',
       content: (
         <div>
           <p>Looking for new opportunities in the treat industry! 🦴</p>

@@ -16,14 +16,25 @@ a {
 
 .navbar {
   display: flex;
+  justify-content: center;
   align-items: center;
   background: white;
-  padding: 0 16px;
+  padding: 0;
   height: 52px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .nav-left {
@@ -32,25 +43,18 @@ a {
 }
 
 .linkedin-logo {
-  width: 34px;
-  height: 34px;
-  margin-right: 8px;
-  background-color: #0a66c2;
-  border-radius: 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
+  margin-right: 8px;
 }
 
 .search-box {
   display: flex;
   align-items: center;
-  background-color: #eef3f8;
-  border-radius: 4px;
-  padding: 0 8px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  padding: 0 12px;
   width: 280px;
   height: 34px;
 }
@@ -58,6 +62,9 @@ a {
 .search-icon {
   color: rgba(0, 0, 0, 0.6);
   margin-right: 8px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .search-input {
@@ -88,23 +95,47 @@ a {
 
 .main-content {
   justify-content: center;
-  width: 80vw;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 16px;
   display: grid;
   gap: 24px;
-  min-width: 300px; /* Ensure minimum width */
+  min-width: 300px;
+  box-sizing: border-box;
 }
 
 .carousel-container,
 .comments-list {
-  width: 80vw;
-  max-width: 1000px;
+  width: 100%;
 }
 
 .title-link {
   color: black;
+}
+
+.post-link {
+  color: #0a66c2;
+}
+
+.link-preview {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 8px;
+  color: inherit;
+}
+
+.link-preview-domain {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 4px;
+}
+
+.link-preview-title {
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .profile-section {
@@ -334,7 +365,16 @@ a {
 }
 
 .post-action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
   margin-right: 4px;
+}
+
+.post-action-icon svg {
+  display: block;
 }
 
 .rc-scout__logo {
@@ -434,7 +474,6 @@ a {
 .skill-endorsement {
   display: flex;
   align-items: center;
-  margin-left: 24px;
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
 }
@@ -630,7 +669,7 @@ a {
   display: flex;
   align-items: center;
   position: relative;
-  width: 80vw;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -658,22 +697,24 @@ a {
   border-radius: 8px;
   padding: 16px;
   width: calc(min(300px, 100%) - 25px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .carousel-btn {
-  position: center;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: white;
+  color: rgba(0, 0, 0, 0.6);
   border: none;
-  padding: 8px 12px;
+  padding: 8px;
   cursor: pointer;
-  font-size: 10px;
-  align-items: center;
-  text-align: center;
   border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .prev {
@@ -685,13 +726,24 @@ a {
 }
 
 .carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: #f3f2ef;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .search-box {
-    width: 0px;
-    visibility: hidden;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    padding: 0 8px;
+  }
+
+  .search-input {
+    display: none;
+  }
+
+  .search-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
   .nav-item {
@@ -701,7 +753,9 @@ a {
     font-size: 0px;
     min-width: 50px;
   }
+}
 
+@media (max-width: 768px) {
   .main-content {
     grid-template-columns: 1fr;
   }
