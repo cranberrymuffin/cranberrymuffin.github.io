@@ -669,7 +669,7 @@ a {
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
+  max-width: calc(min(1000px, 80vw));
   overflow: hidden;
 }
 
