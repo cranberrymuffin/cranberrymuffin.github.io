@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Resume from './resume/resume';
 import Home from './home/Home';
 import Writing from './writing/writing';
@@ -15,7 +16,11 @@ import DogLinkedInProfile from './linkedin/dog-linkedin';
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <Helmet>
+        <title>cranberrymuffin</title>
+      </Helmet>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/resume" element={<Resume />} />
@@ -30,5 +35,6 @@ export default function App() {
       <Route path="/blog/json-validator" element={<JSONParserBlogPost />} />
       <Route path="/blog/path-recorder" element={<PathRecorderBlogPost />} />
     </Routes>
+    </>
   );
 }

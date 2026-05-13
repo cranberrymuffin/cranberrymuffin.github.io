@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import useSwapFavicon from '../hooks/useSwapFavicon';
 import './linkedin.css';
 import Navbar from './components/Navbar';
 import ProfileHeader from './components/ProfileHeader';
@@ -11,6 +13,8 @@ import Carousel from './components/Carousel';
 
 const DogLinkedInProfile = () => {
   const [activeTab, setActiveTab] = useState('posts');
+
+  useSwapFavicon('/linkedin-favicon.svg');
 
   const posts = [
     {
@@ -105,6 +109,9 @@ const DogLinkedInProfile = () => {
 
   return (
     <div className="linkedin">
+      <Helmet>
+        <title>Loretta</title>
+      </Helmet>
       <Navbar />
       <main className="main-content">
         <div className="profile-content">
