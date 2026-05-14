@@ -44,7 +44,7 @@ export default function DogLinkedInBlogPost() {
           </p>
           <p>
             So when people ask for my LinkedIn, I sometimes just send{' '}
-            <a href="/#/linkedin/dog">my fake one</a> instead.
+            <a href="/#/linkedin">my fake one</a> instead.
           </p>
           <h2>
             My dog's <a href="/#/linkedin/dog">LinkedIn</a>
@@ -90,8 +90,8 @@ export default function DogLinkedInBlogPost() {
               labels disappear, leaving icon-only navigation.
             </li>
             <li>
-              <code>ProfileHeader</code> renders the top of the profile —
-              photo, name, headline, location, and follower count. It also
+              <code>ProfileHeader</code> renders the top of the profile — photo,
+              name, headline, location, and follower count. It also
               conditionally renders action buttons: my profile shows Message,
               View Resume, and Meet My Dog; Loretta's hides all of that. The{' '}
               <code>isDogProfile</code> flag handles the difference without
@@ -100,8 +100,8 @@ export default function DogLinkedInBlogPost() {
             <li>
               <code>ProfileCard</code> is a generic section wrapper. Every
               section on a LinkedIn profile — About, Experience, Skills — has
-              the same card shape: a title and a content area. Without it,
-              that structure would be duplicated for every section.
+              the same card shape: a title and a content area. Without it, that
+              structure would be duplicated for every section.
             </li>
             <li>
               <code>ExperienceItem</code> is reused for experience, education,
@@ -115,14 +115,14 @@ export default function DogLinkedInBlogPost() {
               description.
             </li>
             <li>
-              <code>Recommendation</code> is its own component because it's
-              the most complex item on the page: a quote, an author, a
-              relationship context, and a date.
+              <code>Recommendation</code> is its own component because it's the
+              most complex item on the page: a quote, an author, a relationship
+              context, and a date.
             </li>
             <li>
               <code>ActivitySection</code> wraps a <code>ProfileCard</code>{' '}
-              internally but adds tab state on top of it, switching between
-              two different content types — posts and comments — in the same
+              internally but adds tab state on top of it, switching between two
+              different content types — posts and comments — in the same
               section.
             </li>
             <li>
@@ -132,11 +132,10 @@ export default function DogLinkedInBlogPost() {
               them; <code>Post</code> only knows about one.
             </li>
             <li>
-              <code>Carousel</code> is a scrollable container with
-              conditionally rendered prev/next buttons. It uses a{' '}
-              <code>ResizeObserver</code> to track scroll position and only
-              shows the navigation buttons when there's actually content to
-              scroll to in that direction.
+              <code>Carousel</code> is a scrollable container with conditionally
+              rendered prev/next buttons. It uses a <code>ResizeObserver</code>{' '}
+              to track scroll position and only shows the navigation buttons
+              when there's actually content to scroll to in that direction.
             </li>
           </ul>
           <p>
