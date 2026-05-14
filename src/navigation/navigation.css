@@ -1,5 +1,6 @@
 :root {
   --nav-text-color: #000000;
+  --nav-height: 44px;
 }
 /* Navigation Styles */
 #nav {

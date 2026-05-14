@@ -16,6 +16,11 @@
 
     <!-- Stories here -->
     <item>
+      <title>My Dog Is #OpenToWork</title>
+      <link>https://cranberrymuffin.github.io/#/blog/dog-linkedin</link>
+      <description>Building a reusable LinkedIn profile template for me and my dog</description>
+    </item>
+    <item>
       <title>Path Recorder</title>
       <link>https://cranberrymuffin.github.io/#/blog/path-recorder</link>
       <description>Building my first iOS app: Path Recorder</description>
