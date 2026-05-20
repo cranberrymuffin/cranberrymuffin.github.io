@@ -1,3 +1,19 @@
+.webring-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.webring-links a {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+
+.webring-links a:hover {
+  text-decoration: underline;
+}
+
 .linkedin {
   box-sizing: border-box;
   font-family:
@@ -443,6 +459,7 @@ a {
 .job-title {
   font-weight: 600;
   font-size: 16px;
+  color: black;
 }
 
 .company-name {

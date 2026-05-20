@@ -6,18 +6,6 @@ import { getRelativeTime } from './utils/dateUtils';
 
 const posts = [
   {
-    date: new Date('2025-05-12'),
-    profileImage: '/pro-pic-2.png',
-    author: 'Aparna Natarajan',
-    content: (
-      <div>
-        <p>
-          I will be participating in the Recurse Center's Winter 2, 2025 batch!
-        </p>
-      </div>
-    ),
-  },
-  {
     date: new Date('2025-08-15'),
     profileImage: '/pro-pic-2.png',
     author: 'Aparna Natarajan',
@@ -118,6 +106,12 @@ const experience = [
 
 const education = [
   {
+    logo: '/rc-scout.png',
+    title: 'Recurse Center',
+    company: 'Winter 2, 2025',
+    link: 'https://www.recurse.com/scout/click?t=4f0d21efdf10880bb07e8f0ac2e22146',
+  },
+  {
     logo: '/brown.jpg',
     title: 'Brown University',
     company: 'Master of Science - MS, Computer Science',
@@ -200,12 +194,30 @@ const LinkedInProfile = () => {
         <div className="tablist">
           <div className="tab active">Organizations</div>
         </div>
-        <ExperienceItem
-          logo="/rc-scout.png"
-          title="Recurse Center"
-          company="4,516 followers"
-          link="https://www.recurse.com/scout/click?t=4f0d21efdf10880bb07e8f0ac2e22146"
-        />
+        <a
+          id="rc-ring-home"
+          data-rc-uuid="e31fb97f-d813-4593-83a1-682e7de3d896"
+          href="https://ring.recurse.com/"
+          className="experience-item"
+        >
+          <div className="company-logo">
+            <img src="/rc-scout.png" alt="Recurse Center logo" />
+          </div>
+          <div className="experience-details">
+            <div className="job-title">The Recurse Webring</div>
+            <div className="webring-links">
+              <a id="rc-ring-prev" href="https://ring.recurse.com/prev?id=75">
+                ←
+              </a>
+              <a id="rc-ring-rand" href="https://ring.recurse.com/rand">
+                Random
+              </a>
+              <a id="rc-ring-next" href="https://ring.recurse.com/next?id=75">
+                →
+              </a>
+            </div>
+          </div>
+        </a>
       </ProfileCard>
     </LinkedInProfileTemplate>
   );

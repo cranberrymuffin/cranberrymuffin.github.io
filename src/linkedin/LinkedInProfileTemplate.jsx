@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import useSwapFavicon from '../hooks/useSwapFavicon';
 import './linkedin.css';
@@ -25,6 +25,17 @@ const LinkedInProfileTemplate = ({
   children,
 }) => {
   useSwapFavicon('/linkedin-favicon.svg');
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src =
+      'https://raw.githack.com/Qwuke/recurse-ring/main/static/ring.js';
+    script.type = 'text/javascript';
+    document.head.appendChild(script);
+    return () => {
+      if (document.head.contains(script)) document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="linkedin">
