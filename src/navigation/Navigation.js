@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './navigation.css';
 
-export default function Navigation({ textColor = '#000000', styleOverride = {} }) {
+export default function Navigation({
+  textColor = '#000000',
+  styleOverride = {},
+}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {

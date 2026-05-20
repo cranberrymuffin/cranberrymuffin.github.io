@@ -22,21 +22,21 @@ export default function App() {
         <title>cranberrymuffin</title>
       </Helmet>
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/portfolio" element={<PortfolioPage />} />
-      <Route path="/resume" element={<Resume />} />
-      <Route path="/blog" element={<Writing />} />
-      <Route path="/linkedin" element={<LinkedInProfile />} />
-      <Route path="/linkedin/dog" element={<DogLinkedInProfile />} />
-      <Route path="/blog/valentine" element={<ValentineBlogPost />} />
-      <Route path="/blog/tic-tac-toe" element={<TicTacToeBlogPost />} />
-      <Route path="/blog/Snowstorm" element={<SnowstormBlogPost />} />
-      <Route path="/blog/gemini-akinator" element={<GeminiAkinator />} />
-      <Route path="/blog/ascii-art" element={<AsciiArtBlogPost />} />
-      <Route path="/blog/json-validator" element={<JSONParserBlogPost />} />
-      <Route path="/blog/path-recorder" element={<PathRecorderBlogPost />} />
-      <Route path="/blog/dog-linkedin" element={<DogLinkedInBlogPost />} />
-    </Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/blog" element={<Writing />} />
+        <Route path="/linkedin" element={<LinkedInProfile />} />
+        <Route path="/linkedin/dog" element={<DogLinkedInProfile />} />
+        <Route path="/blog/valentine" element={<ValentineBlogPost />} />
+        <Route path="/blog/tic-tac-toe" element={<TicTacToeBlogPost />} />
+        <Route path="/blog/Snowstorm" element={<SnowstormBlogPost />} />
+        <Route path="/blog/gemini-akinator" element={<GeminiAkinator />} />
+        <Route path="/blog/ascii-art" element={<AsciiArtBlogPost />} />
+        <Route path="/blog/json-validator" element={<JSONParserBlogPost />} />
+        <Route path="/blog/path-recorder" element={<PathRecorderBlogPost />} />
+        <Route path="/blog/dog-linkedin" element={<DogLinkedInBlogPost />} />
+      </Routes>
     </>
   );
 }

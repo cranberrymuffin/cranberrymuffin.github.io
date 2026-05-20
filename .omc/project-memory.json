@@ -1,0 +1,171 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779317264949,
+  "projectRoot": "/Users/aparna/cranberrymuffin.github.io",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": ["package.json"]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "18.3",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "18.3",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "5.3.3",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": "npm test",
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "start": "react-scripts start",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "dev": "vite",
+      "build": "vite build",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist",
+      "lint": "eslint . --max-warnings 1",
+      "prettier:check": "prettier . --check",
+      "prettier:write": "prettier . --write"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": ["public", "src"],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 27,
+      "lastAccessed": 1779317264919,
+      "keyFiles": [
+        "activision.jpg",
+        "blog.xml",
+        "brown.jpg",
+        "cranberrymuffin.png",
+        "crystal-ball.png"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 27,
+      "lastAccessed": 1779317264919,
+      "keyFiles": [
+        "activision.jpg",
+        "blog.xml",
+        "brown.jpg",
+        "cranberrymuffin.png",
+        "crystal-ball.png"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 4,
+      "lastAccessed": 1779317264929,
+      "keyFiles": ["App.jsx", "index.html", "index.js"]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1779317264935,
+      "keyFiles": [
+        "index-C8GYAjXP.js",
+        "index-C8GYAjXP.js.map",
+        "index-Xc013E8P.css"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/linkedin/linkedin.jsx",
+      "accessCount": 9,
+      "lastAccessed": 1779320139549,
+      "type": "file"
+    },
+    {
+      "path": "src/linkedin/linkedin.css",
+      "accessCount": 9,
+      "lastAccessed": 1779320172804,
+      "type": "file"
+    },
+    {
+      "path": "src/linkedin/LinkedInProfileTemplate.jsx",
+      "accessCount": 6,
+      "lastAccessed": 1779318750753,
+      "type": "file"
+    },
+    {
+      "path": "src/index.html",
+      "accessCount": 1,
+      "lastAccessed": 1779317329789,
+      "type": "file"
+    },
+    {
+      "path": "src/App.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1779317329797,
+      "type": "file"
+    },
+    {
+      "path": "src/home/Home.js",
+      "accessCount": 1,
+      "lastAccessed": 1779317339218,
+      "type": "file"
+    },
+    {
+      "path": "src/home/home.css",
+      "accessCount": 1,
+      "lastAccessed": 1779317339515,
+      "type": "file"
+    },
+    {
+      "path": "src/navigation/Navigation.js",
+      "accessCount": 1,
+      "lastAccessed": 1779317349820,
+      "type": "file"
+    },
+    {
+      "path": "src/linkedin/components/ExperienceItem.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1779317387842,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

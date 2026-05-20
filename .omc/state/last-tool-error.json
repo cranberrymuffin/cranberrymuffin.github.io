@@ -1,0 +1,7 @@
+{
+  "tool_name": "Edit",
+  "tool_input_preview": "{\"file_path\":\"/Users/aparna/cranberrymuffin.github.io/src/linkedin/linkedin.jsx\",\"old_string\":\"  {\\n    date: new Date('2025-05-12'),\\n    profileImage: '/pro-pic-2.png',\\n    author: 'Aparna Nataraja...",
+  "error": "File content has changed since it was last read. This commonly happens when a linter or formatter run via Bash rewrites the file. Call Read on this file to refresh, then retry the edit.",
+  "timestamp": "2026-05-20T23:26:43.487Z",
+  "retry_count": 1
+}

@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 
 export default function useSwapFavicon(href, type = 'image/svg+xml') {
   useEffect(() => {
-    let favicon = document.getElementById('favicon') || document.querySelector("link[rel~='icon']");
+    let favicon =
+      document.getElementById('favicon') ||
+      document.querySelector("link[rel~='icon']");
     let created = false;
     if (!favicon) {
       favicon = document.createElement('link');

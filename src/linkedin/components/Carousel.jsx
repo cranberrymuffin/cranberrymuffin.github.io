@@ -35,8 +35,14 @@ const Carousel = ({ children }) => {
     <div className="carousel-container">
       {canScrollLeft && (
         <button className="carousel-btn prev" onClick={() => scroll(-1)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="16" height="16">
-            <path d="M11 1 6.39 8 11 15H8.61L4 8l4.61-7z"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            width="16"
+            height="16"
+          >
+            <path d="M11 1 6.39 8 11 15H8.61L4 8l4.61-7z" />
           </svg>
         </button>
       )}
@@ -45,8 +51,14 @@ const Carousel = ({ children }) => {
       </div>
       {canScrollRight && (
         <button className="carousel-btn next" onClick={() => scroll(1)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="16" height="16">
-            <path d="m5 15 4.61-7L5 1h2.39L12 8l-4.61 7z"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            width="16"
+            height="16"
+          >
+            <path d="m5 15 4.61-7L5 1h2.39L12 8l-4.61 7z" />
           </svg>
         </button>
       )}
