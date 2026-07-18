@@ -58,6 +58,53 @@ export default function GetUpBlogPost() {
                     </figcaption>
                   </figure>
                 </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            While I was running, I saw a woman lying across the path ahead of
+            me. I was going to say <i>"Hi, Excuse me"</i> to pass her.
+          </p>
+          <p>
+            {' '}
+            I saw her turn to me, I was able to get out <i>"Hi..."</i> when she
+            got up and lunged at me yelling, <i>"What's your problem?"</i>. I
+            had started turning around when I saw her lunging at me, but I was
+            not able to get away. She grabbed me around my neck. I remember
+            feeling the pressure of her grabbing my neck as I got out a strained{' '}
+            <i>"No"</i>.
+          </p>
+          <p>
+            She brought me down. She punched me in the head. She slammed my head
+            against the sidewalk. She kicked me in the back of the head.
+          </p>
+          <p>
+            I remember saying: <i>"Stop, please. "I'm sorry! I'm sorry!"</i>
+          </p>
+
+          <p>
+            When I started apologizing, she responded to me with:{' '}
+            <i>"What are you apologizing for?"</i> I was confused and didn't
+            know what to say but knew it was important to tell her something
+            that could stop the assault while she was verbally communicating
+            with me. I said:{' '}
+            <i>"I don't know, I don't know, I don't know why I upset you."</i>
+          </p>
+          <p>
+            The attack stopped. I grabbed my glasses and my phone and headed
+            back to my apartment.
+          </p>
+          <p>
+            I typically hold my phone in my hand while I run to track my
+            distance and time. I was going through my camera roll today, and
+            found that before I dropped my phone during the attack, I had
+            pressed the side buttons resulting in a screenshot and an accidental
+            photo capture.
+          </p>
+          <table className="photo-table">
+            <tbody>
+              <tr>
                 <td>
                   <figure>
                     <img
@@ -66,14 +113,7 @@ export default function GetUpBlogPost() {
                     ></img>
                     <figcaption>(2/2) Taken accidentally</figcaption>
                   </figure>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table className="photo-table">
-            <tbody>
-              <tr>
-                {' '}
+                </td>{' '}
                 <td>
                   <figure>
                     <img
@@ -86,14 +126,34 @@ export default function GetUpBlogPost() {
               </tr>
             </tbody>
           </table>
+
+          <h2>TW: the black eye</h2>
+          <p>
+            The photos below are of the black eye healing over the following
+            days, ordered by when they were taken. Tap a photo to reveal it.
+          </p>
+          <div className="tw-grid">
+            {BLACK_EYE_PHOTOS.map((photo, index) => (
+              <RevealablePhoto
+                key={photo.src}
+                src={photo.src}
+                alt={`black eye, ${photo.date}`}
+                caption={photo.date}
+                revealed={revealed.has(index)}
+                onToggle={() => toggleReveal(index)}
+              />
+            ))}
+          </div>
+
+          <h2>Buisness Takeaways</h2>
           <p>
             After taking the minimum amount of PTO needed for the swelling on my
-            right eye to go down enough for my eye to open back up, I found
-            myself back and ready build.
+            right eye to go down and my eye to open back up, I found myself back
+            and ready build.
           </p>
           <p>
-            Turning the week over in my head, I kept landing on the same three
-            things.
+            Turning the week over in my head with a buisness perspective, I kept
+            landing on the same three things.
           </p>
           <ol>
             <li>
@@ -101,7 +161,7 @@ export default function GetUpBlogPost() {
                 <b>When you're knocked down, get back up. 🥊 </b>
               </p>
               <p>
-                Getting knocked down isnt a choice, but staying down is. The
+                Getting knocked down isnt a choice, but staying down is. My
                 instinct to get back up from the cement is the same instinct
                 that gets me through a bad sprint, a failed launch, or a
                 rejection.
@@ -120,10 +180,7 @@ export default function GetUpBlogPost() {
               <p>
                 <b>Your head is your biggest asset. 🧠 </b>
               </p>
-              <p>
-                In the moment, it was what I was most scared of losing
-                literally.
-              </p>
+              <p>In that moment, it was what I was most scared of losing.</p>
               <p>
                 But my head is also what got me through the attack: the ability
                 to think quickly through the chaos.
@@ -135,23 +192,6 @@ export default function GetUpBlogPost() {
               </p>
             </li>
           </ol>
-          <h2>TW: the black eye</h2>
-          <p>
-            The photos below are of the black eye healing over the following
-            days, ordered by when they were taken. Tap a photo to reveal it.
-          </p>
-          <div className="tw-grid">
-            {BLACK_EYE_PHOTOS.map((photo, index) => (
-              <RevealablePhoto
-                key={photo.src}
-                src={photo.src}
-                alt={`black eye, ${photo.date}`}
-                caption={photo.date}
-                revealed={revealed.has(index)}
-                onToggle={() => toggleReveal(index)}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </div>
