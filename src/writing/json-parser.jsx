@@ -5,7 +5,7 @@ export default function JSONParserBlogPost() {
   return (
     <div id="main" className="main">
       <Navigation />
-      <div id="blog" className="blog">
+      <div id="writing" className="writing">
         <div id="writing" className="writing">
           <h1>
             Building a <a href="/json-validator">JSON Validator</a> by Parsing

@@ -4,7 +4,7 @@ import './writing.css';
 
 export default function ValentineBlogPost() {
   return (
-    <div id="blog" className="blog">
+    <div id="main" className="main">
       <Navigation />
       <div id="writing" className="writing">
         <h1>

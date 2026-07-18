@@ -1,8 +1,10 @@
 import './writing.css';
+import Navigation from '../navigation/Navigation';
 
 export default function AsciiArtBlogPost() {
   return (
-    <div id="blog" className="blog">
+    <div id="main" className="main">
+      <Navigation />
       <div id="writing" className="writing">
         <h1>
           Transforming Images into{' '}

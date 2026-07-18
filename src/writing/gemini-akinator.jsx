@@ -5,7 +5,7 @@ export default function GeminiAkinator() {
   return (
     <div id="main" className="main">
       <Navigation />
-      <div id="blog" className="blog">
+      <div id="writing" className="writing">
         <div id="writing" className="writing">
           <h1>
             My Gemini AI Powered{' '}

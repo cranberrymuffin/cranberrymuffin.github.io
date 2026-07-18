@@ -18,7 +18,7 @@ import DogLinkedInProfile from './linkedin/dog-linkedin';
 
 export default function App() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>cranberrymuffin</title>
       </Helmet>
@@ -39,6 +39,6 @@ export default function App() {
         <Route path="/blog/dog-linkedin" element={<DogLinkedInBlogPost />} />
         <Route path="/blog/get-up" element={<GetUpBlogPost />} />
       </Routes>
-    </>
+    </div>
   );
 }
