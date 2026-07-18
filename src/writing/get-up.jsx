@@ -1,7 +1,35 @@
+import { useState } from 'react';
 import Navigation from '../navigation/Navigation';
+import RevealablePhoto from './components/RevealablePhoto';
 import './writing.css';
 
+const BLACK_EYE_PHOTOS = [
+  { src: '/IMG_6660.jpeg', date: 'July 14 at 10:38 PM' },
+  { src: '/IMG_6661.jpeg', date: 'July 15 at 3:49 AM' },
+  { src: '/IMG_6662.jpeg', date: 'July 15 at 5:01 AM' },
+  { src: '/IMG_6664.jpeg', date: 'July 15 at 4:44 PM' },
+  { src: '/IMG_6674.jpeg', date: 'July 16 at 9:43 AM' },
+  { src: '/IMG_6685.jpeg', date: 'July 16 at 8:48 PM' },
+  { src: '/IMG_6700.jpeg', date: 'July 17 at 7:46 AM' },
+  { src: '/IMG_6724.jpeg', date: 'July 18 at 9:46 AM' },
+  { src: '/black-eye.png', date: 'July 18 at 4:31 PM' },
+];
+
 export default function GetUpBlogPost() {
+  const [revealed, setRevealed] = useState(() => new Set());
+
+  function toggleReveal(index) {
+    setRevealed(prev => {
+      const next = new Set(prev);
+      if (next.has(index)) {
+        next.delete(index);
+      } else {
+        next.add(index);
+      }
+      return next;
+    });
+  }
+
   return (
     <div id="main" className="main">
       <Navigation />
@@ -107,6 +135,23 @@ export default function GetUpBlogPost() {
               </p>
             </li>
           </ol>
+          <h2>TW: the black eye</h2>
+          <p>
+            The photos below are of the black eye healing over the following
+            days, ordered by when they were taken. Tap a photo to reveal it.
+          </p>
+          <div className="tw-grid">
+            {BLACK_EYE_PHOTOS.map((photo, index) => (
+              <RevealablePhoto
+                key={photo.src}
+                src={photo.src}
+                alt={`black eye, ${photo.date}`}
+                caption={photo.date}
+                revealed={revealed.has(index)}
+                onToggle={() => toggleReveal(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
