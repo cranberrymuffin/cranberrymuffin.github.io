@@ -12,6 +12,7 @@ import AsciiArtBlogPost from './writing/ascii';
 import PortfolioPage from './portfolio/PortfolioPage';
 import JSONParserBlogPost from './writing/json-parser';
 import DogLinkedInBlogPost from './writing/dog-linkedin';
+import GetUpBlogPost from './writing/get-up';
 import LinkedInProfile from './linkedin/linkedin';
 import DogLinkedInProfile from './linkedin/dog-linkedin';
 
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/blog/json-validator" element={<JSONParserBlogPost />} />
         <Route path="/blog/path-recorder" element={<PathRecorderBlogPost />} />
         <Route path="/blog/dog-linkedin" element={<DogLinkedInBlogPost />} />
+        <Route path="/blog/get-up" element={<GetUpBlogPost />} />
       </Routes>
     </>
   );

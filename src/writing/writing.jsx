@@ -9,6 +9,12 @@ export default function Writing() {
         <h1> Writing </h1>
         <ul>
           <li>
+            July 18, 2026:{' '}
+            <a href="/#/blog/get-up">
+              What I Learned From Getting Knocked Down
+            </a>
+          </li>
+          <li>
             May 13, 2026:{' '}
             <a href="/#/blog/dog-linkedin">My Dog Is #OpenToWork</a>
           </li>
