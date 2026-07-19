@@ -116,9 +116,11 @@ export default function GetUpBlogPost() {
             </tbody>
           </table>
           <p>
-            Even though the photos I capture do not associate location
-            information on them by default, when I upload them to PathRecorder,
-            they are associated with the location closest to the timestamp .
+            The photos I capture do not associate location information on them
+            by default. My phone's camera app does not have location services.
+            But when I upload photos to PathRecorder, if they were taken while a
+            path was in progress, they can be uploaded after the fact and
+            associated with the GPS coordinate recorded at the time of capture.
           </p>
 
           <table className="photo-table">
@@ -143,7 +145,7 @@ export default function GetUpBlogPost() {
                       src="/path-recorder-with-pic-uploaded.png"
                     ></img>
                     <figcaption>
-                      Photo geotagged to the attack location.
+                      Photo capture during attacked geotagged to path.
                     </figcaption>
                   </figure>
                 </td>
