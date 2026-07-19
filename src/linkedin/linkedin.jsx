@@ -6,6 +6,28 @@ import { getRelativeTime } from './utils/dateUtils';
 
 const posts = [
   {
+    date: new Date('2026-07-14'),
+    profileImage: '/pro-pic-2.png',
+    author: 'Aparna Natarajan',
+    content: (
+      <div>
+        <a style={{ color: 'inherit' }} href="/#/blog/get-up">
+          <p>
+            On Tuesday night I was attacked while running on the East River
+            walkway. After taking the minimum amount of PTO, I wanted to share
+            my career reflections:
+          </p>
+          <p>
+            1. When you fall down you can get back up.
+            <br />
+            2. People can join your network in unexpected ways. <br />
+            3. Your head is your biggest asset
+          </p>
+        </a>
+      </div>
+    ),
+  },
+  {
     date: new Date('2025-08-15'),
     profileImage: '/pro-pic-2.png',
     author: 'Aparna Natarajan',
@@ -183,13 +205,8 @@ const LinkedInProfile = () => {
           'Aparna is an amazing engineer with an ability to learn quickly and integrate the right technologies to make a project successful. She is also driven and hard working. While working with her on building a multiplayer game, she quickly learned how to use peerjs and zustand integrated them into the project. She is fantastic and good to work with and I would recommend her for any role that needs someone who can figure things out and propel the team forward!',
         link: 'https://www.linkedin.com/in/bdettmer/',
       }}
+      projects={projects}
     >
-      <ProfileCard title="Projects" id="projects">
-        {projects.map((project, index) => (
-          <ExperienceItem key={index} {...project} />
-        ))}
-      </ProfileCard>
-
       <ProfileCard title="Interests" id="interests">
         <div className="tablist">
           <div className="tab active">Organizations</div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navigation from '../navigation/Navigation';
 import RevealablePhoto from './components/RevealablePhoto';
 import './writing.css';
@@ -29,6 +29,9 @@ export default function GetUpBlogPost() {
       return next;
     });
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div id="main" className="main">
@@ -165,54 +168,6 @@ export default function GetUpBlogPost() {
               />
             ))}
           </div>
-
-          <h2>Buisness Takeaways</h2>
-          <p>
-            After taking the minimum amount of PTO needed for the swelling on my
-            right eye to go down and my eye to open back up, I found myself back
-            and ready build.
-          </p>
-          <p>
-            Turning the week over in my head with a buisness perspective, I kept
-            landing on the same three things.
-          </p>
-          <ol>
-            <li>
-              <p>
-                <b>When you're knocked down, get back up. 🥊 </b>
-              </p>
-              <p>
-                Getting knocked down isnt a choice, but staying down is. My
-                instinct to get back up from the cement is the same instinct
-                that gets me through a bad sprint, a failed launch, or a
-                rejection.
-              </p>
-            </li>
-            <li>
-              <p>
-                <b>People can join your network in unexpected ways. 🤝 </b>
-              </p>
-              <p>
-                I grew my network meeting the woman that attacked me, police
-                officers, and medical professionals.
-              </p>
-            </li>
-            <li>
-              <p>
-                <b>Your head is your biggest asset. 🧠 </b>
-              </p>
-              <p>In that moment, it was what I was most scared of losing.</p>
-              <p>
-                But my head is also what got me through the attack: the ability
-                to think quickly through the chaos.
-              </p>
-              <p>
-                That same asset that shows up for me on the job. Timely and
-                strategic decision making can stop incidents before they get
-                worse.
-              </p>
-            </li>
-          </ol>
         </div>
       </div>
     </div>

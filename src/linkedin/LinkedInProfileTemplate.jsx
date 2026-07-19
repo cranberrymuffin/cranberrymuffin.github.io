@@ -22,6 +22,7 @@ const LinkedInProfileTemplate = ({
   skills,
   skillsFooter,
   recommendation,
+  projects,
   children,
 }) => {
   useSwapFavicon('/linkedin-favicon.svg');
@@ -50,39 +51,47 @@ const LinkedInProfileTemplate = ({
           <ProfileCard title="About" id="about">
             <p>{about}</p>
           </ProfileCard>
-
           <ActivitySection
             followers={followers}
             posts={posts}
             comments={comments}
           />
 
-          <ProfileCard title="Experience" id="experience">
-            {experience.map((exp, index) => (
-              <ExperienceItem key={index} {...exp} />
-            ))}
-          </ProfileCard>
-
-          <ProfileCard title="Education" id="education">
-            {education.map((edu, index) => (
-              <ExperienceItem key={index} {...edu} />
-            ))}
-          </ProfileCard>
-
-          <ProfileCard title="Skills" id="skills">
-            {skills.map((skill, index) => (
-              <SkillItem key={index} {...skill} />
-            ))}
-            {skillsFooter}
-          </ProfileCard>
-
+          {experience && (
+            <ProfileCard title="Experience" id="experience">
+              {experience.map((exp, index) => (
+                <ExperienceItem key={index} {...exp} />
+              ))}
+            </ProfileCard>
+          )}
+          {education && (
+            <ProfileCard title="Education" id="education">
+              {education.map((edu, index) => (
+                <ExperienceItem key={index} {...edu} />
+              ))}
+            </ProfileCard>
+          )}
+          {skills && (
+            <ProfileCard title="Skills" id="skills">
+              {skills.map((skill, index) => (
+                <SkillItem key={index} {...skill} />
+              ))}
+              {skillsFooter}
+            </ProfileCard>
+          )}
+          {projects && (
+            <ProfileCard title="Projects" id="projects">
+              {projects.map((project, index) => (
+                <ExperienceItem key={index} {...project} />
+              ))}
+            </ProfileCard>
+          )}
           <ProfileCard title="Recommendations" id="recommendations">
             <div className="tablist">
               <div className="tab active">Received</div>
             </div>
             <Recommendation {...recommendation} />
           </ProfileCard>
-
           {children}
         </div>
       </main>
