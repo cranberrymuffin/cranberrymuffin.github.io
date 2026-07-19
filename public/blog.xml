@@ -16,6 +16,13 @@
 
     <!-- Stories here -->
     <item>
+      <title>What I Learned From Getting Knocked Down</title>
+      <link>https://cranberrymuffin.io/#/blog/get-up</link>
+      <description>I share my experience of being attacked while running on the East River, the days that followed, and the unexpected digital trail my phone left behind that helped piece together what happened.</description>
+      <pubDate>Wed, 18 July 2026 00:00:00 +0000</pubDate>
+      <guid>https://cranberrymuffin.io/#/blog/get-up</guid>
+    </item>
+    <item>
       <title>My Dog Is #OpenToWork</title>
       <link>https://cranberrymuffin.io/#/blog/dog-linkedin</link>
       <description>Building a reusable LinkedIn profile template for me and my dog</description>
