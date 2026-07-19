@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1779317264949,
+  "lastScanned": 1784398768979,
   "projectRoot": "/Users/aparna/cranberrymuffin.github.io",
   "techStack": {
     "languages": [
@@ -8,7 +8,9 @@
         "name": "JavaScript/TypeScript",
         "version": null,
         "confidence": "high",
-        "markers": ["package.json"]
+        "markers": [
+          "package.json"
+        ]
       }
     ],
     "frameworks": [
@@ -58,7 +60,10 @@
   "structure": {
     "isMonorepo": false,
     "workspaces": [],
-    "mainDirectories": ["public", "src"],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
     "gitBranches": {
       "defaultBranch": "main",
       "branchingStrategy": null
@@ -70,7 +75,7 @@
       "path": "dist",
       "purpose": "Distribution/build output",
       "fileCount": 27,
-      "lastAccessed": 1779317264919,
+      "lastAccessed": 1784398768953,
       "keyFiles": [
         "activision.jpg",
         "blog.xml",
@@ -83,7 +88,7 @@
       "path": "public",
       "purpose": "Public files",
       "fileCount": 27,
-      "lastAccessed": 1779317264919,
+      "lastAccessed": 1784398768954,
       "keyFiles": [
         "activision.jpg",
         "blog.xml",
@@ -96,14 +101,18 @@
       "path": "src",
       "purpose": "Source code",
       "fileCount": 4,
-      "lastAccessed": 1779317264929,
-      "keyFiles": ["App.jsx", "index.html", "index.js"]
+      "lastAccessed": 1784398768964,
+      "keyFiles": [
+        "App.jsx",
+        "index.html",
+        "index.js"
+      ]
     },
     "dist/assets": {
       "path": "dist/assets",
       "purpose": "Static assets",
       "fileCount": 3,
-      "lastAccessed": 1779317264935,
+      "lastAccessed": 1784398768966,
       "keyFiles": [
         "index-C8GYAjXP.js",
         "index-C8GYAjXP.js.map",
@@ -113,57 +122,117 @@
   },
   "hotPaths": [
     {
-      "path": "src/linkedin/linkedin.jsx",
-      "accessCount": 9,
-      "lastAccessed": 1779320139549,
+      "path": "src/writing/get-up.jsx",
+      "accessCount": 40,
+      "lastAccessed": 1784411550906,
       "type": "file"
     },
     {
-      "path": "src/linkedin/linkedin.css",
-      "accessCount": 9,
-      "lastAccessed": 1779320172804,
-      "type": "file"
-    },
-    {
-      "path": "src/linkedin/LinkedInProfileTemplate.jsx",
-      "accessCount": 6,
-      "lastAccessed": 1779318750753,
-      "type": "file"
-    },
-    {
-      "path": "src/index.html",
-      "accessCount": 1,
-      "lastAccessed": 1779317329789,
+      "path": "src/writing/writing.css",
+      "accessCount": 18,
+      "lastAccessed": 1784406572415,
       "type": "file"
     },
     {
       "path": "src/App.jsx",
-      "accessCount": 1,
-      "lastAccessed": 1779317329797,
+      "accessCount": 4,
+      "lastAccessed": 1784403146328,
       "type": "file"
     },
     {
-      "path": "src/home/Home.js",
-      "accessCount": 1,
-      "lastAccessed": 1779317339218,
+      "path": "src/writing/writing.jsx",
+      "accessCount": 4,
+      "lastAccessed": 1784404105315,
+      "type": "file"
+    },
+    {
+      "path": "src/resume/resume.css",
+      "accessCount": 3,
+      "lastAccessed": 1784403141515,
+      "type": "file"
+    },
+    {
+      "path": "src/writing/snowstorm.jsx",
+      "accessCount": 3,
+      "lastAccessed": 1784406138401,
+      "type": "file"
+    },
+    {
+      "path": "public/blog.xml",
+      "accessCount": 2,
+      "lastAccessed": 1784399849069,
+      "type": "file"
+    },
+    {
+      "path": "src/resume/resume.js",
+      "accessCount": 2,
+      "lastAccessed": 1784403146100,
       "type": "file"
     },
     {
       "path": "src/home/home.css",
-      "accessCount": 1,
-      "lastAccessed": 1779317339515,
+      "accessCount": 2,
+      "lastAccessed": 1784404517680,
       "type": "file"
     },
     {
-      "path": "src/navigation/Navigation.js",
-      "accessCount": 1,
-      "lastAccessed": 1779317349820,
+      "path": "src/index.js",
+      "accessCount": 2,
+      "lastAccessed": 1784404523569,
       "type": "file"
     },
     {
-      "path": "src/linkedin/components/ExperienceItem.jsx",
+      "path": "src/writing/dog-linkedin.jsx",
+      "accessCount": 2,
+      "lastAccessed": 1784405800000,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
       "accessCount": 1,
-      "lastAccessed": 1779317387842,
+      "lastAccessed": 1784399883078,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.js",
+      "accessCount": 1,
+      "lastAccessed": 1784399977775,
+      "type": "file"
+    },
+    {
+      "path": "src/writing/valentine.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1784401723928,
+      "type": "file"
+    },
+    {
+      "path": "src/linkedin/linkedin.css",
+      "accessCount": 1,
+      "lastAccessed": 1784403180720,
+      "type": "file"
+    },
+    {
+      "path": "src/index.css",
+      "accessCount": 1,
+      "lastAccessed": 1784404513482,
+      "type": "file"
+    },
+    {
+      "path": "src/writing/components/RevealablePhoto.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1784407083869,
+      "type": "file"
+    },
+    {
+      "path": "public/IMG_6657-deblurred.jpeg",
+      "accessCount": 1,
+      "lastAccessed": 1784417866044,
+      "type": "file"
+    },
+    {
+      "path": "public/IMG_6657-streaks.png",
+      "accessCount": 1,
+      "lastAccessed": 1784417866516,
       "type": "file"
     }
   ],

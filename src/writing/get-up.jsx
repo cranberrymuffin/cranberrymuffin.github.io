@@ -43,24 +43,6 @@ export default function GetUpBlogPost() {
             On Tuesday, July 14 at 8:54 PM, I was attacked while running 🏃 on
             the East River walkway.
           </p>
-          <table className="photo-table">
-            <tbody>
-              <tr>
-                <td>
-                  <figure>
-                    <img
-                      alt="path recorder map of the run"
-                      src="/IMG_6726.png"
-                    ></img>
-                    <figcaption>
-                      The location of the attack during my route (in blue)
-                      circled (in red).
-                    </figcaption>
-                  </figure>
-                </td>
-              </tr>
-            </tbody>
-          </table>
 
           <p>
             While I was running, I saw a woman lying across the path ahead of
@@ -95,12 +77,16 @@ export default function GetUpBlogPost() {
             The attack stopped. I grabbed my glasses and my phone and headed
             back to my apartment.
           </p>
+          <h2>Being my own digital detective</h2>
           <p>
-            I typically hold my phone in my hand while I run to track my
-            distance and time. I was going through my camera roll today, and
-            found that before I dropped my phone during the attack, I had
-            pressed the side buttons resulting in a screenshot and an accidental
-            photo capture.
+            I typically hold my phone in my hand while I run to get information
+            on my distance and time on my lock screen from PathRecorder's
+            lockscreen live activity.
+          </p>
+          <p>
+            I was going through my camera roll today, and found that before I
+            dropped my phone and while I was going down, I had pressed the side
+            buttons resulting in an accidental screenshot and camera capture.
           </p>
           <table className="photo-table">
             <tbody>
@@ -121,6 +107,41 @@ export default function GetUpBlogPost() {
                       src="/IMG_6657.jpeg"
                     ></img>
                     <figcaption>(1/2) Taken accidentally</figcaption>
+                  </figure>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Even though the photos I capture do not associate location
+            information on them by default, when I upload them to PathRecorder,
+            they are associated with the location closest to the timestamp .
+          </p>
+
+          <table className="photo-table">
+            <tbody>
+              <tr>
+                <td>
+                  <figure>
+                    <img
+                      alt="path recorder map of the run"
+                      src="/IMG_6726.png"
+                    ></img>
+                    <figcaption>
+                      The location of the attack during my route (in blue)
+                      circled (in red).
+                    </figcaption>
+                  </figure>
+                </td>
+                <td>
+                  <figure>
+                    <img
+                      alt="path recorder map of the run"
+                      src="/path-recorder-with-pic-uploaded.png"
+                    ></img>
+                    <figcaption>
+                      Photo geotagged to the attack location.
+                    </figcaption>
                   </figure>
                 </td>
               </tr>
