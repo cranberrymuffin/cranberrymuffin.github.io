@@ -6,28 +6,6 @@ import { getRelativeTime } from './utils/dateUtils';
 
 const posts = [
   {
-    date: new Date('2026-07-14'),
-    profileImage: '/pro-pic-2.png',
-    author: 'Aparna Natarajan',
-    content: (
-      <div>
-        <a style={{ color: 'inherit' }} href="/#/blog/get-up">
-          <p>
-            On Tuesday night I was attacked while running on the East River
-            walkway. After taking the minimum amount of PTO, I wanted to share
-            my career reflections:
-          </p>
-          <p>
-            1. When you fall down you can get back up.
-            <br />
-            2. People can join your network in unexpected ways. <br />
-            3. Your head is your biggest asset
-          </p>
-        </a>
-      </div>
-    ),
-  },
-  {
     date: new Date('2025-08-15'),
     profileImage: '/pro-pic-2.png',
     author: 'Aparna Natarajan',
@@ -206,37 +184,7 @@ const LinkedInProfile = () => {
         link: 'https://www.linkedin.com/in/bdettmer/',
       }}
       projects={projects}
-    >
-      <ProfileCard title="Interests" id="interests">
-        <div className="tablist">
-          <div className="tab active">Organizations</div>
-        </div>
-        <a
-          id="rc-ring-home"
-          data-rc-uuid="e31fb97f-d813-4593-83a1-682e7de3d896"
-          href="https://ring.recurse.com/"
-          className="experience-item"
-        >
-          <div className="company-logo">
-            <img src="/rc-scout.png" alt="Recurse Center logo" />
-          </div>
-          <div className="experience-details">
-            <div className="job-title">The Recurse Webring</div>
-            <div className="webring-links">
-              <a id="rc-ring-prev" href="https://ring.recurse.com/prev?id=75">
-                ←
-              </a>
-              <a id="rc-ring-rand" href="https://ring.recurse.com/rand">
-                Random
-              </a>
-              <a id="rc-ring-next" href="https://ring.recurse.com/next?id=75">
-                →
-              </a>
-            </div>
-          </div>
-        </a>
-      </ProfileCard>
-    </LinkedInProfileTemplate>
+    ></LinkedInProfileTemplate>
   );
 };
 
