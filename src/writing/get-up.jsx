@@ -82,9 +82,9 @@ export default function GetUpBlogPost() {
           </p>
           <h2>Being my own digital detective</h2>
           <p>
-            I typically hold my phone in my hand while I run to get information
-            on my distance and time on my lock screen from PathRecorder's
-            lockscreen live activity.
+            I typically hold my phone in my hand while I run to get live
+            information on my distance and time on my lock screen from
+            PathRecorder's lockscreen live activity.
           </p>
           <p>
             I was going through my camera roll today, and found that before I
@@ -118,9 +118,10 @@ export default function GetUpBlogPost() {
           <p>
             The photos I capture do not associate location information on them
             by default. My phone's camera app does not have location services.
-            But when I upload photos to PathRecorder, if they were taken while a
-            path was in progress, they can be uploaded after the fact and
-            associated with the GPS coordinate recorded at the time of capture.
+            PathRecorder uses the photo's capture timestamp to associate
+            uploaded photos with the corresponding GPS coordinates recorded
+            during the active path, even if the photos are uploaded after the
+            recording has finished.
           </p>
 
           <table className="photo-table">
@@ -153,7 +154,7 @@ export default function GetUpBlogPost() {
             </tbody>
           </table>
 
-          <h2>TW: the black eye</h2>
+          <h2>Trigger Warning: the black eye</h2>
           <p>
             The photos below are of the black eye healing over the following
             days, ordered by when they were taken. Tap a photo to reveal it.
