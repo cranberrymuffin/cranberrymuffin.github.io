@@ -65,7 +65,7 @@ export default function GetUpBlogPost() {
             against the sidewalk. She kicked me in the back of the head.
           </p>
           <p>
-            I remember saying: <i>"Stop, please. "I'm sorry! I'm sorry!"</i>
+            I remember saying: <i>"Stop, please. I'm sorry! I'm sorry!"</i>
           </p>
 
           <p>
