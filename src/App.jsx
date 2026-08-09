@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import ScrollToTop from './ScrollToTop';
 import Resume from './resume/resume';
 import Home from './home/Home';
 import Animation from './home/Animation';
@@ -24,6 +25,7 @@ export default function App() {
       <Helmet>
         <title>cranberrymuffin</title>
       </Helmet>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/animation" element={<Animation />} />
