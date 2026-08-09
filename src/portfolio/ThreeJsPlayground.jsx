@@ -3,21 +3,25 @@ import './portfolio.css';
 
 const demos = [
   {
-    title: 'Animation',
-    description: 'The cranberry muffin animation featured on the home page.',
+    title: '3D Physics Animation',
+    description:
+      'My cranberrymuffin displayname featured on the home page with gravity.',
     src: '/#/animation',
   },
   {
-    title: 'Valentine Heart',
+    title: 'Parametric Meshes',
     description:
       'A 3D heart generated from parametric equations, rendered with React Three Fiber.',
     src: 'https://cranberrymuffin.io/valentine/',
+    blogLink: '/#/blog/valentine',
+    codeLink: 'https://github.com/cranberrymuffin/valentine',
   },
   {
-    title: 'Snowstorm',
-    description:
-      'A whack-a-mole-style winter game with real-time falling snow.',
+    title: 'My first game: Snowstorm',
+    description: 'A whack-a-mole-style christmas themed game.',
     src: 'https://cranberrymuffin.io/snowstorm/',
+    blogLink: '/#/blog/snowstorm',
+    codeLink: 'https://github.com/cranberrymuffin/snowstorm',
   },
 ];
 
@@ -38,14 +42,31 @@ export default function ThreeJsPlayground() {
             <div className="embed-frame">
               <iframe src={demo.src} title={demo.title} loading="lazy" />
             </div>
-            <a
-              href={demo.src}
-              className="btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open Fullscreen
-            </a>
+            <div className="button-row">
+              <a
+                href={demo.src}
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open
+              </a>
+              {demo.blogLink && (
+                <a href={demo.blogLink} className="btn">
+                  Blog
+                </a>
+              )}
+              {demo.codeLink && (
+                <a
+                  href={demo.codeLink}
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Code
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </section>
