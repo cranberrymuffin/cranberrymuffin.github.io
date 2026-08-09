@@ -3,12 +3,6 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 
 const projects = [
   {
-    title: 'Three.js',
-    description:
-      'A collection of three.js and React Three Fiber experiments, embedded and ready to try live.',
-    links: [{ label: 'View Playground', href: '/#/three-js-playground' }],
-  },
-  {
     title: 'Path Recorder',
     description: 'An iOS app that tracks and visualizes your foot paths.',
     links: [
@@ -22,6 +16,12 @@ const projects = [
       },
       { label: 'Blog', href: '/#/blog/path-recorder' },
     ],
+  },
+  {
+    title: 'Three.js',
+    description:
+      'A collection of three.js and React Three Fiber experiments, embedded and ready to try live.',
+    links: [{ label: 'View Playground', href: '/#/three-js-playground' }],
   },
   {
     title: 'Animal Emoji Chrome Extension',
