@@ -13,7 +13,7 @@ const projects = [
     description: 'An iOS app that tracks and visualizes your foot paths.',
     links: [
       {
-        label: 'App Store',
+        label: 'Download',
         href: 'https://apps.apple.com/us/app/pathrecorder/id6749169358',
       },
       {
@@ -29,7 +29,7 @@ const projects = [
       'A chrome extension that replaces animal names with their corresponding emojis across webpages.',
     links: [
       {
-        label: 'Chrome Web Store',
+        label: 'Download',
         href: 'https://chromewebstore.google.com/detail/emojizoo/lcjbmbipfajbefepfpfoogancikbeack',
       },
       {

@@ -80,11 +80,10 @@ useFrame((state, delta) => {
         </p>
         <h2>Displaying the Snowmen</h2>
         <p>
-          Simple geometry (i.e. sphere, cone) meshes stacked and scaled to
-          build a snowman in a component. The color of the snowman can be
-          configured by a React prop called "evil" which describes whether
-          the snowman should be green or red. Red snowmen are evil. Green
-          snowmen are good.
+          Simple geometry (i.e. sphere, cone) meshes stacked and scaled to build
+          a snowman in a component. The color of the snowman can be configured
+          by a React prop called "evil" which describes whether the snowman
+          should be green or red. Red snowmen are evil. Green snowmen are good.
         </p>
         <pre>
           <code>
@@ -131,35 +130,34 @@ function Snowman(props) {
         </pre>
         <h3>The Camera Frusustum</h3>
         <p>
-          The camera frustum is a 3D volume that represents the visible area
-          of a 3D scene from the camera's perspective. It's a truncated
-          pyramid where the narrow end (near plane) is closest to the camera
-          and the wide end (far plane) extends further into the scene. Any
-          object outside this frustum is invisible to the camera. We only
-          need to generate our snowmen meshes within the 3D volume of the
-          camera frustum.
+          The camera frustum is a 3D volume that represents the visible area of
+          a 3D scene from the camera's perspective. It's a truncated pyramid
+          where the narrow end (near plane) is closest to the camera and the
+          wide end (far plane) extends further into the scene. Any object
+          outside this frustum is invisible to the camera. We only need to
+          generate our snowmen meshes within the 3D volume of the camera
+          frustum.
         </p>
         <img alt="frustum" src="/frustum.png"></img>
         <h3>Movement</h3>
         <p>
-          Every frame, the snowman moves closer to the camera (or forward on
-          the z-axis). In order to achieve this, we use React Three Fiber's
-          useFrame hook to execute code before every rendered frame. The code
-          we will execute is a function call to increment the snowman group's
-          position forward on the z-axis. Once the snowman moves past the
-          camera, its position is reset to a random point in the camera
-          frustum.
+          Every frame, the snowman moves closer to the camera (or forward on the
+          z-axis). In order to achieve this, we use React Three Fiber's useFrame
+          hook to execute code before every rendered frame. The code we will
+          execute is a function call to increment the snowman group's position
+          forward on the z-axis. Once the snowman moves past the camera, its
+          position is reset to a random point in the camera frustum.
         </p>
         <h3>Destroying snowmen</h3>
         <p>
-          The onClick property of the snowman mesh makes snowmen invisible
-          once triggered. Once they are invisible they are destroyed.
+          The onClick property of the snowman mesh makes snowmen invisible once
+          triggered. Once they are invisible they are destroyed.
         </p>
         <h2>Points</h2>
         <p>
-          A point store is created using zustand. This allows the onClick of
-          the snowmen to increase or decrease the points displayed by the
-          info component of the game.
+          A point store is created using zustand. This allows the onClick of the
+          snowmen to increase or decrease the points displayed by the info
+          component of the game.
         </p>
       </div>
     </div>

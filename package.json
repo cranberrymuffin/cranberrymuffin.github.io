@@ -34,7 +34,7 @@
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --max-warnings 1",
     "prettier:check": "prettier . --check",
-    "prettier:write": "prettier . --write"
+    "prettify": "prettier . --write"
   },
   "eslintConfig": {
     "extends": [
