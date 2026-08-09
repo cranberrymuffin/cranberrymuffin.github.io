@@ -18,9 +18,9 @@ const projects = [
     ],
   },
   {
-    title: 'Three.js',
+    title: 'React Three Fiber Playground',
     description:
-      'A collection of three.js and React Three Fiber experiments, embedded and ready to try live.',
+      'A collection of React Three Fiber experiments, embedded and ready to try live.',
     links: [{ label: 'View Playground', href: '/#/three-js-playground' }],
   },
   {

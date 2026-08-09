@@ -30,8 +30,8 @@ export default function ThreeJsPlayground() {
     <div className="portfolio-container">
       <Navigation textColor="linear-gradient(45deg, #ff0099, #ff6600, #ff0099, #6600ff)" />
       <header>
-        <h1>Three.js Playground</h1>
-        <p>Live three.js and React Three Fiber experiments, embedded below.</p>
+        <h1>React Three Fiber Playground</h1>
+        <p>Live React Three Fiber experiments, embedded below.</p>
       </header>
 
       <section className="playground">
