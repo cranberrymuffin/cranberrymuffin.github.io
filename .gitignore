@@ -12,6 +12,9 @@
 /build
 /dist
 
+# oh-my-claudecode session state
+.omc/
+
 # misc
 .DS_Store
 .env.local
