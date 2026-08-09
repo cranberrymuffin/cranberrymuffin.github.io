@@ -51,18 +51,14 @@ export default function JSONParserBlogPost() {
             and structures. JSON consists of key-value pairs enclosed in curly
             braces.
           </p>
-          <pre>
-            <code>
-              {`
-            JSON Object      → { (String : Value (, String : Value)*)? }
-            Value      → String | Number | Boolean | Null | Array | JSON
-            Array      → [ (Value (, Value)*)? ]
-            String     → "[^"]*"
-            Number     → [-]? [0-9]+ (.[0-9]+)?
-            Boolean    → true | false
-            Null       → null
-            `}
-            </code>
+          <pre className="component-diagram">
+            <code>{`JSON Object      → { (String : Value (, String : Value)*)? }
+Value      → String | Number | Boolean | Null | Array | JSON
+Array      → [ (Value (, Value)*)? ]
+String     → "[^"]*"
+Number     → [-]? [0-9]+ (.[0-9]+)?
+Boolean    → true | false
+Null       → null`}</code>
           </pre>
           <h2>Converting Grammar into Parse Functions</h2>{' '}
           <p>
@@ -85,17 +81,13 @@ export default function JSONParserBlogPost() {
             extended to handle recursive definitions, such as parsing arrays
             within arrays or nested JSON objects.{' '}
           </p>
-          <pre>
-            <code>
-              {`
-            export function parseNull(str, idx) {
-              if (str.slice(idx, idx + 4) === 'null') {
-                return [null, idx + 4];
-              }
-              return null;
-            }
-            `}
-            </code>
+          <pre className="component-diagram">
+            <code>{`export function parseNull(str, idx) {
+  if (str.slice(idx, idx + 4) === 'null') {
+    return [null, idx + 4];
+  }
+  return null;
+}`}</code>
           </pre>
           <h2>Recursive Descent Parsing</h2>
           <p>
@@ -111,7 +103,7 @@ export default function JSONParserBlogPost() {
               recursive because it can contain other JSON objects as values.
               Specifically, the <code>JSON</code> rule refers back to itself
               within the <code>Value</code> rule:
-              <pre>
+              <pre className="component-diagram">
                 <code>
                   Value → String | Number | Boolean | Null | Array | JSON
                 </code>
@@ -125,7 +117,7 @@ export default function JSONParserBlogPost() {
               objects, which might again contain other arrays or objects. The{' '}
               <code>Array</code> rule has recursive elements that allow arrays
               to contain nested structures:
-              <pre>
+              <pre className="component-diagram">
                 <code>Array → [ (Value (, Value)*)? ]</code>
               </pre>
               This allows arrays to hold any valid JSON values, including other
@@ -147,7 +139,7 @@ export default function JSONParserBlogPost() {
             <code>parseValue</code> is central to this process, and it attempts
             to parse each of these valid JSON types in turn.
           </p>
-          <pre>
+          <pre className="component-diagram">
             <code>
               {`
             export function parseValue(str, idx) {

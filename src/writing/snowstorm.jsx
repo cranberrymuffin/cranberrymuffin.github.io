@@ -29,7 +29,7 @@ export default function SnowstormBlogPost() {
               I generated particles positioned at random places within a 3D
               spherical bounding volume, each representing a snowflake.{' '}
             </li>
-            <pre>
+            <pre className="component-diagram">
               <code>
                 {' '}
                 {`
@@ -60,7 +60,7 @@ function generateRandomParticleInSphere(radius) {
               </a>{' '}
               to execute code before every rendered frame.
             </li>
-            <pre>
+            <pre className="component-diagram">
               <code>
                 {' '}
                 {`
@@ -85,7 +85,7 @@ useFrame((state, delta) => {
           by a React prop called "evil" which describes whether the snowman
           should be green or red. Red snowmen are evil. Green snowmen are good.
         </p>
-        <pre>
+        <pre className="component-diagram">
           <code>
             {' '}
             {`

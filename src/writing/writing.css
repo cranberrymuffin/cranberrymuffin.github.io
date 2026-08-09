@@ -5,6 +5,7 @@
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   min-height: 100vh;
+  display: flow-root;
 }
 
 #blog {
@@ -34,6 +35,11 @@
   max-width: 750px;
   margin: auto;
   z-index: 2;
+}
+
+.writing img {
+  max-width: 100%;
+  height: auto;
 }
 
 .writing p,

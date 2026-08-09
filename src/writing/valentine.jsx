@@ -46,7 +46,7 @@ export default function ValentineBlogPost() {
           represented in the diagram below.
           <br></br>
           <img
-            width="500px"
+            width="500"
             alt="spherical-coordinates"
             src="/spherical.png"
           ></img>
@@ -112,7 +112,7 @@ export default function ValentineBlogPost() {
         traversed (in their winding order) and mapped to triangles which will
         form faces. Normals are computed based on the winding order of the
         verticies.
-        <pre>
+        <pre className="component-diagram">
           <code>
             {' '}
             {`
