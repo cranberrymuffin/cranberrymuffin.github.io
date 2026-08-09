@@ -3,19 +3,40 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 
 const projects = [
   {
+    title: 'Three.js',
+    description:
+      'A collection of three.js and React Three Fiber experiments, embedded and ready to try live.',
+    links: [{ label: 'View Playground', href: '/#/three-js-playground' }],
+  },
+  {
     title: 'Path Recorder',
     description: 'An iOS app that tracks and visualizes your foot paths.',
-    projectLink: 'https://apps.apple.com/us/app/pathrecorder/id6749169358',
-    codeLink: 'https://github.com/cranberrymuffin/PathRecorder', // Replace with your code repo link
-    blogLink: '/#/blog/path-recorder',
+    links: [
+      {
+        label: 'App Store',
+        href: 'https://apps.apple.com/us/app/pathrecorder/id6749169358',
+      },
+      {
+        label: 'Code',
+        href: 'https://github.com/cranberrymuffin/PathRecorder',
+      },
+      { label: 'Blog', href: '/#/blog/path-recorder' },
+    ],
   },
   {
     title: 'Animal Emoji Chrome Extension',
     description:
       'A chrome extension that replaces animal names with their corresponding emojis across webpages.',
-    projectLink:
-      'https://chromewebstore.google.com/detail/emojizoo/lcjbmbipfajbefepfpfoogancikbeack',
-    codeLink: 'https://github.com/cranberrymuffin/zoo-emoji-extension',
+    links: [
+      {
+        label: 'Chrome Web Store',
+        href: 'https://chromewebstore.google.com/detail/emojizoo/lcjbmbipfajbefepfpfoogancikbeack',
+      },
+      {
+        label: 'Code',
+        href: 'https://github.com/cranberrymuffin/zoo-emoji-extension',
+      },
+    ],
   },
   {
     title: 'WebRTC Video Chat',
@@ -40,20 +61,30 @@ export default function PortfolioPage() {
             <h2>{project.title}</h2>
             <p className="desc">{project.description}</p>
             <div className="button-row">
-              {project.codeLink && (
-                <a href={project.codeLink} className="btn">
-                  Code
-                </a>
-              )}
-              {project.projectLink && (
-                <a href={project.projectLink} className="btn">
-                  Demo
-                </a>
-              )}
-              {project.blogLink && (
-                <a href={project.blogLink} className="btn">
-                  Blog
-                </a>
+              {project.links ? (
+                project.links.map((link, linkIndex) => (
+                  <a href={link.href} className="btn" key={linkIndex}>
+                    {link.label}
+                  </a>
+                ))
+              ) : (
+                <>
+                  {project.codeLink && (
+                    <a href={project.codeLink} className="btn">
+                      Code
+                    </a>
+                  )}
+                  {project.projectLink && (
+                    <a href={project.projectLink} className="btn">
+                      Demo
+                    </a>
+                  )}
+                  {project.blogLink && (
+                    <a href={project.blogLink} className="btn">
+                      Blog
+                    </a>
+                  )}
+                </>
               )}
             </div>
           </div>

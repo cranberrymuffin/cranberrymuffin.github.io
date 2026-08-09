@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Resume from './resume/resume';
 import Home from './home/Home';
+import Animation from './home/Animation';
 import Writing from './writing/writing';
 import ValentineBlogPost from './writing/valentine';
 import TicTacToeBlogPost from './writing/tic-tac-toe';
@@ -10,6 +11,7 @@ import PathRecorderBlogPost from './writing/path-recorder';
 import GeminiAkinator from './writing/gemini-akinator';
 import AsciiArtBlogPost from './writing/ascii';
 import PortfolioPage from './portfolio/PortfolioPage';
+import ThreeJsPlayground from './portfolio/ThreeJsPlayground';
 import JSONParserBlogPost from './writing/json-parser';
 import DogLinkedInBlogPost from './writing/dog-linkedin';
 import GetUpBlogPost from './writing/get-up';
@@ -24,7 +26,9 @@ export default function App() {
       </Helmet>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/animation" element={<Animation />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/three-js-playground" element={<ThreeJsPlayground />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/blog" element={<Writing />} />
         <Route path="/linkedin" element={<LinkedInProfile />} />
