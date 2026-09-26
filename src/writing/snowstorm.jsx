@@ -159,6 +159,16 @@ function Snowman(props) {
           snowmen to increase or decrease the points displayed by the info
           component of the game.
         </p>
+        <h2>Snowstorm on the RCade</h2>
+        <p>
+          In September 2026, I put Snowstorm on the{' '}
+          <a href="https://rcade.dev/">RCade</a>, the arcade cabinet at the
+          Recurse Center.
+        </p>
+        <img
+          alt="Snowstorm running on the RCade arcade cabinet"
+          src="/snowstorm-rcade.jpg"
+        ></img>
       </div>
     </div>
   );
