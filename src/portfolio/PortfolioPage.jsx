@@ -3,6 +3,30 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 
 const projects = [
   {
+    title: 'Audition With Me',
+    description:
+      'A browser-based rehearsal tool for actors that parses PDF scripts, reads scene partners’ lines aloud, and records self-tapes.',
+    links: [
+      { label: 'Visit', href: 'https://auditionwithme.com' },
+      {
+        label: 'Code',
+        href: 'https://github.com/cranberrymuffin/auditionwithme',
+      },
+    ],
+  },
+  {
+    title: 'East Village Pottery Collective',
+    description:
+      'I designed and built the website and member portal for a shared pottery studio in NYC, including memberships, kiln firing tracking, and invoicing.',
+    links: [
+      { label: 'Visit', href: 'https://eastvillagepottery.com/' },
+      {
+        label: 'Code',
+        href: 'https://github.com/cranberrymuffin/eastvillagepotterycollective',
+      },
+    ],
+  },
+  {
     title: 'Path Recorder',
     description: 'An iOS app that tracks and visualizes your foot paths.',
     links: [
