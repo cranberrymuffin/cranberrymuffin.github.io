@@ -40,21 +40,30 @@ export default function Resume() {
         </div>
         <ul>
           <li>
-            Architected frontend pricing design system to communicate cost
-            information across user facing card and flyer editor toolsets.
+            Led frontend development of a tiered pricing design system to
+            communicate cost information for different features in the
+            invitation design editor.
           </li>
           <li>
             Developed reusable React components that dynamically display pricing
-            information based on active A/B test configurations.
-          </li>
-          <li>
-            Collaborated with design to ship UI and UX refinements that made
-            monetized features more discoverable and easier to use.
+            information based on active A/B test configurations, and shipped the
+            winning pricing to all customers.
           </li>
           <li>
             Modernized and unified cost calculation logic by designing a shared
             TypeScript purchase recommendation library used across frontend
             services.
+          </li>
+          <li>
+            Built editor-wide undo/redo on a Redux history stack covering all
+            edits on templated designs, and reused it to allow users to undo
+            paid edits and return an invite to its free version in a single
+            step.
+          </li>
+          <li>
+            Shipped subscription payment features across Go, GraphQL, and Rails
+            services, including subscription checkout credits and self-serve
+            subscription upgrades and downgrades.
           </li>
         </ul>
         <h3>Meta</h3>
@@ -149,7 +158,7 @@ export default function Resume() {
           <strong>Languages:</strong>
           Java, Kotlin, JavaScript, TypeScript, C++, C#, C, Ruby, Python, R,
           Scala, OCaml, Prolog, Matlab, GoLang, PHP, bash, PostgreSQL, Rust,
-          CSS, Ruby, Swift
+          CSS, Swift
           <br />
           <strong>Frameworks:</strong> React, Redux, Spring Boot, GraphQL,
           Next.js, Ruby on Rails
