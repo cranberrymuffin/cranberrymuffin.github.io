@@ -182,3 +182,8 @@ header,
   height: 100%;
   border: none;
 }
+
+/* Keep the card's emoji cursor when hovering its buttons */
+.card .btn {
+  cursor: inherit;
+}

@@ -4,6 +4,7 @@ import Navigation from '../navigation/Navigation'; // Import the Navigation comp
 const projects = [
   {
     title: 'Audition With Me',
+    cursor: '🎬',
     description:
       'A browser-based rehearsal tool for actors that parses PDF scripts, reads scene partners’ lines aloud, and records self-tapes.',
     links: [
@@ -16,6 +17,7 @@ const projects = [
   },
   {
     title: 'East Village Pottery Collective',
+    cursor: '🏺',
     description:
       'I designed and built the website and member portal for a shared pottery studio in NYC, including memberships, kiln firing tracking, and invoicing.',
     links: [
@@ -28,6 +30,7 @@ const projects = [
   },
   {
     title: 'Path Recorder',
+    cursor: '🏃‍♀️',
     description: 'An iOS app that tracks and visualizes your foot paths.',
     links: [
       {
@@ -43,12 +46,14 @@ const projects = [
   },
   {
     title: 'React Three Fiber Playground',
+    cursor: '🧊',
     description:
       'A collection of React Three Fiber experiments, embedded and ready to try live.',
     links: [{ label: 'View Playground', href: '/#/three-js-playground' }],
   },
   {
     title: 'Animal Emoji Chrome Extension',
+    cursor: '🐼',
     description:
       'A chrome extension that replaces animal names with their corresponding emojis across webpages.',
     links: [
@@ -64,11 +69,18 @@ const projects = [
   },
   {
     title: 'WebRTC Video Chat',
+    cursor: '📹',
     description: `WebRTC two person video chat app built with React and PeerJS.`,
     projectLink: '/peerjs-video-chat/',
     codeLink: 'https://github.com/cranberrymuffin/peerjs-video-chat',
   },
 ];
+
+// Renders an emoji as an SVG data URL so it can be used as a CSS cursor.
+function emojiCursor(emoji) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="26">${emoji}</text></svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 16 16, auto`;
+}
 
 export default function PortfolioPage() {
   return (
@@ -81,7 +93,11 @@ export default function PortfolioPage() {
 
       <section className="portfolio">
         {projects.map((project, index) => (
-          <div className="card" key={index}>
+          <div
+            className="card"
+            key={index}
+            style={project.cursor && { cursor: emojiCursor(project.cursor) }}
+          >
             <h2>{project.title}</h2>
             <p className="desc">{project.description}</p>
             <div className="button-row">
