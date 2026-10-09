@@ -32,6 +32,8 @@ header {
   text-align: center;
   z-index: 1;
   overflow: hidden; /* Prevents overflow from the pseudo-element */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Animated Gradient Border */
@@ -110,7 +112,8 @@ header,
   display: flex;
   justify-content: space-between; /* Distribute buttons evenly */
   gap: 10px; /* Add space between the buttons */
-  margin-top: 20px; /* Add some spacing at the top */
+  margin-top: auto; /* Push the buttons to the bottom of the card */
+  padding-top: 20px; /* Add some spacing at the top */
 }
 
 /* Buttons inside the row */
