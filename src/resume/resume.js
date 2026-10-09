@@ -147,6 +147,8 @@ export default function Resume() {
           Masters in Computer Science, Brown University, 2022
           <br />
           Bachelors in Computer Science, University of Maryland, 2018
+          <br />
+          Recurse Center Batch, Winter 2 2025
         </p>
         <h2>Skills</h2>
         <p>

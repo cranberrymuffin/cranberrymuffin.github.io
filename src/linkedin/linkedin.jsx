@@ -106,7 +106,7 @@ const experience = [
 
 const education = [
   {
-    logo: '/rc-scout.png',
+    scout: true,
     title: 'Recurse Center',
     company: 'Winter 2, 2025',
     link: 'https://www.recurse.com/scout/click?t=4f0d21efdf10880bb07e8f0ac2e22146',

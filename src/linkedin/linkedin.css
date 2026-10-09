@@ -393,8 +393,15 @@ a {
   display: block;
 }
 
-.rc-scout__logo {
-  display: inline-block;
+/* Scout injects its own styles later, so these need higher specificity */
+.company-logo .rc-scout__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.company-logo .rc-scout__logo {
+  display: block;
   padding: 0;
   border: 0;
   margin: 0;
