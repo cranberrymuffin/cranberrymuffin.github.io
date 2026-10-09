@@ -1,15 +1,18 @@
 import Navigation from '../navigation/Navigation';
 import './portfolio.css';
+import { emojiCursor } from './emojiCursor';
 
 const demos = [
   {
     title: '3D Physics Animation',
+    cursor: '🧁',
     description:
       'My cranberrymuffin displayname featured on the home page with gravity.',
     src: '/#/animation',
   },
   {
     title: 'Parametric Meshes',
+    cursor: '💖',
     description:
       'A 3D heart generated from parametric equations, rendered with React Three Fiber.',
     src: 'https://cranberrymuffin.io/valentine/',
@@ -18,6 +21,7 @@ const demos = [
   },
   {
     title: 'My first game: Snowstorm',
+    cursor: '⛄',
     description: 'A whack-a-mole-style christmas themed game.',
     src: 'https://cranberrymuffin.io/snowstorm/',
     blogLink: '/#/blog/snowstorm',
@@ -36,7 +40,11 @@ export default function ThreeJsPlayground() {
 
       <section className="playground">
         {demos.map((demo, index) => (
-          <div className="card playground-card" key={index}>
+          <div
+            className="card playground-card"
+            key={index}
+            style={demo.cursor && { cursor: emojiCursor(demo.cursor) }}
+          >
             <h2>{demo.title}</h2>
             <p className="desc">{demo.description}</p>
             <div className="embed-frame">
