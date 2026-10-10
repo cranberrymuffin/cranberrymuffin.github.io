@@ -1,0 +1,6 @@
+name = "read-count"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# Secret (not committed): GOATCOUNTER_TOKEN
+#   npx wrangler secret put GOATCOUNTER_TOKEN
