@@ -1,4 +1,5 @@
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import './writing.css';
 
 export default function TicTacToeBlogPost() {
@@ -10,7 +11,8 @@ export default function TicTacToeBlogPost() {
           WebRTC multiplayer <a href="/tic-tac-toe">Tic-Tac-Toe</a>
         </h1>
         <i>
-          First published <time datetime="2025-01-30">Feb 4, 2025</time>.
+          First published <time datetime="2025-01-30">Feb 4, 2025</time>
+          <ReadCount />.
         </i>
         <p>
           What if you could play a game online with a friend, peer-to-peer,

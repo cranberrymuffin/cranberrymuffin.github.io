@@ -1,4 +1,5 @@
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import './writing.css';
 import './writing.css';
 
@@ -11,7 +12,8 @@ export default function ValentineBlogPost() {
           Building a <a href="/valentine">3D Heart</a> with Math
         </h1>
         <i>
-          First published <time datetime="2025-01-30">Jan 30, 2025</time>.
+          First published <time datetime="2025-01-30">Jan 30, 2025</time>
+          <ReadCount />.
         </i>
         <p>Shapes can be represented as equations in 3D space.</p>
         <h2>Implicit Equations</h2>

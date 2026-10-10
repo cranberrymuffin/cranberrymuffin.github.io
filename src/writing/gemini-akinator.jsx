@@ -1,4 +1,5 @@
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import './writing.css';
 
 export default function GeminiAkinator() {
@@ -12,7 +13,8 @@ export default function GeminiAkinator() {
             <a href="https://akinator.rcdis.co/">Akinator Game</a>
           </h1>
           <i>
-            First published <time datetime="2025-02-11">Feb 11, 2025</time>.
+            First published <time datetime="2025-02-11">Feb 11, 2025</time>
+            <ReadCount />.
           </i>
           <p>
             This app combines a powerful backend, a smooth frontend, and AI to

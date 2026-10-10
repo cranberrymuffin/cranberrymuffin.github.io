@@ -1,4 +1,5 @@
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import './writing.css';
 
 export default function JSONParserBlogPost() {
@@ -12,7 +13,8 @@ export default function JSONParserBlogPost() {
             from Scratch
           </h1>
           <i>
-            First published <time datetime="2025-03-02">Mar 2, 2025</time>.
+            First published <time datetime="2025-03-02">Mar 2, 2025</time>
+            <ReadCount />.
           </i>
           <p>
             In the world of web development, JSON is one of the most widely used

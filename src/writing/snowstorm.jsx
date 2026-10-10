@@ -1,4 +1,5 @@
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import './writing.css';
 
 export default function SnowstormBlogPost() {
@@ -10,7 +11,8 @@ export default function SnowstormBlogPost() {
           Building <a href="/snowstorm">Snowstorm</a>: A Wintertime Web Game
         </h1>
         <i>
-          First published <time datetime="2025-01-27">Jan 27, 2025</time>.
+          First published <time datetime="2025-01-27">Jan 27, 2025</time>
+          <ReadCount />.
         </i>
         <p>
           Destroy all evil (red team) snowmen. Destroying good (green team)

@@ -1,4 +1,5 @@
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import './writing.css';
 
 export default function PathRecorderBlogPost() {
@@ -13,7 +14,8 @@ export default function PathRecorderBlogPost() {
           </a>
         </h1>
         <i>
-          First published <time datetime="2025-07-29">Jul 29, 2025</time>.
+          First published <time datetime="2025-07-29">Jul 29, 2025</time>
+          <ReadCount />.
         </i>
         <p>
           Path Recorder is my first foray into iOS development - a location

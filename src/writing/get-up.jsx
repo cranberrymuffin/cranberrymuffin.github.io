@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import RevealablePhoto from './components/RevealablePhoto';
 import './writing.css';
 
@@ -40,7 +41,8 @@ export default function GetUpBlogPost() {
         <div id="writing" className="writing">
           <h1>What I Learned From Getting Knocked Down </h1>
           <i>
-            First published <time dateTime="2026-07-18">July 18, 2026</time>.
+            First published <time dateTime="2026-07-18">July 18, 2026</time>
+            <ReadCount />.
           </i>
           <p>
             On Tuesday, July 14 at 8:54 PM, I was attacked while running 🏃 on

@@ -1,5 +1,6 @@
 import './writing.css';
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 
 export default function AsciiArtBlogPost() {
   return (
@@ -11,7 +12,8 @@ export default function AsciiArtBlogPost() {
           <a href="https://cranberrymuffin.github.io/ascii-art/">ASCII Art</a>
         </h1>
         <i>
-          First published <time datetime="2025-02-20">Feb 20, 2025</time>.
+          First published <time datetime="2025-02-20">Feb 20, 2025</time>
+          <ReadCount />.
         </i>
         <p>
           ASCII Art displays images using characters. In this post, I’ll walk

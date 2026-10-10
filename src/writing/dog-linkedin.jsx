@@ -1,4 +1,5 @@
 import Navigation from '../navigation/Navigation';
+import { ReadCount } from '../analytics/goatcounter';
 import './writing.css';
 
 export default function DogLinkedInBlogPost() {
@@ -10,7 +11,8 @@ export default function DogLinkedInBlogPost() {
           My Dog Is <a href="/#/linkedin/dog">#OpenToWork</a>
         </h1>
         <i>
-          First published <time dateTime="2026-05-13">May 13, 2026</time>.
+          First published <time dateTime="2026-05-13">May 13, 2026</time>
+          <ReadCount />.
         </i>
         <p>
           I find social media overwhelming. Because of that, I'm not really on

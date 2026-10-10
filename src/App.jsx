@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTop from './ScrollToTop';
+import { PageViewTracker } from './analytics/goatcounter';
 import Resume from './resume/resume';
 import Home from './home/Home';
 import Animation from './home/Animation';
@@ -26,6 +27,7 @@ export default function App() {
         <title>cranberrymuffin</title>
       </Helmet>
       <ScrollToTop />
+      <PageViewTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/animation" element={<Animation />} />
