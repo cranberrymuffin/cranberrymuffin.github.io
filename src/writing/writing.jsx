@@ -1,50 +1,58 @@
 import Navigation from '../navigation/Navigation';
+import { ListReadCount, useBlogReadCounts } from '../analytics/goatcounter';
 import './writing.css';
 
+const POSTS = [
+  {
+    date: 'July 18, 2026',
+    path: '/blog/get-up',
+    title: 'What I Learned From Getting Knocked Down',
+  },
+  {
+    date: 'May 13, 2026',
+    path: '/blog/dog-linkedin',
+    title: 'My Dog Is #OpenToWork',
+  },
+  {
+    date: 'July 29, 2025',
+    path: '/blog/path-recorder',
+    title: 'Building my first iOS app: Path Recorder',
+  },
+  { date: 'March 2, 2025', path: '/blog/json-validator', title: 'Json Parser' },
+  {
+    date: 'February 20, 2025',
+    path: '/blog/ascii-art',
+    title: 'ASCII Art Generation',
+  },
+  {
+    date: 'February 11, 2025',
+    path: '/blog/gemini-akinator',
+    title: 'Gemini AI Akinator',
+  },
+  {
+    date: 'February 4, 2025',
+    path: '/blog/tic-tac-toe',
+    title: 'WebRTC Tic-Tac-Toe',
+  },
+  { date: 'January 30, 2025', path: '/blog/valentine', title: 'Valentine' },
+  { date: 'January 27, 2025', path: '/blog/snowstorm', title: 'Snowstorm' },
+];
+
 export default function Writing() {
+  const counts = useBlogReadCounts();
+
   return (
     <div id="main" className="main">
       <Navigation />
       <div id="writing" className="writing">
         <h1> Writing </h1>
         <ul>
-          <li>
-            July 18, 2026:{' '}
-            <a href="/#/blog/get-up">
-              What I Learned From Getting Knocked Down
-            </a>
-          </li>
-          <li>
-            May 13, 2026:{' '}
-            <a href="/#/blog/dog-linkedin">My Dog Is #OpenToWork</a>
-          </li>
-          <li>
-            July 29, 2025:{' '}
-            <a href="/#/blog/path-recorder">
-              Building my first iOS app: Path Recorder
-            </a>
-          </li>
-          <li>
-            March 2, 2025: <a href="/#/blog/json-validator">Json Parser</a>
-          </li>
-          <li>
-            February 20, 2025:{' '}
-            <a href="/#/blog/ascii-art">ASCII Art Generation</a>
-          </li>
-          <li>
-            February 11, 2025:{' '}
-            <a href="/#/blog/gemini-akinator">Gemini AI Akinator</a>
-          </li>
-          <li>
-            February 4, 2025:{' '}
-            <a href="/#/blog/tic-tac-toe">WebRTC Tic-Tac-Toe</a>
-          </li>
-          <li>
-            January 30, 2025: <a href="/#/blog/valentine">Valentine</a>
-          </li>
-          <li>
-            January 27, 2025: <a href="/#/blog/snowstorm">Snowstorm</a>
-          </li>
+          {POSTS.map(post => (
+            <li key={post.path}>
+              {post.date} · <a href={`/#${post.path}`}>{post.title}</a>
+              <ListReadCount counts={counts} path={post.path} />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

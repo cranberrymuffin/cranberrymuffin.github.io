@@ -54,6 +54,37 @@ async function fetchCachedCount(path) {
   return (await res.json()).count;
 }
 
+function formatReads(count) {
+  return count === '1' ? '1 read' : `${count} reads`;
+}
+
+// Counts for every blog post in one request, keyed by path.
+export function useBlogReadCounts() {
+  const [counts, setCounts] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${READ_COUNT_URL}/?all`)
+      .then(res => {
+        if (!res.ok) throw new Error(res.statusText);
+        return res.json();
+      })
+      .then(data => !cancelled && setCounts(data.counts))
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return counts;
+}
+
+// "· 12 reads" for a list entry; nothing until counts have loaded.
+export function ListReadCount({ counts, path }) {
+  if (!counts) return null;
+  return <> · {formatReads((counts[path] ?? 0).toLocaleString('en-US'))}</>;
+}
+
 export function ReadCount() {
   const { pathname } = useLocation();
   const [count, setCount] = useState(null);
@@ -71,5 +102,5 @@ export function ReadCount() {
   }, [pathname]);
 
   if (count === null) return null;
-  return <> · {count === '1' ? '1 read' : `${count} reads`}</>;
+  return <> · {formatReads(count)}</>;
 }

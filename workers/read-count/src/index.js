@@ -5,6 +5,7 @@
 // keeps the API key out of the browser.
 //
 //   GET /?path=/blog/get-up  ->  {"count": 12}
+//   GET /?all                ->  {"counts": {"/blog/get-up": 12, ...}}
 
 const API = 'https://cranberrymuffin.goatcounter.com/api/v0/stats/hits';
 // Analytics started after this, so it covers every hit.
@@ -43,13 +44,11 @@ function endOfHour() {
   return d.toISOString().replace('.000Z', 'Z');
 }
 
-async function fetchCount(path, token) {
+async function fetchHits(token, params) {
   const url = new URL(API);
   url.searchParams.set('start', START);
   url.searchParams.set('end', endOfHour());
-  url.searchParams.set('path_by_name', 'true');
-  url.searchParams.set('include_paths', path);
-  url.searchParams.set('limit', '1');
+  for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
 
   const res = await fetch(url, {
     headers: {
@@ -58,10 +57,45 @@ async function fetchCount(path, token) {
     },
   });
   if (!res.ok) throw new Error(`GoatCounter ${res.status}`);
+  return (await res.json()).hits || [];
+}
 
-  const data = await res.json();
-  const hit = (data.hits || []).find(h => h.path === path);
-  return hit ? hit.count : 0;
+async function fetchCount(path, token) {
+  const hits = await fetchHits(token, {
+    path_by_name: 'true',
+    include_paths: path,
+    limit: '1',
+  });
+  const hit = hits.find(h => h.path === path);
+  return { count: hit ? hit.count : 0 };
+}
+
+// One API call for every blog post, for the Writing page list.
+async function fetchAllCounts(token) {
+  const hits = await fetchHits(token, { limit: '100' });
+  const counts = {};
+  for (const h of hits) {
+    if (h.path.startsWith('/blog/')) counts[h.path] = h.count;
+  }
+  return { counts };
+}
+
+async function cached(ctx, key, load) {
+  const cache = caches.default;
+  const cacheKey = new Request(`https://read-count.cache/${key}`);
+  const hit = await cache.match(cacheKey);
+  if (hit) return hit.json();
+
+  const body = await load();
+  ctx.waitUntil(
+    cache.put(
+      cacheKey,
+      new Response(JSON.stringify(body), {
+        headers: { 'Cache-Control': `max-age=${CACHE_SECONDS}` },
+      }),
+    ),
+  );
+  return body;
 }
 
 export default {
@@ -70,33 +104,26 @@ export default {
       return new Response(null, { headers: corsHeaders(request) });
     }
 
-    const path = new URL(request.url).searchParams.get('path') || '';
-    if (!/^\/blog\/[a-z0-9-]+$/.test(path)) {
-      return json(request, { error: 'invalid path' }, 400);
-    }
-
-    const cache = caches.default;
-    const cacheKey = new Request(`https://read-count.cache/${path}`);
-    let count;
-    const cached = await cache.match(cacheKey);
-    if (cached) {
-      ({ count } = await cached.json());
+    const params = new URL(request.url).searchParams;
+    const token = env.GOATCOUNTER_TOKEN;
+    let key, load;
+    if (params.has('all')) {
+      key = 'all';
+      load = () => fetchAllCounts(token);
     } else {
-      try {
-        count = await fetchCount(path, env.GOATCOUNTER_TOKEN);
-      } catch (err) {
-        return json(request, { error: err.message }, 502);
+      const path = params.get('path') || '';
+      if (!/^\/blog\/[a-z0-9-]+$/.test(path)) {
+        return json(request, { error: 'invalid path' }, 400);
       }
-      ctx.waitUntil(
-        cache.put(
-          cacheKey,
-          new Response(JSON.stringify({ count }), {
-            headers: { 'Cache-Control': `max-age=${CACHE_SECONDS}` },
-          }),
-        ),
-      );
+      key = path;
+      load = () => fetchCount(path, token);
     }
 
-    return json(request, { count }, 200, { 'Cache-Control': 'no-store' });
+    try {
+      const body = await cached(ctx, key, load);
+      return json(request, body, 200, { 'Cache-Control': 'no-store' });
+    } catch (err) {
+      return json(request, { error: err.message }, 502);
+    }
   },
 };
