@@ -185,3 +185,9 @@ ol {
   max-width: 320px;
   margin: 1rem 0;
 }
+
+/* For apps whose layout needs more height than 4:3 gives on a phone */
+.game-embed.tall {
+  aspect-ratio: auto;
+  height: 600px;
+}

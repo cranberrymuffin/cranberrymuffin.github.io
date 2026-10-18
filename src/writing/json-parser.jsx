@@ -33,6 +33,13 @@ export default function JSONParserBlogPost() {
             that I built the parser myself, instead of using the built-in
             JSON.parse() method.
           </p>
+          <div className="game-embed tall">
+            <iframe
+              src="https://cranberrymuffin.io/json-validator/"
+              title="JSON Validator"
+              loading="lazy"
+            />
+          </div>
           <h2>Why Not Use JSON.parse()?</h2>
           <p>
             JSON.parse() is the go-to tool for parsing JSON strings in
