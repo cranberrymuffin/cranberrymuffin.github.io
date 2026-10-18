@@ -39,8 +39,8 @@ const POSTS = [
 ];
 
 // From "Edit or view HTML" at https://ring.recurse.com after adding the site.
-const RC_RING_ID = 'TODO';
-const RC_RING_UUID = 'TODO';
+const RC_RING_ID = '90';
+const RC_RING_UUID = 'ac30d19f-8763-4a95-84bb-ccd9b9e84b29';
 
 export default function Writing() {
   const counts = useBlogReadCounts();
