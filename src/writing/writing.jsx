@@ -38,6 +38,10 @@ const POSTS = [
   { date: 'January 27, 2025', path: '/blog/snowstorm', title: 'Snowstorm' },
 ];
 
+// From "Edit or view HTML" at https://ring.recurse.com after adding the site.
+const RC_RING_ID = 'TODO';
+const RC_RING_UUID = 'TODO';
+
 export default function Writing() {
   const counts = useBlogReadCounts();
 
@@ -54,6 +58,30 @@ export default function Writing() {
             </li>
           ))}
         </ul>
+        <nav className="rc-ring" aria-label="Recurse Center webring">
+          <a
+            id="rc-ring-prev"
+            href={`https://ring.recurse.com/prev?id=${RC_RING_ID}`}
+          >
+            ← Prev
+          </a>
+          <a
+            id="rc-ring-home"
+            data-rc-uuid={RC_RING_UUID}
+            href="https://ring.recurse.com/"
+          >
+            The Recurse Webring
+          </a>
+          <a id="rc-ring-rand" href="https://ring.recurse.com/rand">
+            Random
+          </a>
+          <a
+            id="rc-ring-next"
+            href={`https://ring.recurse.com/next?id=${RC_RING_ID}`}
+          >
+            Next →
+          </a>
+        </nav>
       </div>
     </div>
   );
