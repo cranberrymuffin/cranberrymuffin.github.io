@@ -44,6 +44,11 @@ export default function GetUpBlogPost() {
             First published <time dateTime="2026-07-18">July 18, 2026</time>
             <ReadCount />.
           </i>
+          <img
+            alt="LinkedIn post: On Tuesday July 14, I was attacked while running on the East River Walkway. After taking the minimum amount of PTO, I came to the following career reflections: 1. When you fall down you get back up 2. People can enter your network in the most unexpected ways 3. Your head is your most valuable asset."
+            src="/get-up-linkedin-post.png"
+            className="linkedin-post"
+          ></img>
           <p>
             On Tuesday, July 14 at 8:54 PM, I was attacked while running 🏃 on
             the East River walkway.
