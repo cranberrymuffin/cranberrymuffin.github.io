@@ -21,6 +21,13 @@ export default function GeminiAkinator() {
             create an interactive experience. Here's an overview of the tech
             stack:
           </p>
+          <div className="game-embed">
+            <iframe
+              src="https://akinator.rcdis.co/"
+              title="Akinator Game"
+              loading="lazy"
+            />
+          </div>
 
           <h2>1. React Frontend, Node Backend, and Express Delivery</h2>
           <p>
