@@ -21,6 +21,13 @@ export default function TicTacToeBlogPost() {
           <strong>PeerJS</strong>. We are going to explore how this was
           accomplished in <a href="/tic-tac-toe">Tic-Tac-Toe</a>.
         </p>
+        <div className="game-embed">
+          <iframe
+            src="https://cranberrymuffin.io/tic-tac-toe/"
+            title="Tic-Tac-Toe"
+            loading="lazy"
+          />
+        </div>
 
         <h2>Peer-to-Peer: No Servers, No Problem</h2>
         <p>
