@@ -23,6 +23,13 @@ export default function SnowstormBlogPost() {
           the snowfall, and the other is the snowmen. I’m going to cover how
           both visual effects can be created.
         </p>
+        <div className="game-embed">
+          <iframe
+            src="https://cranberrymuffin.io/snowstorm/"
+            title="Snowstorm"
+            loading="lazy"
+          />
+        </div>
         <h2>Making it Snow</h2>
         <p>
           To make the illusion of snowfall
