@@ -23,6 +23,13 @@ export default function ValentineBlogPost() {
           expressing y or z directly as a function of x, an implicit equation
           combines all variables into a single equation.
         </p>
+        <div className="game-embed">
+          <iframe
+            src="https://cranberrymuffin.io/valentine/"
+            title="3D Heart"
+            loading="lazy"
+          />
+        </div>
         <p>
           A sphere can be represented by the implicit equation x² + y² + z² = r²
           where "r" represents the radius of the sphere
