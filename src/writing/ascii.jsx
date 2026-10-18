@@ -20,6 +20,13 @@ export default function AsciiArtBlogPost() {
           through how I built a web tool that converts images into ASCII art,
           and share the challenges faced along the way.
         </p>
+        <div className="game-embed">
+          <iframe
+            src="https://cranberrymuffin.io/ascii-art/"
+            title="ASCII Art"
+            loading="lazy"
+          />
+        </div>
         <h2>Image preprocessing</h2>
         Before converting our image to ASCII, we will do some preprocessing on
         it to enhance the results.
