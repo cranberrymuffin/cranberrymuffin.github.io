@@ -20,7 +20,7 @@ export default function AsciiArtBlogPost() {
           through how I built a web tool that converts images into ASCII art,
           and share the challenges faced along the way.
         </p>
-        <div className="game-embed">
+        <div className="game-embed tall">
           <iframe
             src="https://cranberrymuffin.io/ascii-art/"
             title="ASCII Art"
