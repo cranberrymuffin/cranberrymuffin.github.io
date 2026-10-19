@@ -16,19 +16,21 @@ export default function DogLinkedInBlogPost() {
         </i>
         <p>
           I find social media overwhelming. Because of that, I'm not really on
-          any platforms except LinkedIn.
+          any social platforms except LinkedIn.
         </p>
         <p>
           Even so, I end up hibernating LinkedIn for weeks or months at a time
           when it starts to feel like too much.
         </p>
         <p>
-          It's hard to fully step away from it. Even though LinkedIn is just
-          another social media platform, it's also used professionally — which
-          makes it difficult to delete or ignore entirely.
+          It's hard to fully step away from it. LinkedIn is tied to professional
+          life, which makes it hard to delete or ignore until you can retire. It
+          is a necessary tool in job searching and professional life today. But
+          it is also is a platform that is designed to be addictive, and it is
+          easy to get sucked into the endless scroll of content, notifications,
+          and social networks.
         </p>
         <p>
-          You still need some version of it to participate in professional life.
           Most recently I needed one to attend a{' '}
           <a
             href="https://partiful.com/e/uaMJVd3xreNGjfWDdiUF"
@@ -44,8 +46,8 @@ export default function DogLinkedInBlogPost() {
           .
         </p>
         <p>
-          So when people ask for my LinkedIn, I sometimes just send{' '}
-          <a href="/#/linkedin">my fake one</a> instead.
+          So when people ask for my LinkedIn while I'm hibernated, I sometimes
+          just send <a href="/#/linkedin">my fake one</a> instead.
         </p>
         <h2>
           My dog's <a href="/#/linkedin/dog">LinkedIn</a>
