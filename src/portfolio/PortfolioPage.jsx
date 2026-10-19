@@ -1,6 +1,6 @@
 import './portfolio.css';
 import Navigation from '../navigation/Navigation'; // Import the Navigation component
-import { emojiCursor } from './emojiCursor';
+import { emojiCursor, imageCursor } from './emojiCursor';
 
 const projects = [
   {
@@ -43,6 +43,22 @@ const projects = [
         href: 'https://github.com/cranberrymuffin/PathRecorder',
       },
       { label: 'Blog', href: '/#/blog/path-recorder' },
+    ],
+  },
+  {
+    title: 'Feed Hider for LinkedIn',
+    cursorImage: '/linkedin-cursor.svg',
+    description:
+      'A Chrome extension that hides the LinkedIn home feed and sends you to Jobs instead, so you can use LinkedIn without the endless scroll.',
+    links: [
+      {
+        label: 'Download',
+        href: 'https://chromewebstore.google.com/detail/feed-hider-for-linkedin/mkgojaokkbjlapnjmdddjfeffjhdmfpj',
+      },
+      {
+        label: 'Code',
+        href: 'https://github.com/cranberrymuffin/linkedin-feed-hider',
+      },
     ],
   },
   {
@@ -91,7 +107,11 @@ export default function PortfolioPage() {
           <div
             className="card"
             key={index}
-            style={project.cursor && { cursor: emojiCursor(project.cursor) }}
+            style={
+              project.cursorImage
+                ? { cursor: imageCursor(project.cursorImage) }
+                : project.cursor && { cursor: emojiCursor(project.cursor) }
+            }
           >
             <h2>{project.title}</h2>
             <p className="desc">{project.description}</p>
